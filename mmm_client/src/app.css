@@ -1,1 +1,139 @@
 @import "reset.css";
+
+.loginTitle {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 120px;
+  width: 133px;
+  height: 47px;
+  line-height: 47px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loginLogin {
+  margin-top: 70px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.loginInputId {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 24px;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.loginInputId:focus-within {
+  border: 2px solid #68c9d1;
+}
+
+#loginInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+
+.loginInputPassword {
+  margin: 0 auto;
+  margin-top: 24px;
+  padding-left: 24px;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.loginInputPassword:focus-within {
+  border: 2px solid #68c9d1;
+}
+
+#loginInputPassword {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+
+.loginSubmitBtn {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #68c9d1;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#loginSubmitBtn {
+  border: none;
+  background-color: #68c9d1;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Noto Sans KR";
+}
+
+.loginFindIdandPassword {
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #68c9d1;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.loginAskMember {
+  margin-top: 80px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.loginSignUpBtn {
+  margin-top: 10px;
+  margin-bottom: 200px; /*소셜 로그인 추가 되면 수정*/
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #68c9d1;
+}
