@@ -1,7 +1,12 @@
 import "./app.css";
+import Login from "./components/login";
 
 function App() {
-  return <div>Welcome to MMM</div>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;
