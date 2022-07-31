@@ -1,5 +1,7 @@
 @import "reset.css";
 
+/* LogIn page CSS*/
+
 .loginTitle {
   margin: 0 auto;
   text-align: center;
@@ -97,7 +99,9 @@
   border-radius: 5px;
 }
 
-#loginSubmitBtn {
+/* 하늘색 버튼 */
+#loginSubmitBtn,
+#signupSubmitBtn {
   border: none;
   background-color: #68c9d1;
   color: #ffffff;
@@ -137,3 +141,164 @@
   font-size: 16px;
   color: #68c9d1;
 }
+
+/* signup page CSS */
+.signupTitle {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 120px;
+  width: 133px;
+  height: 47px;
+  line-height: 47px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  /* background: #68c9d1; */
+  background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signupAskMember {
+  margin-top: 22px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.signUpLoginBtn {
+  margin-top: 10px;
+  margin-bottom: 63px; /*소셜 로그인 추가 되면 수정*/
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #68c9d1;
+}
+
+.signupSignup {
+  margin-top: 64px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.signupInputName,
+.signupInputEmail,
+.signupInputId,
+.signupInputPassword,
+.signupInputPasswordCheck {
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding-left: 24px;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.signupInputName:focus-within,
+.signupInputEmail:focus-within,
+.signupInputId:focus-within,
+.signupInputPassword:focus-within,
+.signupInputPasswordCheck:focus-within {
+  border: 2px solid #68c9d1;
+}
+
+#signupInputName,
+#signupInputEmail,
+#signupInputId,
+#signupInputPassword,
+#signupInputPasswordCheck {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+
+.signupBoxTitle {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #8e8e8e;
+
+  width: 420px;
+  display: block;
+  margin: auto;
+}
+
+/* .signupBoxError {
+  display: block;
+} */
+
+.signupAgreeContainer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  margin-top: 46px;
+  margin-bottom: 27px;
+}
+
+.signupAgree {
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+  line-height: 23px;
+}
+
+.signupAgreeIcon {
+  margin-left: 28px;
+}
+
+.signupAgreeCheck {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #68c9d1;
+  text-align: center;
+}
+.signupSubmitBtn {
+  margin: 0 auto;
+  margin-top: 64px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #68c9d1;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+
+  margin-bottom: 62px;
+}
+
+.findInSignup {
+  padding-bottom: 273px;
+}
+/* 흠.. 이걸 padding으로 해도 괜찮을런지.. -> 문제생기면 바꾸기 .. */

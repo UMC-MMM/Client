@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -36,7 +37,15 @@ const Login = () => {
         <span>비밀번호 찾기</span>
       </div>
       <div className="loginAskMember">아직 서베이브 회원이 아니신가요?</div>
-      <div className="loginSignUpBtn">회원가입 하기</div>
+      <Link
+        to="/signup"
+        style={{
+          textDecoration: "none",
+          cursor: "pointer",
+        }}
+      >
+        <div className="loginSignUpBtn">회원가입 하기</div>
+      </Link>
     </>
   );
 };
