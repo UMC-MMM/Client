@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
 
 const Signup = () => {
+  // 동의 초기값 회색색상
+  const [color, setColor] = useState("#8e8e8e");
+  const handleAgree = () => {
+    color === "#8e8e8e" ? setColor("#E1605C") : setColor("#8e8e8e");
+  };
+
   return (
     <>
       <div className="signupTitle">Survave</div>
@@ -58,23 +64,19 @@ const Signup = () => {
             placeholder="비밀번호를 한번 더 입력하세요."
           ></input>
         </div>
-
-        {/* <div className="signupAgree">
-          서베이브의 개인정보 수집 및 이용에 동의합니다.
-          <BsCheckCircleFill
-            className="signAgreeIcon"
-            size="28px"
-            color="#8e8e8e"
-          />
-        </div> */}
-        <div className="signupAgreeContainer">
-          <div className="signupAgree">
+        <div className="signupAgreeContainer" onClick={handleAgree}>
+          <div
+            className="signupAgree"
+            style={{ color: { color } }}
+            onClick={handleAgree}
+          >
             서베이브의 개인정보 수집 및 이용에 동의합니다.
           </div>
           <BsCheckCircleFill
             className="signupAgreeIcon"
             size="28px"
-            color="#8e8e8e"
+            color={color}
+            onClick={handleAgree}
           />
         </div>
 
