@@ -31,11 +31,11 @@ const Login = () => {
           value="로그인하기"
         />
       </div>
-      <div className="loginFindIdandPassword">
+      {/* <div className="loginFindIdandPassword">
         <span>아이디 찾기</span>
         <span>|</span>
         <span>비밀번호 찾기</span>
-      </div>
+      </div> */}
       <div className="loginAskMember">아직 서베이브 회원이 아니신가요?</div>
       <Link
         to="/signup"
