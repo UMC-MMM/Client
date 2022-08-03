@@ -13,7 +13,7 @@ const Signup = () => {
     <>
       <div className="signupTitle">Survave</div>
       <div className="signupAskMember">이미 서베이브 회원이신가요?</div>
-      <Link to="/" style={{ textDecoration: "none", cursor: "pointer" }}>
+      <Link to="/login" style={{ textDecoration: "none", cursor: "pointer" }}>
         <div className="signUpLoginBtn">로그인 하기</div>
       </Link>
       <div className="signupSignup">회원가입</div>
@@ -90,11 +90,11 @@ const Signup = () => {
             value="회원가입 하기"
           />
         </div>
-        <div className="loginFindIdandPassword findInSignup">
+        {/* <div className="loginFindIdandPassword findInSignup">
           <span>아이디 찾기</span>
           <span>|</span>
           <span>비밀번호 찾기</span>
-        </div>
+        </div> */}
       </div>
     </>
   );
