@@ -6,7 +6,7 @@ const Signup = () => {
   // 동의 초기값 회색색상
   const [color, setColor] = useState("#8e8e8e");
   const handleAgree = () => {
-    color === "#8e8e8e" ? setColor("#E1605C") : setColor("#8e8e8e");
+    color === "#8e8e8e" ? setColor("#68c9d1") : setColor("#8e8e8e");
   };
 
   return (
