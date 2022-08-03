@@ -1,8 +1,113 @@
 @import "reset.css";
 
 /* 메인페이지 - 상단 네비게이션 바*/
+.navbar {
+  height: 139px;
+  /* background-color: #8e8e8e; */
+  position: sticky;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarContainer {
+  display: flex;
+  width: 66.6%;
+  /* background-color:aquamarine; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarLeftContainer {
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navbarMenuItem {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 22px;
+  padding-right: 22px;
+}  
+
+.navbarRightContainer {
+  display: flex;
+  /* background-color: antiquewhite; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarSearch {
+  display: flex;
+  padding-right: 70px;
+}
+
+.navbarSearchBox {
+  display: flex;
+  width: 411px;
+  height: 58px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarSearchBox input {
+font-size: 16px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+padding-top: 17px;
+padding-bottom: 17px;
+padding-left: 24px;
+border: 0;
+outline: none;
+background-color: #eeeeee;
+}
+
+.navbarSearchBox button {
+  border: none;
+  padding-right: 17px;
+}
+
+.navbarIcons {
+  display: flex;
+}
+
+.navbarBellIcon, .navbarMypageIcon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbarLogo{
+  text-align: center;
+  width: 133px;
+  height: 47px;
+  line-height: 47px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
 
 /* LogIn page CSS*/
+.logo{
+  background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .loginTitle {
   margin: 0 auto;
@@ -14,10 +119,6 @@
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
-  background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .loginLogin {
