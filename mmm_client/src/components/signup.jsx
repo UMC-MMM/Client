@@ -79,8 +79,13 @@ const Signup = () => {
             onClick={handleAgree}
           />
         </div>
+        <Link
+          to="/agreement"
+          style={{ textDecoration: "none", cursor: "pointer" }}
+        >
+          <div className="signupAgreeCheck">동의서 확인하기 →</div>
+        </Link>
 
-        <div className="signupAgreeCheck">동의서 확인하기 →</div>
         <div className="signupSubmitBtn">
           <input
             id="signupSubmitBtn"
