@@ -408,3 +408,18 @@
   padding-bottom: 273px;
 }
 /* 흠.. 이걸 padding으로 해도 괜찮을런지.. -> 문제생기면 바꾸기 .. */
+
+/* 개인정보동의서 페이지  */
+.agreementContainer {
+  display: block;
+  margin: auto;
+}
+
+.agreementContainer h1 {
+  font-size: 2em;
+  margin: 10px;
+}
+
+.agreementContainer p {
+  margin: 10px;
+}
