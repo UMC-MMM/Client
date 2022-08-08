@@ -67,8 +67,8 @@ const Signup = () => {
         <div className="signupAgreeContainer" onClick={handleAgree}>
           <div
             className="signupAgree"
-            style={{ color: { color } }}
             onClick={handleAgree}
+            style={{ color: color }}
           >
             서베이브의 개인정보 수집 및 이용에 동의합니다.
           </div>
