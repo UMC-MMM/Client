@@ -51,7 +51,7 @@ const Agreement = () => {
           권리가 있습니다. 단, Survave 서비스 이용에 제한 또는 불이익이 발생할
           수 있음을 알려 드립니다.
         </h5>
-        <div>
+        <div className="finalAgreement">
           본인은 위 동의서 내용을 충분히 숙지하였으며, 개인정보 수집, 이용,
           제공하는 것에 동의합니다.
         </div>

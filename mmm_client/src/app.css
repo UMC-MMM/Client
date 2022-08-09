@@ -411,15 +411,55 @@
 
 /* 개인정보동의서 페이지  */
 .agreementContainer {
-  display: block;
-  margin: auto;
+  margin: 0 auto;
+  width: 66.6%;
 }
 
 .agreementContainer h1 {
   font-size: 2em;
-  margin: 10px;
+  margin: 30px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .agreementContainer p {
   margin: 10px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.agreementContainer h2 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.agreementContainer h3 {
+  font-size: 1.2em;
+  margin: 20px;
+  margin-left: 40px;
+}
+
+.agreementContainer h4 {
+  font-size: 1em;
+  margin: 20px;
+  margin-left: 60px;
+}
+
+.agreementContainer h5 {
+  font-size: 0.9em;
+  margin: 10px;
+  margin-left: 90px;
+  line-height: 20px;
+}
+
+.agreementContainer .finalAgreement {
+  font-size: 1.2em;
+  margin: 30px;
+  line-height: 30px;
+
+  margin-bottom: 70px;
 }
