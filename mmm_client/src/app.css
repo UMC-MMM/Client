@@ -38,7 +38,7 @@
   text-align: left;
   padding-left: 22px;
   padding-right: 22px;
-}  
+}
 
 .navbarRightContainer {
   display: flex;
@@ -63,17 +63,17 @@
 }
 
 .navbarSearchBox input {
-font-size: 16px;
-font-weight: 400;
-line-height: 23px;
-letter-spacing: 0em;
-text-align: left;
-padding-top: 17px;
-padding-bottom: 17px;
-padding-left: 24px;
-border: 0;
-outline: none;
-background-color: #eeeeee;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 24px;
+  border: 0;
+  outline: none;
+  background-color: #eeeeee;
 }
 
 .navbarSearchBox button {
@@ -85,12 +85,13 @@ background-color: #eeeeee;
   display: flex;
 }
 
-.navbarBellIcon, .navbarMypageIcon {
+.navbarBellIcon,
+.navbarMypageIcon {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.navbarLogo{
+.navbarLogo {
   text-align: center;
   width: 133px;
   height: 47px;
@@ -102,9 +103,8 @@ background-color: #eeeeee;
   padding-right: 40px;
 }
 
-
 /* LogIn page CSS*/
-.logo{
+.logo {
   background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -361,6 +361,7 @@ background-color: #eeeeee;
 
   margin-top: 46px;
   margin-bottom: 27px;
+  cursor: pointer;
 }
 
 .signupAgree {
@@ -407,3 +408,58 @@ background-color: #eeeeee;
   padding-bottom: 273px;
 }
 /* 흠.. 이걸 padding으로 해도 괜찮을런지.. -> 문제생기면 바꾸기 .. */
+
+/* 개인정보동의서 페이지  */
+.agreementContainer {
+  margin: 0 auto;
+  width: 66.6%;
+}
+
+.agreementContainer h1 {
+  font-size: 2em;
+  margin: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.agreementContainer p {
+  margin: 10px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.agreementContainer h2 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.agreementContainer h3 {
+  font-size: 1.2em;
+  margin: 20px;
+  margin-left: 40px;
+}
+
+.agreementContainer h4 {
+  font-size: 1em;
+  margin: 20px;
+  margin-left: 60px;
+}
+
+.agreementContainer h5 {
+  font-size: 0.9em;
+  margin: 10px;
+  margin-left: 90px;
+  line-height: 20px;
+}
+
+.agreementContainer .finalAgreement {
+  font-size: 1.2em;
+  margin: 30px;
+  line-height: 30px;
+
+  margin-bottom: 70px;
+}
