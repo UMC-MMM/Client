@@ -5,8 +5,12 @@ import { BsCheckCircleFill } from "react-icons/bs";
 const Signup = () => {
   // 동의 초기값 회색색상
   const [color, setColor] = useState("#8e8e8e");
+  // 개인정보 수집 동의에 대한 상태 저장 -> 초기값은 false
+  const [agree, setAgree] = useState(false);
+  // 개인정보 수집 동의에 대한 함수 -> 동의 시 색상 변경 & 상태 true로 변경
   const handleAgree = () => {
     color === "#8e8e8e" ? setColor("#68c9d1") : setColor("#8e8e8e");
+    setAgree(!agree);
   };
 
   return (

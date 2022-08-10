@@ -273,7 +273,7 @@
 
 #signupSubmitBtn {
   border: none;
-  background-color: #8e8e8e;
+  background-color: #68c9d1;
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
@@ -461,8 +461,8 @@
   height: 60px;
   text-align: center;
   line-height: 60px;
-  /* background-color: #68c9d1; */
-  background-color: #8e8e8e;
+  background-color: #68c9d1;
+  /* background-color: #8e8e8e; */
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
