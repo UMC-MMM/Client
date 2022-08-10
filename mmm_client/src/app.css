@@ -105,15 +105,13 @@
 /* 메인페이지 - 랭킹 */
 .rank {
   display: flex;
-  justify-content: center;
   padding-top: 56px;
   /* background-color: #33c207; */
 }
 
 .rankContainer {
   display: flex;
-  width: 66.6%;
-  justify-content: flex-start;
+  /* margin-top: 56px; */
   align-items: center;
   /* background-color: #68c9d1; */
 }
@@ -138,7 +136,6 @@
 .rankBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   /* background-color: #edf42c; */
@@ -148,7 +145,6 @@
 .rankBox2,
 .rankBox3 {
   display: flex;
-  width: 66.6%;
   text-align: center;
   line-height: 115px;
   margin-bottom: 24px;
@@ -196,11 +192,13 @@
 }
 
 .rankName {
+  /* display: flex; */
+  /* justify-content: flex-start; */
   width: 33%;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
-  /* padding-left: 40px; */
+  padding-left: 40px;
   /* background-color: antiquewhite; */
 }
 
