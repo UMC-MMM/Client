@@ -531,3 +531,48 @@
 
   margin-bottom: 70px;
 }
+
+/* 설문조사 게시 화면 */
+.surveyPostTitleBox {
+  margin: 0 auto;
+  padding: 10px;
+  width: 40%;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.surveyPostTitleInput {
+  margin: 20px 0 0 30px;
+}
+
+#surveyPostTitleInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Noto Sans KR";
+}
+
+.surveyPostDescriptionInput {
+  margin: 20px 0 30px 30px;
+}
+
+#surveyPostDescriptionInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Noto Sans KR";
+}
