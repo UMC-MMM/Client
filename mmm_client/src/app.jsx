@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/login";
 import Signup from "./components/signup";
 import Main from "./components/main";
+import Join from "./components/join";
 import Agreement from "./components/agreement";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" element={<Main />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/signup" element={<Signup />}></Route>
+        <Route exact path="/join" element={<Join />}></Route>
         <Route exact path="/agreement" element={<Agreement />}></Route>
       </Routes>
     </>
