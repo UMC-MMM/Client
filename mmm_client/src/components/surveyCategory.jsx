@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryButton from "./categoryButton";
+import { FaCommentDollar } from "react-icons/fa";
 import { AiFillRead } from "react-icons/ai";
 import { AiFillExperiment } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
@@ -14,7 +15,10 @@ const SurveyCategory = () => {
     <div className="surveyCategory">
       <div className="surveyCategoryTitle">설문조사 카테고리</div>
       <div className="surveyCategoryContainer">
-        <CategoryButton title="경영·경제" />
+        <CategoryButton
+          title="경영·경제"
+          icon={<FaCommentDollar size="40px" />}
+        />
         <CategoryButton title="인문·사회" icon={<AiFillRead size="40px" />} />
         <CategoryButton title="과학" icon={<AiFillExperiment size="40px" />} />
         <CategoryButton title="IT" icon={<GrTechnology size="40px" />} />
