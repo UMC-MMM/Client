@@ -7,6 +7,8 @@
   position: sticky;
   display: flex;
   justify-content: center;
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .navbarContainer {
@@ -259,11 +261,14 @@
 
 /* 설문조사 카테고리 컴포넌트 */
 .surveyCategoryTitle {
+  display: flex;
+}
+
+.surveyCategoryTitleName {
   font-size: 20px;
   font-weight: 700;
   line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
+  margin-left: 19px;
 }
 
 /* 설문조사 카테고리 버튼 컴포넌트 */
@@ -305,6 +310,67 @@
 
   margin-top: 20.07px;
 }
+
+/* 메인페이지 - 인기 스토리  */
+.popularityStory {
+  margin-top: 113px;
+  margin-bottom: 142px;
+}
+
+.popularityStoryContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* margin-left: 14px;
+  margin-right: 14px; */
+}
+
+.popularityStoryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+.storyBoxContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.storyBoxImg {
+  height: 301px;
+  width: 279px;
+  left: 320px;
+  top: 1083px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+
+.storyBoxTitle {
+  margin-top: 15px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.storyBoxDetail {
+  margin-top: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  height: 93px;
+  width: 279px;
+}
+
 /* LogIn page CSS*/
 .logo {
   background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
@@ -977,4 +1043,49 @@
   line-height: 30px;
 
   margin-bottom: 70px;
+}
+
+/* 설문조사 게시 화면 */
+.surveyPostTitleBox {
+  margin: 0 auto;
+  padding: 10px;
+  width: 40%;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.surveyPostTitleInput {
+  margin: 20px 0 0 30px;
+}
+
+#surveyPostTitleInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Noto Sans KR";
+}
+
+.surveyPostDescriptionInput {
+  margin: 20px 0 30px 30px;
+}
+
+#surveyPostDescriptionInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Noto Sans KR";
 }

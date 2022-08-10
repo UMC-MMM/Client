@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./navbar";
 import Rank from "./rank";
 import SurveyCategory from "./surveyCategory";
+import PopularityStory from "./popularityStory";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <div className="mainWrap">
         <Rank />
         <SurveyCategory />
+        <PopularityStory />
       </div>
     </>
   );
