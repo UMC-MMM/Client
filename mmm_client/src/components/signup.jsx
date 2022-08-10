@@ -55,7 +55,7 @@ const Signup = () => {
             id="signupInputPassword"
             type="password"
             name="password"
-            placeholder="n~n자의 영문자, 숫자, 특수문자를 사용하세요."
+            placeholder="6~16자의 영문자, 숫자, 특수문자를 사용하세요."
           ></input>
         </div>
         <div className="signupBoxTitle">비밀번호 확인</div>
