@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./navbar";
+import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import { BsCircle } from "react-icons/bs";
 import { BsSquare } from "react-icons/bs";
 
-const Join = () => {
+const SurveyJoin = () => {
   return (
     <>
       <Navbar />
@@ -108,4 +108,4 @@ const Join = () => {
   );
 };
 
-export default Join;
+export default SurveyJoin;
