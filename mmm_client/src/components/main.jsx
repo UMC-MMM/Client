@@ -8,9 +8,8 @@ const Main = () => {
   return (
     <>
       <Navbar />
-      <Rank />
-
       <div className="mainWrap">
+        <Rank />
         <SurveyCategory />
         <PopularityStory />
       </div>
