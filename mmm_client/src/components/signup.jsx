@@ -5,8 +5,12 @@ import { BsCheckCircleFill } from "react-icons/bs";
 const Signup = () => {
   // 동의 초기값 회색색상
   const [color, setColor] = useState("#8e8e8e");
+  // 개인정보 수집 동의에 대한 상태 저장 -> 초기값은 false
+  const [agree, setAgree] = useState(false);
+  // 개인정보 수집 동의에 대한 함수 -> 동의 시 색상 변경 & 상태 true로 변경
   const handleAgree = () => {
     color === "#8e8e8e" ? setColor("#68c9d1") : setColor("#8e8e8e");
+    setAgree(!agree);
   };
 
   return (
@@ -51,7 +55,7 @@ const Signup = () => {
             id="signupInputPassword"
             type="password"
             name="password"
-            placeholder="n~n자의 영문자, 숫자, 특수문자를 사용하세요."
+            placeholder="6~16자의 영문자, 숫자, 특수문자를 사용하세요."
           ></input>
         </div>
         <div className="signupBoxTitle">비밀번호 확인</div>

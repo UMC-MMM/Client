@@ -103,6 +103,61 @@
   padding-right: 40px;
 }
 
+/* 메인페이지 컴포넌트들 */
+.mainWrap {
+  width: 66.6%;
+  margin: 0 auto;
+}
+/* 메인페이지 전체를 묶는 className으로 중앙에 맞춤 */
+
+/* 설문조사 카테고리 컴포넌트 */
+.surveyCategoryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* 설문조사 카테고리 버튼 컴포넌트 */
+.surveyCategoryContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+.categoryButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 57px;
+}
+
+.categoryButtonIcon {
+  height: 71.92660522460938px;
+  width: 80px;
+  left: 334px;
+  top: 801px;
+  border-radius: 60px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoryButtonName {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-align: center;
+
+  height: 24px;
+  width: 80px;
+
+  margin-top: 20.07px;
+}
 /* LogIn page CSS*/
 .logo {
   background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
@@ -205,7 +260,17 @@
 }
 
 /* 하늘색 버튼 */
-#loginSubmitBtn,
+#loginSubmitBtn {
+  border: none;
+  background-color: #68c9d1;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+}
+
 #signupSubmitBtn {
   border: none;
   background-color: #68c9d1;
@@ -214,6 +279,7 @@
   font-weight: 700;
   font-size: 18px;
   font-family: "Noto Sans KR";
+  cursor: pointer;
 }
 
 .loginFindIdandPassword {
@@ -387,6 +453,7 @@
   color: #68c9d1;
   text-align: center;
 }
+
 .signupSubmitBtn {
   margin: 0 auto;
   margin-top: 64px;
@@ -395,6 +462,7 @@
   text-align: center;
   line-height: 60px;
   background-color: #68c9d1;
+  /* background-color: #8e8e8e; */
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
