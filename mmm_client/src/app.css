@@ -112,11 +112,14 @@
 
 /* 설문조사 카테고리 컴포넌트 */
 .surveyCategoryTitle {
+  display: flex;
+}
+
+.surveyCategoryTitleName {
   font-size: 20px;
   font-weight: 700;
   line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
+  margin-left: 19px;
 }
 
 /* 설문조사 카테고리 버튼 컴포넌트 */

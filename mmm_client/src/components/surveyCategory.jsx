@@ -9,11 +9,17 @@ import { MdOutlineSportsVolleyball } from "react-icons/md";
 import { FaEnvira } from "react-icons/fa";
 import { FaDog } from "react-icons/fa";
 import { CgInbox } from "react-icons/cg";
+import { BsFillGridFill } from "react-icons/bs";
 
 const SurveyCategory = () => {
   return (
     <div className="surveyCategory">
-      <div className="surveyCategoryTitle">설문조사 카테고리</div>
+      <div className="surveyCategoryTitle">
+        <div className="surveyCategoryTitleIcon">
+          <BsFillGridFill size="30px" color="#E1605C" />
+        </div>
+        <div className="surveyCategoryTitleName">설문조사 카테고리</div>
+      </div>
       <div className="surveyCategoryContainer">
         <CategoryButton
           title="경영·경제"
