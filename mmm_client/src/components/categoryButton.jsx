@@ -1,10 +1,10 @@
 import React from "react";
 
-const CategoryButton = () => {
+const CategoryButton = (props) => {
   return (
     <div className="categoryButtonContainer">
-      <div className="categoryButtonIcon">아이콘자리</div>
-      <div className="categoryButtonName">이름 자리</div>
+      <div className="categoryButtonIcon">{props.icon}</div>
+      <div className="categoryButtonName">{props.title}</div>
     </div>
   );
 };
