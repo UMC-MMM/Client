@@ -1096,3 +1096,62 @@
   width: 66.6%;
   margin: 0 auto;
 }
+
+/* 푸터 */
+.footer {
+  height: 196px;
+  background-color: #fefefe;
+}
+
+.footerContainer {
+  width: 37.135%;
+  height: 196px;
+  background-color: #fefefe;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerSurvaveEng {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #282828;
+}
+
+.footerSurvaveKor {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #282828;
+}
+
+.footerContactTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #777777;
+}
+
+.footerContactDetail {
+  font-size: 13px;
+  font-weight: 350;
+  line-height: 19px;
+  color: #777777;
+  margin-left: 21px;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContactTeam {
+  display: flex;
+}
+
+.footerContactEmail {
+  display: flex;
+}

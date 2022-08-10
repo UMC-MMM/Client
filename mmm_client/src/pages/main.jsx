@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import Rank from "../components/rank";
 import SurveyCategory from "../components/surveyCategory";
 import PopularityStory from "../components/popularityStory";
@@ -31,6 +32,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
