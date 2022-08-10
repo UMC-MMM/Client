@@ -57,7 +57,9 @@ const Navbar = () => {
               </li>
               <li className="navbarMypageIcon">
                 <span>
-                  <FaUserCircle color="#C2C2C2" size="35px" />
+                  <Link to="/login">
+                    <FaUserCircle color="#C2C2C2" size="35px" />
+                  </Link>
                 </span>
               </li>
             </ul>

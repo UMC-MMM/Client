@@ -107,7 +107,7 @@
   display: flex;
   justify-content: center;
   padding-top: 56px;
-  background-color: #33c207;
+  /* background-color: #33c207; */
 }
 
 .rankContainer {
@@ -115,15 +115,16 @@
   width: 66.6%;
   justify-content: flex-start;
   align-items: center;
-  background-color: #68c9d1;
+  /* background-color: #68c9d1; */
 }
 
 .rankTitle {
   font-weight: 700;
   font-size: 20px;
   line-height: 29px;
-  padding-left: 16px;
-  padding-right: 23px;
+  margin-left: 16px;
+  margin-right: 23px;
+  /* background-color: #ed7dc8; */
 }
 
 .rankSubTitle {
@@ -131,6 +132,7 @@
   font-size: 14px;
   line-height: 20px;
   color: #8e8e8e;
+  /* background-color: #d9d9d9; */
 }
 
 .rankBox {
@@ -138,7 +140,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
-  background-color: #edf42c;
+  padding-bottom: 32px;
+  /* background-color: #edf42c; */
 }
 
 .rankBox1,
@@ -149,7 +152,7 @@
   text-align: center;
   line-height: 115px;
   margin-bottom: 24px;
-  background-color: #e1605c;
+  /* background-color: #e1605c; */
 }
 
 .rankBox1Left {
@@ -198,7 +201,7 @@
   font-size: 18px;
   line-height: 26px;
   /* padding-left: 40px; */
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .rankHashtags {
@@ -208,7 +211,7 @@
   align-items: center;
   /* vertical-align: baseline; */
   /* line-height: 115px; */
-  background-color: #e1605c;
+  /* background-color: #e1605c; */
 }
 
 .rankHashtag1,
@@ -228,7 +231,7 @@
   width: 20%;
   display: flex;
   justify-content: space-around;
-  background-color: #d9fc10;
+  /* background-color: #d9fc10; */
 }
 
 .rankCond1,
@@ -249,6 +252,61 @@
   background-color: transparent;
 }
 
+/* 메인페이지 컴포넌트들 */
+.mainWrap {
+  width: 66.6%;
+  margin: 0 auto;
+}
+/* 메인페이지 전체를 묶는 className으로 중앙에 맞춤 */
+
+/* 설문조사 카테고리 컴포넌트 */
+.surveyCategoryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* 설문조사 카테고리 버튼 컴포넌트 */
+.surveyCategoryContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+.categoryButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 57px;
+}
+
+.categoryButtonIcon {
+  height: 71.92660522460938px;
+  width: 80px;
+  left: 334px;
+  top: 801px;
+  border-radius: 60px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoryButtonName {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-align: center;
+
+  height: 24px;
+  width: 80px;
+
+  margin-top: 20.07px;
+}
 /* LogIn page CSS*/
 .logo {
   background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);
@@ -351,7 +409,17 @@
 }
 
 /* 하늘색 버튼 */
-#loginSubmitBtn,
+#loginSubmitBtn {
+  border: none;
+  background-color: #68c9d1;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+}
+
 #signupSubmitBtn {
   border: none;
   background-color: #68c9d1;
@@ -360,6 +428,7 @@
   font-weight: 700;
   font-size: 18px;
   font-family: "Noto Sans KR";
+  cursor: pointer;
 }
 
 .loginFindIdandPassword {
@@ -507,6 +576,7 @@
 
   margin-top: 46px;
   margin-bottom: 27px;
+  cursor: pointer;
 }
 
 .signupAgree {
@@ -532,6 +602,7 @@
   color: #68c9d1;
   text-align: center;
 }
+
 .signupSubmitBtn {
   margin: 0 auto;
   margin-top: 64px;
@@ -540,6 +611,7 @@
   text-align: center;
   line-height: 60px;
   background-color: #68c9d1;
+  /* background-color: #8e8e8e; */
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
@@ -852,4 +924,59 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+}
+
+/* 개인정보동의서 페이지  */
+.agreementContainer {
+  margin: 0 auto;
+  width: 66.6%;
+}
+
+.agreementContainer h1 {
+  font-size: 2em;
+  margin: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.agreementContainer p {
+  margin: 10px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.agreementContainer h2 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.agreementContainer h3 {
+  font-size: 1.2em;
+  margin: 20px;
+  margin-left: 40px;
+}
+
+.agreementContainer h4 {
+  font-size: 1em;
+  margin: 20px;
+  margin-left: 60px;
+}
+
+.agreementContainer h5 {
+  font-size: 0.9em;
+  margin: 10px;
+  margin-left: 90px;
+  line-height: 20px;
+}
+
+.agreementContainer .finalAgreement {
+  font-size: 1.2em;
+  margin: 30px;
+  line-height: 30px;
+
+  margin-bottom: 70px;
 }
