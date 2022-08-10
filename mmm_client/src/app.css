@@ -535,6 +535,7 @@
 /* 설문조사 게시 화면 */
 .surveyPostTitleBox {
   margin: 0 auto;
+  margin-top: 50px; /* <-- 나중에 수정 */
   padding: 10px;
   width: 40%;
   background: #eeeeee;
