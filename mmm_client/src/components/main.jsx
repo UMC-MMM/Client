@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./navbar";
 import SurveyCategory from "./surveyCategory";
+import PopularityStory from "./popularityStory";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
           <div>로그인 화면 가기</div>
         </Link>
         <SurveyCategory />
+        <PopularityStory />
       </div>
     </>
   );

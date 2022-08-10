@@ -158,6 +158,67 @@
 
   margin-top: 20.07px;
 }
+
+/* 메인페이지 - 인기 스토리  */
+.popularityStory {
+  margin-top: 113px;
+  margin-bottom: 142px;
+}
+
+.popularityStoryContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* margin-left: 14px;
+  margin-right: 14px; */
+}
+
+.popularityStoryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+.storyBoxContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.storyBoxImg {
+  height: 301px;
+  width: 279px;
+  left: 320px;
+  top: 1083px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+
+.storyBoxTitle {
+  margin-top: 15px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.storyBoxDetail {
+  margin-top: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  height: 93px;
+  width: 279px;
+}
+
 /* LogIn page CSS*/
 .logo {
   background: linear-gradient(90deg, #e1605c 39.85%, #68c9d1 60.53%);

@@ -17,12 +17,24 @@ const SurveyCategory = () => {
       <div className="surveyCategoryContainer">
         <CategoryButton
           title="경영·경제"
-          icon={<FaCommentDollar size="40px" />}
+          icon={<FaCommentDollar size="40px" color="#282828" />}
         />
-        <CategoryButton title="인문·사회" icon={<AiFillRead size="40px" />} />
-        <CategoryButton title="과학" icon={<AiFillExperiment size="40px" />} />
-        <CategoryButton title="IT" icon={<GrTechnology size="40px" />} />
-        <CategoryButton title="문화·예술" icon={<FaPaintBrush size="40px" />} />
+        <CategoryButton
+          title="인문·사회"
+          icon={<AiFillRead size="40px" color="#282828" />}
+        />
+        <CategoryButton
+          title="과학"
+          icon={<AiFillExperiment size="40px" color="#282828" />}
+        />
+        <CategoryButton
+          title="IT"
+          icon={<GrTechnology size="40px" color="#282828" />}
+        />
+        <CategoryButton
+          title="문화·예술"
+          icon={<FaPaintBrush size="40px" color="#282828" />}
+        />
         <CategoryButton
           title="건강·운동"
           icon={<MdOutlineSportsVolleyball size="40px" />}
