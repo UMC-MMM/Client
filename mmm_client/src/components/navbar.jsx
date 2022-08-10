@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="navbarContainer">
           <div className="navbarLeftContainer">
             <div className="logo navbarLogo">
-              <Link to="/main">Survave</Link>
+              <Link to="/">Survave</Link>
             </div>
             <ul className="navbarMenu">
               <li className="navbarMenuItem">
