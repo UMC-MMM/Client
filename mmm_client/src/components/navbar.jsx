@@ -16,7 +16,7 @@ const Navbar = () => {
             <ul className="navbarMenu">
               <li className="navbarMenuItem">
                 <Link
-                  to="/"
+                  to="/surveyList"
                   style={{
                     textDecoration: "none",
                     cursor: "pointer",

@@ -1089,3 +1089,10 @@
   font-size: 14px;
   font-family: "Noto Sans KR";
 }
+
+/* 설문조사 목록 페이지 */
+
+.surveyList {
+  width: 66.6%;
+  margin: 0 auto;
+}
