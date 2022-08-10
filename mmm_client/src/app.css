@@ -7,7 +7,6 @@
   position: sticky;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .navbarContainer {
@@ -101,6 +100,156 @@
   font-size: 32px;
   padding-left: 20px;
   padding-right: 40px;
+}
+
+/* 메인페이지 - 랭킹 */
+.rank {
+  display: flex;
+  justify-content: center;
+  padding-top: 56px;
+  /* background-color: #33c207; */
+}
+
+.rankContainer {
+  display: flex;
+  width: 66.6%;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: #68c9d1; */
+}
+
+.rankTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  margin-left: 16px;
+  margin-right: 23px;
+  /* background-color: #ed7dc8; */
+}
+
+.rankSubTitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8e8e;
+  /* background-color: #d9d9d9; */
+}
+
+.rankBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* background-color: #edf42c; */
+}
+
+.rankBox1,
+.rankBox2,
+.rankBox3 {
+  display: flex;
+  width: 66.6%;
+  text-align: center;
+  line-height: 115px;
+  margin-bottom: 24px;
+  /* background-color: #e1605c; */
+}
+
+.rankBox1Left {
+  background-color: #56c4cd;
+  border-radius: 50px 0px 0px 50px;
+  width: 7.7%;
+  height: 115px;
+  font-weight: 900;
+  font-size: 32px;
+  color: #fefefe;
+}
+
+.rankBox2Left {
+  background-color: #78d6de;
+  border-radius: 50px 0px 0px 50px;
+  width: 7.7%;
+  height: 115px;
+  font-weight: 900;
+  font-size: 32px;
+  color: #fefefe;
+}
+
+.rankBox3Left {
+  background-color: #a2e3e9;
+  border-radius: 50px 0px 0px 50px;
+  width: 7.7%;
+  height: 115px;
+  font-weight: 900;
+  font-size: 32px;
+  color: #fefefe;
+}
+
+.rankBoxRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 0px 50px 50px 0px;
+  width: 92.3%;
+  height: 115px;
+}
+
+.rankName {
+  width: 33%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  /* padding-left: 40px; */
+  /* background-color: antiquewhite; */
+}
+
+.rankHashtags {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* vertical-align: baseline; */
+  /* line-height: 115px; */
+  /* background-color: #e1605c; */
+}
+
+.rankHashtag1,
+.rankHashtag2,
+.rankHashtag3 {
+  background-color: #ffffff;
+  border-radius: 30px;
+  color: #68c9d1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  width: 121px;
+  height: 33px;
+}
+
+.rankCond {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #d9fc10; */
+}
+
+.rankCond1,
+.rankCond2 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+}
+
+.rankBtn {
+  width: 7%;
+  border: 0;
+  background-color: transparent;
 }
 
 /* 메인페이지 컴포넌트들 */
@@ -476,6 +625,306 @@
   padding-bottom: 273px;
 }
 /* 흠.. 이걸 padding으로 해도 괜찮을런지.. -> 문제생기면 바꾸기 .. */
+
+/* 설문조사 참여 페이지 */
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 85px;
+  /* background-color: #8e8e8e; */
+}
+
+.joinTop {
+  display: flex;
+  justify-content: space-between;
+  width: 44%;
+  align-items: center;
+  /* background-color: #e1605c; */
+}
+
+.joinTopPoint {
+  background-color: #f3be00;
+  border-radius: 30px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+}
+
+.joinTopProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #78d6de; */
+}
+
+.joinTopProfileName {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.joinTitle {
+  width: 44%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* background-color: #78d6de; */
+}
+
+.joinTitleT {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  align-items: center;
+  color: #282828;
+}
+
+.joinTitleTime {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: flex-end;
+  color: #282828;
+  padding-left: 17px;
+}
+
+.joinSub {
+  display: flex;
+  margin-top: 24px;
+  width: 44%;
+  align-items: center;
+}
+
+.joinSubCond {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  /* background-color: #68c9d1; */
+}
+
+.joinSubCond1,
+.joinSubCond2 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.joinSubHash {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  /* background-color: #78de87; */
+}
+
+.joinSubHash1,
+.joinSubHash2,
+.joinSubHash3 {
+  width: 121px;
+  height: 33px;
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+}
+
+.joinSubEnd {
+  width: 20%;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: right;
+  color: #282828;
+  /* background-color: #f3be00; */
+}
+
+/*joinBox1 요소들 위치 수정필요*/
+.joinBox1 {
+  width: 44%;
+  margin-top: 95px;
+  height: 177px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  display: flex;
+}
+
+.joinBox1Text {
+  color: #282828;
+  font-weight: 400;
+  font-size: 14px;
+  /* line-height: 105px; */
+  height: 105px;
+  margin: 32px 24px 40px;
+  /* background-color: #a91010; */
+}
+
+.joinBox2,
+.joinBox3,
+.joinBox4 {
+  width: 44%;
+  margin-top: 72px;
+  /* background-color: #56c4cd; */
+}
+
+.joinBox2Shape {
+  height: 239px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joinBox2Cond,
+.joinBox3Cond,
+.joinBox4Cond {
+  width: 91%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1605c;
+  padding-top: 16px;
+  /* height: 20%; */
+  /* background-color: #a7c816; */
+}
+
+.joinBox2Q,
+.joinBox3Q,
+.joinBox4Q {
+  width: 91%;
+  /* height: 15%; */
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #282828;
+  /* background-color: #f3be00; */
+}
+
+.joinBox2A,
+.joinBox3A,
+.joinBox4A {
+  width: 91%;
+  height: 65%;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+  /* background-color: aquamarine; */
+}
+
+.joinBox2A1,
+.joinBox2A2,
+.joinBox3A1,
+.joinBox3A2,
+.joinBox3A3 {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: 42px;
+  align-items: center;
+}
+
+.joinBox2A1Btn,
+.joinBox2A2Btn,
+.joinBox3A1Btn,
+.joinBox3A2Btn,
+.joinBox3A3Btn {
+  display: flex;
+  justify-content: center;
+  width: 7%;
+  color: #68c9d1;
+  /* background-color: #e1605c; */
+}
+
+.joinBox2A1Text,
+.joinBox2A2Text,
+.joinBox3A1Text,
+.joinBox3A2Text,
+.joinBox3A3Text {
+  width: 93%;
+  font-weight: 400;
+  font-size: 15px;
+  color: #282828;
+  /* background-color: #78d6de; */
+}
+
+.joinBox3Shape {
+  height: 297px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joinBox4Shape {
+  height: 181px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joinBox4A1 {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: 42px;
+  align-items: center;
+}
+
+.joinBox4A1 input {
+  border: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #777777;
+  background-color: transparent;
+  padding-left: 10px;
+}
+
+.joinFinal {
+  margin-top: 118px;
+  margin-bottom: 291px;
+  /* background-color: #e1605c; */
+}
+
+.joinFinal button {
+  width: 168px;
+  height: 52px;
+  background-color: #68c9d1;
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
 
 /* 개인정보동의서 페이지  */
 .agreementContainer {
