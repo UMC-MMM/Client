@@ -1096,6 +1096,119 @@
 .surveyList {
   width: 66.6%;
   margin: 0 auto;
+  padding-top: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .surveyListLeft {
+   margin-right: 54px; 
+} */
+
+.surveyListRight {
+  width: 78.82%;
+}
+
+.surveyListSelectBox {
+  height: 65px;
+  width: 67.69%;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+
+  padding-left: 23px;
+  padding-right: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.surveyListSelectBoxTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 65px;
+  color: #282828;
+}
+
+.surveyListRightTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.surveyWriteBnt {
+  height: 52px;
+  width: 168px;
+  border-radius: 5px;
+  background: #68c9d1;
+  border-radius: 5px;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* 설문조사 카테고리 CategoryListContainer */
+.categoryListContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 709px;
+  width: 217px;
+  left: 320px;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.categoryListContainerTitle {
+  width: 152px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #e1605c;
+
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.categoryListItems {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.categoryListItemsCircle {
+  display: inline;
+  background: #e1605c;
+
+  height: 24px;
+  width: 24px;
+  left: -12px;
+  top: 14px;
+  border-radius: 0px;
 }
 
 /* 푸터 */
