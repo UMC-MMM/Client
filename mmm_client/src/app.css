@@ -1109,7 +1109,7 @@
   width: 78.82%;
 }
 
-.surveyListSelectBox {
+.surveyListSelectBoxSmall {
   height: 65px;
   width: 67.69%;
   border-radius: 10px;
@@ -1124,7 +1124,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.surveyListSelectBoxBig {
+  height: 190px;
+  width: 67.69%;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+
+  padding-left: 23px;
+  padding-right: 25px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.surveyListSelectBoxBigTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.surveyListSelectBoxArrowUp {
+  margin-top: 20px;
+  cursor: pointer;
+  /* 개선 필요 */
+}
+
+.surveyListSelectBoxArrowDown {
   cursor: pointer;
 }
 
@@ -1134,6 +1164,67 @@
   font-size: 16px;
   line-height: 65px;
   color: #282828;
+}
+
+.surveyListSelectBoxTitleAndDetail {
+  display: flex;
+}
+
+.surveyListSelectBoxDetail {
+  height: 18px;
+  width: 310px;
+
+  margin-top: 24px;
+  margin-left: 38px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #282828;
+}
+
+.surveyListTargetAge {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.surveyListTargetGender {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.surveyListTargetTag {
+  padding: 6px 16px;
+  background-color: #eeeeee;
+  text-align: center;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #8e8e8e;
+
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.surveyListTargetBnt {
+  height: 31px;
+  width: 62px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  background: #8e8e8e;
+  border-radius: 5px;
+  border: none;
+
+  float: right;
+  cursor: pointer;
 }
 
 .surveyListRightTop {
