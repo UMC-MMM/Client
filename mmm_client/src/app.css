@@ -1258,7 +1258,7 @@
 
   height: 709px;
   width: 217px;
-  left: 320px;
+
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -1291,74 +1291,122 @@
   cursor: pointer;
 }
 
-.categoryListItemsCircle {
-  display: inline;
-  background: #e1605c;
-
-  height: 24px;
-  width: 24px;
-  left: -12px;
-  top: 14px;
-  border-radius: 0px;
-}
-
-/* 푸터 */
-.footer {
-  height: 196px;
-  background-color: #fefefe;
-}
-
-.footerContainer {
-  width: 37.135%;
-  height: 196px;
-  background-color: #fefefe;
+/* 마이 페이지 */
+.myPage {
+  width: 66.6%;
   margin: 0 auto;
+  padding-top: 43px;
 
   display: flex;
+  justify-content: space-between;
+}
+
+.myPageRight {
+  width: 76.48%;
+  height: 373px;
+  margin-top: 47px;
+
+  border-radius: 20px;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.myPageListContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 709px;
+  width: 217px;
+
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
   justify-content: space-between;
   align-items: center;
 }
 
-.footerSurvaveEng {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 23px;
-  color: #282828;
-}
-
-.footerSurvaveKor {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #282828;
-}
-
-.footerContactTitle {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #777777;
-}
-
-.footerContactDetail {
-  font-size: 13px;
-  font-weight: 350;
-  line-height: 19px;
-  color: #777777;
-  margin-left: 21px;
-}
-
-.footerContact {
+.myPageListContainerTop {
+  height: 47.954%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.footerContactTeam {
+.myPageListContainerBottom {
+  margin-bottom: 27px;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.myPageListContainerTitle {
+  width: 152px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #68c9d1;
+
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.myPageListItems {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.myPageLogoutBnt {
+  width: 196px;
+  height: 52px;
+  background: #eeeeee;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #777777;
+
+  padding-left: 29.3px;
+}
+
+.myPageRight {
   display: flex;
 }
 
-.footerContactEmail {
-  display: flex;
+.myPageRightImg {
+  height: 138px;
+  width: 138px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 4px solid #fefefe;
+}
+
+.myPageRightChangeBnt {
+  height: 42px;
+  width: 134px;
+  border-radius: 10px;
+  padding: 10px, 15px, 10px, 15px;
+  background: #68c9d1;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #ffffff;
 }
 
 /* 푸터 */

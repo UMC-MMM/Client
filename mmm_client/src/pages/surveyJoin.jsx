@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import { BsCircle } from "react-icons/bs";
 import { BsSquare } from "react-icons/bs";
+import Footer from "../components/footer";
 
 const SurveyJoin = () => {
   return (
@@ -104,6 +105,7 @@ const SurveyJoin = () => {
           <button type="submit">설문 제출하기</button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

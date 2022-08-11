@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
 
 const Signup = () => {
   // 동의 초기값 회색색상
@@ -15,7 +16,9 @@ const Signup = () => {
 
   return (
     <>
-      <div className="signupTitle">Survave</div>
+      <div className="signupTitle">
+        <Survave />
+      </div>
       <div className="signupAskMember">이미 서베이브 회원이신가요?</div>
       <Link to="/login" style={{ textDecoration: "none", cursor: "pointer" }}>
         <div className="signUpLoginBtn">로그인 하기</div>

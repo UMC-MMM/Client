@@ -4,6 +4,7 @@ import { useState } from "react";
 import CategoryListContainer from "../components/categoryListContainer";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import Footer from "../components/footer";
 
 const SurveyList = () => {
   const [selectBoxOpen, setSelectBoxOpen] = useState(false);
@@ -84,6 +85,7 @@ const SurveyList = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
