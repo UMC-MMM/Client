@@ -1,5 +1,6 @@
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,7 +21,19 @@ const Footer = () => {
           </div>
         </div>
         <div className="footerSNS">
-          <AiFillGithub size="36px" />
+          <a
+            href="https://github.com/UMC-MMM"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "#282828",
+            }}
+            title="GitHub"
+          >
+            <AiFillGithub size="36px" />
+          </a>
         </div>
       </div>
     </div>
