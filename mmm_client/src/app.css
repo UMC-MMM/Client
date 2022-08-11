@@ -299,7 +299,7 @@
 
 .categoryButtonName {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -307,6 +307,7 @@
 
   height: 24px;
   width: 80px;
+  color: #282828;
 
   margin-top: 20.07px;
 }

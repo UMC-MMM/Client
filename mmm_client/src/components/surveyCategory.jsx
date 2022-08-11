@@ -23,31 +23,31 @@ const SurveyCategory = () => {
       <div className="surveyCategoryContainer">
         <CategoryButton
           title="경영·경제"
-          icon={<FaCommentDollar size="40px" color="#282828" />}
+          icon={<FaCommentDollar size="35px" color="#282828" />}
         />
         <CategoryButton
           title="인문·사회"
-          icon={<AiFillRead size="40px" color="#282828" />}
+          icon={<AiFillRead size="35px" color="#282828" />}
         />
         <CategoryButton
           title="과학"
-          icon={<AiFillExperiment size="40px" color="#282828" />}
+          icon={<AiFillExperiment size="35px" color="#282828" />}
         />
         <CategoryButton
           title="IT"
-          icon={<GrTechnology size="40px" color="#282828" />}
+          icon={<GrTechnology size="35px" color="#282828" />}
         />
         <CategoryButton
           title="문화·예술"
-          icon={<FaPaintBrush size="40px" color="#282828" />}
+          icon={<FaPaintBrush size="35px" color="#282828" />}
         />
         <CategoryButton
           title="건강·운동"
-          icon={<MdOutlineSportsVolleyball size="40px" />}
+          icon={<MdOutlineSportsVolleyball size="35px" />}
         />
-        <CategoryButton title="환경" icon={<FaEnvira size="40px" />} />
-        <CategoryButton title="반려동물" icon={<FaDog size="40px" />} />
-        <CategoryButton title="기타" icon={<CgInbox size="40px" />} />
+        <CategoryButton title="환경" icon={<FaEnvira size="35px" />} />
+        <CategoryButton title="반려동물" icon={<FaDog size="35px" />} />
+        <CategoryButton title="기타" icon={<CgInbox size="35px" />} />
       </div>
     </div>
   );
