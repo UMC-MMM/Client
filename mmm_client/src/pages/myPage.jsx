@@ -12,23 +12,39 @@ const MyPage = () => {
           <MyPageListContainer />
         </div>
         <div className="myPageRight">
-          <div className="myPageRightImg"></div>
+          <div className="myPageRightImgBox">
+            <div className="myPageRightImg"></div>
+          </div>
           <div className="myPageRightProfile">
             <div>
-              <span>닉네임</span>
-              <span>Sheon</span>
+              <div className="myPageProfileTitle">닉네임</div>
+              <div className="myPageProfileDetail">Sheon</div>
             </div>
             <div>
-              <span>이름</span>
-              <span>이서영</span>
+              <div className="myPageProfileTitle">이름</div>
+              <div className="myPageProfileDetail">이서영</div>
             </div>
             <div>
-              <span>성별</span>
-              <span>여성</span>
+              <div className="myPageProfileTitle">성별</div>
+              <div className="myPageProfileDetail">여성</div>
             </div>
             <div>
-              <span>나이</span>
-              <span>20대</span>
+              <div className="myPageProfileTitle">나이</div>
+              <div className="myPageProfileDetail">20대</div>
+            </div>
+            <div className="myPageProfileIDEmailPW">
+              <div>
+                <div className="myPageProfileTitle">아이디</div>
+                <div className="myPageProfileDetail">abcdefg123</div>
+              </div>
+              <div>
+                <div className="myPageProfileTitle">이메일</div>
+                <div className="myPageProfileDetail">abcdefg@gmail.com</div>
+              </div>
+              <div>
+                <div className="myPageProfileTitle">비밀번호</div>
+                <div className="myPageProfileDetail">abcdefg1234.</div>
+              </div>
             </div>
           </div>
           <button className="myPageRightChangeBnt">사용자 정보 변경</button>
