@@ -962,7 +962,7 @@
 }
 
 .joinBox4A1 input {
-  border: 0;
+  border: none;
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;

@@ -6,7 +6,7 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Main from "./components/main";
 import Join from "./components/join";
-import Agreement from "./components/agreement";
+import SurveyListBox from "./components/surveyListBox";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/signup" element={<Signup />}></Route>
         <Route exact path="/join" element={<Join />}></Route>
-        <Route exact path="/agreement" element={<Agreement />}></Route>
+        <Route exact path="/surveyListBox" element={<SurveyListBox />}></Route>
       </Routes>
     </>
   );
