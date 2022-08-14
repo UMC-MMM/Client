@@ -1368,6 +1368,13 @@
   cursor: pointer;
 }
 
+.myPageListClicked {
+  color: #68c9d1;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
 .myPageLogoutBnt {
   width: 196px;
   height: 52px;

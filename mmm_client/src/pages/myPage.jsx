@@ -1,21 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
-import MyPageListContainer from "../components/myPageListContainer";
 import Footer from "../components/footer";
 
 import MyProfile from "../components/myProfile";
+import MyCoupon from "../components/myCoupon";
+import MyPoint from "../components/myPoint";
+import MySurvey from "../components/mySurvey";
+import Notice from "../components/notice";
+import Faq from "../components/faq";
 
 const MyPage = () => {
+  const [myPageMenu, setMyPageMenu] = useState(0);
+
+  const myPageMenuArr = [
+    { name: "내 프로필" },
+    { name: "내 설문조사" },
+    { name: "포인트" },
+    { name: "쿠폰" },
+    { name: "공지사항" },
+    { name: "자주 묻는 질문" },
+  ];
+
+  const myPageMenuObj = {
+    0: <MyProfile />,
+    1: <MySurvey />,
+    2: <MyPoint />,
+    3: <MyCoupon />,
+    4: <Notice />,
+    5: <Faq />,
+  };
+
+  const handleMyPageMenu = (index) => {
+    setMyPageMenu(index);
+  };
+
   return (
     <>
       <Navbar />
       <div className="myPage">
         <div className="myPageLeft">
-          <MyPageListContainer />
+          <div className="myPageListContainer">
+            <div className="myPageListContainerTop">
+              <div className="myPageListContainerTitle">마이페이지</div>
+              {myPageMenuArr.map((menu, index) => {
+                return (
+                  <div
+                    className={
+                      myPageMenu === index
+                        ? "myPageListItems myPageListClicked"
+                        : "myPageListItems"
+                    }
+                    onClick={() => handleMyPageMenu(index)}
+                  >
+                    {menu.name}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="myPageListContainerBottom">
+              <button className="myPageLogoutBnt">로그아웃</button>
+            </div>
+          </div>
         </div>
-        <div className="myPageRight">
-          <MyProfile />
-        </div>
+        <div className="myPageRight">{myPageMenuObj[myPageMenu]}</div>
       </div>
       <Footer />
     </>
