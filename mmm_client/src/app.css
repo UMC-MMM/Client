@@ -1303,9 +1303,13 @@
 
 .myPageRight {
   width: 76.48%;
-  height: 373px;
   margin-top: 47px;
+}
 
+.myPageProfile {
+  height: 373px;
+  width: 100%;
+  display: flex;
   border-radius: 20px;
   background: #eeeeee;
   border-radius: 20px;
