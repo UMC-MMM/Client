@@ -4,6 +4,8 @@ import { BiSearch } from "react-icons/bi";
 import { BsBellFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 
+import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
+
 const Navbar = () => {
   return (
     <>
@@ -11,12 +13,14 @@ const Navbar = () => {
         <div className="navbarContainer">
           <div className="navbarLeftContainer">
             <div className="logo navbarLogo">
-              <Link to="/">Survave</Link>
+              <Link to="/">
+                <Survave />
+              </Link>
             </div>
             <ul className="navbarMenu">
               <li className="navbarMenuItem">
                 <Link
-                  to="/"
+                  to="/surveyList"
                   style={{
                     textDecoration: "none",
                     cursor: "pointer",

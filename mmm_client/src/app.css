@@ -299,7 +299,7 @@
 
 .categoryButtonName {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -307,6 +307,7 @@
 
   height: 24px;
   width: 80px;
+  color: #282828;
 
   margin-top: 20.07px;
 }
@@ -1088,4 +1089,629 @@
   font-weight: 400;
   font-size: 14px;
   font-family: "Noto Sans KR";
+}
+
+/* 설문조사 목록 페이지 */
+
+.surveyList {
+  width: 66.6%;
+  margin: 0 auto;
+  padding-top: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .surveyListLeft {
+   margin-right: 54px; 
+} */
+
+.surveyListRight {
+  width: 78.82%;
+}
+
+.surveyListSelectBoxSmall {
+  height: 65px;
+  width: 67.69%;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+
+  padding-left: 23px;
+  padding-right: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.surveyListSelectBoxBig {
+  height: 190px;
+  width: 67.69%;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+
+  padding-left: 23px;
+  padding-right: 25px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.surveyListSelectBoxBigTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.surveyListSelectBoxArrowUp {
+  margin-top: 20px;
+  cursor: pointer;
+  /* 개선 필요 */
+}
+
+.surveyListSelectBoxArrowDown {
+  cursor: pointer;
+}
+
+.surveyListSelectBoxTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 65px;
+  color: #282828;
+}
+
+.surveyListSelectBoxTitleAndDetail {
+  display: flex;
+}
+
+.surveyListSelectBoxDetail {
+  height: 18px;
+  width: 310px;
+
+  margin-top: 24px;
+  margin-left: 38px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #282828;
+}
+
+.surveyListTargetAge {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.surveyListTargetGender {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.surveyListTargetTag {
+  padding: 6px 16px;
+  background-color: #eeeeee;
+  text-align: center;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #8e8e8e;
+
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.surveyListTargetBnt {
+  height: 31px;
+  width: 62px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  background: #8e8e8e;
+  border-radius: 5px;
+  border: none;
+
+  float: right;
+  cursor: pointer;
+}
+
+.surveyListRightTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.surveyWriteBnt {
+  height: 52px;
+  width: 168px;
+  border-radius: 5px;
+  background: #68c9d1;
+  border-radius: 5px;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* 설문조사 카테고리 CategoryListContainer */
+.categoryListContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 709px;
+  width: 217px;
+
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.categoryListContainerTitle {
+  width: 152px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #e1605c;
+
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.categoryListItems {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+/* 마이 페이지 */
+.myPage {
+  width: 66.6%;
+  margin: 0 auto;
+  padding-top: 43px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.myPageRight {
+  width: 76.48%;
+  height: 373px;
+  margin-top: 47px;
+
+  border-radius: 20px;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.myPageListContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 709px;
+  width: 217px;
+
+  border-radius: 10px;
+  background: #fefefe;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myPageListContainerTop {
+  height: 47.954%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.myPageListContainerBottom {
+  margin-bottom: 27px;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.myPageListContainerTitle {
+  width: 152px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #68c9d1;
+
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.myPageListItems {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.myPageLogoutBnt {
+  width: 196px;
+  height: 52px;
+  background: #eeeeee;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #777777;
+
+  padding-left: 29.3px;
+}
+
+.myPageRight {
+  display: flex;
+}
+
+.myPageRightImg {
+  height: 138px;
+  width: 138px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 4px solid #fefefe;
+}
+
+.myPageRightChangeBnt {
+  height: 42px;
+  width: 134px;
+  border-radius: 10px;
+  padding: 10px, 15px, 10px, 15px;
+  background: #68c9d1;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+/* 푸터 */
+.footer {
+  height: 196px;
+  background-color: #fefefe;
+}
+
+.footerContainer {
+  width: 37.135%;
+  height: 196px;
+  background-color: #fefefe;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerSurvaveEng {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #282828;
+}
+
+.footerSurvaveKor {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #282828;
+}
+
+.footerContactTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #777777;
+}
+
+.footerContactDetail {
+  font-size: 13px;
+  font-weight: 350;
+  line-height: 19px;
+  color: #777777;
+  margin-left: 21px;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContactTeam {
+  display: flex;
+}
+
+.footerContactEmail {
+  display: flex;
+}
+
+/* 설문조사 리스트 페이지-구분선 */
+.surveyListLineFirst {
+  border: 2px solid #eeeeee;
+  margin-top: 42px;
+}
+
+.surveyListLine {
+  border: 2px solid #eeeeee;
+}
+
+/* 설문조사리스트 페이지-listBox */
+.surveyListBox {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #8e8e8e; */
+}
+
+.boxTop,
+.myPageListBoxTop {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* background-color: #5c60e1; */
+}
+
+.boxTopLeft,
+.myPageListBoxTopLeft {
+  display: flex;
+  /* background-color: #56c4cd; */
+}
+
+.boxTopPoint {
+  background-color: #f3be00;
+  border-radius: 30px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  margin-top: 45px;
+  margin-right: 18px;
+}
+
+.boxTopTitle,
+.myPageListBoxTopTitle {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-top: 48px;
+  /* background-color: #78d6de; */
+}
+
+.boxTopTitleT,
+.myPageListBoxTopTitleT {
+  height: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  align-items: center;
+  color: #282828;
+}
+
+.boxTopTime,
+.myPageListBoxTopTime {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: flex-end;
+  color: #282828;
+  margin-left: 17px;
+}
+
+.boxTopProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  /* background-color: #78d6de; */
+}
+
+.boxTopProfileName {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 7px;
+}
+
+.boxSub,
+.myPageListBoxSub {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  /* background-color: #f3be00; */
+}
+
+.boxSubCond,
+.myPageListBoxSubCond {
+  display: flex;
+  margin-left: 55px;
+  /* background-color: #68c9d1; */
+}
+
+.boxSubCond1,
+.myPageListBoxSubCond1 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.boxSubCond2,
+.myPageListBoxSubCond2 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.boxSubHash,
+.myPageListBoxSubHash {
+  display: flex;
+  margin-left: 48px;
+  /* background-color: #78de87; */
+}
+
+.boxSubHash1,
+.boxSubHash2,
+.myPageListBoxSubHash1,
+.myPageListBoxSubHash2 {
+  width: 121px;
+  height: 33px;
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+  margin-right: 8px;
+}
+
+.boxSubHash3,
+.myPageListBoxSubHash3 {
+  width: 121px;
+  height: 33px;
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+}
+
+.boxBottom,
+.myPageListBoxBottom {
+  margin-top: 2px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  /* background-color: #f3be00; */
+}
+
+.boxBottomEnd,
+.myPageListBoxBottomEnd {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #282828;
+  margin-right: 17px;
+  /* background-color: #f300b6; */
+}
+
+/* 마이페이지-listBox */
+.myPageListBox {
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.myPageListBoxTopPoint {
+  background-color: #f3be00;
+  border-radius: 30px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  margin-top: 45px;
+  margin-right: 18px;
+  margin-left: 23.19px;
+}
+
+.myPageListBoxTopRight {
+  margin-top: 20px;
+  margin-right: 23px;
+}
+
+.myPageListBoxTopPeople {
+  background: #e1605c;
+  border-radius: 10px;
+  width: 106px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 37px;
+  color: #fefefe;
+  align-items: center;
+  text-align: center;
+}
+
+.myPageListBoxBottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: #f3be00; */
+}
+
+.myPageListBoxBottomEnd {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #282828;
+  margin-right: 23px;
+  margin-bottom: 16px;
+  /* background-color: #f300b6; */
 }
