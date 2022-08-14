@@ -286,10 +286,8 @@
 }
 
 .categoryButtonIcon {
-  height: 71.92660522460938px;
+  height: 80px;
   width: 80px;
-  left: 334px;
-  top: 801px;
   border-radius: 60px;
   background: #d9d9d9;
   display: flex;
