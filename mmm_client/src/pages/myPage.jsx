@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
-import MyProfile from "../components/myProfile";
-import MyCoupon from "../components/myCoupon";
-import MyPoint from "../components/myPoint";
-import MySurvey from "../components/mySurvey";
+import MyProfile from "../components/myPageMenu/myProfile";
+import MyCoupon from "../components/myPageMenu/myCoupon";
+import MyPoint from "../components/myPageMenu/myPoint";
+import MySurvey from "../components/myPageMenu/mySurvey";
 import Notice from "../components/notice";
-import Faq from "../components/faq";
+import Faq from "../components/myPageMenu/faq";
 
 const MyPage = () => {
   const [myPageMenu, setMyPageMenu] = useState(0);
