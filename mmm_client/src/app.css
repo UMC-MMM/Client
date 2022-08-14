@@ -1291,6 +1291,13 @@
   cursor: pointer;
 }
 
+.categoryListItemClicked {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #e1605c;
+}
+
 /* 마이 페이지 */
 .myPage {
   width: 66.6%;

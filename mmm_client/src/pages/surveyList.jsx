@@ -1,13 +1,30 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import { useState } from "react";
-import CategoryListContainer from "../components/categoryListContainer";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Footer from "../components/footer";
 
 const SurveyList = () => {
   const [selectBoxOpen, setSelectBoxOpen] = useState(false);
+  const [surveyList, setSurveyList] = useState(0);
+
+  const surveyListArr = [
+    { name: "전체" },
+    { name: "경영·경제" },
+    { name: "인문·사회" },
+    { name: "과학" },
+    { name: "IT" },
+    { name: "문화·예술" },
+    { name: "건강·운동" },
+    { name: "환경" },
+    { name: "반려동물" },
+    { name: "기타" },
+  ];
+
+  const handleSurveyList = (index) => {
+    setSurveyList(index);
+  };
 
   const handleSelectBox = () => {
     setSelectBoxOpen(!selectBoxOpen);
@@ -28,7 +45,23 @@ const SurveyList = () => {
       <Navbar />
       <div className="surveyList">
         <div className="surveyListLeft">
-          <CategoryListContainer />
+          <div className="categoryListContainer">
+            <div className="categoryListContainerTitle">설문조사 카테고리</div>
+            {surveyListArr.map((menu, index) => {
+              return (
+                <div
+                  className={
+                    surveyList === index
+                      ? "categoryListItems categoryListItemClicked"
+                      : "categoryListItems"
+                  }
+                  onClick={() => handleSurveyList(index)}
+                >
+                  {menu.name}
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="surveyListRight">
           <div className="surveyListRightTop">
