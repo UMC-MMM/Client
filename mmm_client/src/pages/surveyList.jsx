@@ -4,6 +4,8 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
 import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
+import SurveyListBox from "../components/surveyListBox";
+
 const SurveyList = () => {
   const [surveyList, setSurveyList] = useState(0);
   const [surveyTargetBox, setSurveyTargetBox] = useState(0);
@@ -66,6 +68,27 @@ const SurveyList = () => {
             {surveyTargetObj[surveyTargetBox]}
             <button className="surveyWriteBnt">설문 작성하기</button>
           </div>
+          <div className="surveyListLineFirst"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
+          <SurveyListBox />
+          <div className="surveyListLine"></div>
         </div>
       </div>
       <Footer />

@@ -1,7 +1,17 @@
 import React from "react";
+import MyPageListBox from "../myPageListBox";
 
 const MySurvey = () => {
-  return <div>내 설문조사</div>;
+  return (
+    <div className="myPageSurvey">
+      <MyPageListBox />
+      <MyPageListBox />
+      <MyPageListBox />
+      <MyPageListBox />
+      <MyPageListBox />
+      <MyPageListBox />
+    </div>
+  );
 };
 
 export default MySurvey;
