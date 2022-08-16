@@ -1713,7 +1713,7 @@
   /* background-color: #f300b6; */
 }
 
-/* 마이페이지-listBox */
+/* myPageSurvey-listBox */
 .myPageListBox {
   background: #eeeeee;
   border-radius: 20px;
@@ -1768,4 +1768,84 @@
   margin-right: 23px;
   margin-bottom: 16px;
   /* background-color: #f300b6; */
+}
+
+.myPageSurvey {
+  width: 100%;
+}
+
+/* myPageCoupon-쿠폰 */
+.myPageCoupon {
+  background: #eeeeee;
+  width: 461px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  mask: radial-gradient(circle at right, transparent 24px, #eeeeee 0px);
+}
+
+.myPageCouponTitle {
+  color: #282828;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  width: 388px;
+  height: 27px;
+  margin-top: 32px;
+  margin-left: 31px;
+}
+
+.myPageCouponDate {
+  color: #282828;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  width: 388px;
+  height: 21px;
+  margin-top: 8px;
+  margin-left: 31px;
+}
+
+.myPageCouponContent {
+  color: #777777;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  width: 388px;
+  height: 54px;
+  margin-top: 24px;
+  margin-left: 31px;
+}
+
+.myCouponTitle {
+  display: flex;
+}
+
+.myCouponTitleT {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+  width: 97px;
+  height: 30px;
+}
+
+.myCouponNum {
+  color: #68c9d1;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: right;
+  width: 41px;
+  height: 30px;
+  margin-left: 9px;
+}
+
+.myCouponItem {
+  margin-top: 24px;
+  height: 768px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: #56c4cd; */
 }
