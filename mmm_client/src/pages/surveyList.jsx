@@ -4,6 +4,8 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
 import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
+import RedCircle from "../assets/semicircle-r.png";
+
 const SurveyList = () => {
   const [surveyList, setSurveyList] = useState(0);
   const [surveyTargetBox, setSurveyTargetBox] = useState(0);
@@ -47,15 +49,27 @@ const SurveyList = () => {
             <div className="categoryListContainerTitle">설문조사 카테고리</div>
             {surveyListArr.map((menu, index) => {
               return (
-                <div
-                  className={
-                    surveyList === index
-                      ? "categoryListItems categoryListItemClicked"
-                      : "categoryListItems"
-                  }
-                  onClick={() => handleSurveyList(index)}
-                >
-                  {menu.name}
+                <div className="categoryListItemsContainer">
+                  <img
+                    className={
+                      surveyList === index
+                        ? "categoryListItemCircle categoryListItemCircleClicked"
+                        : "categoryListItemCircle"
+                    }
+                    src={RedCircle}
+                    alt="선택"
+                  ></img>
+                  <div
+                    className={
+                      surveyList === index
+                        ? "categoryListItems categoryListItemClicked"
+                        : "categoryListItems"
+                    }
+                    onClick={() => handleSurveyList(index)}
+                  >
+                    {" "}
+                    {menu.name}
+                  </div>
                 </div>
               );
             })}

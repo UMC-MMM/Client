@@ -1284,6 +1284,10 @@
   padding-right: 35px;
 }
 
+.categoryListItemsContainer {
+  display: flex;
+}
+
 .categoryListItems {
   font-style: normal;
   font-weight: 400;
@@ -1298,6 +1302,14 @@
   font-size: 16px;
   line-height: 23px;
   color: #e1605c;
+}
+
+.categoryListItemCircle {
+  visibility: hidden;
+}
+
+.categoryListItemCircleClicked {
+  visibility: visible;
 }
 
 /* 마이 페이지 */
@@ -1382,6 +1394,18 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 23px;
+}
+
+.myPageListItemsContainer {
+  display: flex;
+}
+
+.myPageListItemCircle {
+  visibility: hidden;
+}
+
+.myPageListCircleClicked {
+  visibility: visible;
 }
 
 .myPageLogoutBnt {
