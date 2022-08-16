@@ -286,10 +286,8 @@
 }
 
 .categoryButtonIcon {
-  height: 71.92660522460938px;
+  height: 80px;
   width: 80px;
-  left: 334px;
-  top: 801px;
   border-radius: 60px;
   background: #d9d9d9;
   display: flex;
@@ -1210,6 +1208,10 @@
   cursor: pointer;
 }
 
+.surveyTargetBox {
+  cursor: pointer;
+}
+
 .surveyListTargetBnt {
   height: 31px;
   width: 62px;
@@ -1230,7 +1232,7 @@
 .surveyListRightTop {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .surveyWriteBnt {
@@ -1289,6 +1291,13 @@
   line-height: 23px;
   padding-left: 30px;
   cursor: pointer;
+}
+
+.categoryListItemClicked {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #e1605c;
 }
 
 /* 마이 페이지 */
@@ -1713,7 +1722,7 @@
   /* background-color: #f300b6; */
 }
 
-/* myPageSurvey-listBox */
+/* myPageSurvey */
 .myPageListBox {
   background: #eeeeee;
   border-radius: 20px;
@@ -1848,4 +1857,267 @@
   flex-wrap: wrap;
   justify-content: space-between;
   /* background-color: #56c4cd; */
+}
+
+/* myPage - 공지사항, 자주묻는질문 */
+.myPageNotice,
+.myPageFaq {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticeTitle,
+.faqTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+}
+
+.noticeContainer,
+.faqContainer {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #a2e3e9; */
+}
+
+.noticeItem,
+.faqItem {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background: #eeeeee;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.noticeItemNum,
+.faqItemNum {
+  width: 10px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #777777;
+  margin-left: 29.5px;
+  margin-right: 40px;
+}
+
+.noticeItemContent,
+.faqItemContent {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #282828;
+  width: 135px;
+  height: 27px;
+  margin-right: 662px;
+}
+
+.noticeItemDate,
+.faqItemDate {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777777;
+  width: 72px;
+  height: 21px;
+  margin-right: 29.5px;
+}
+
+/* myPage - 포인트 */
+.myPoint {
+  display: flex;
+  flex-direction: column;
+  width: 447px;
+  height: 117px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+}
+
+.myPointTitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 17px;
+  margin-left: 33px;
+  color: #282828;
+}
+
+.myPointContent {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  /* background-color: #e1605c; */
+}
+
+.myPointContPoint {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  color: #282828;
+  margin-left: 29px;
+  margin-right: 56px;
+}
+
+.myPointContPlusBtn {
+  background-color: #68c9d1;
+  border-radius: 10px;
+  width: 130px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  margin-right: 16px;
+}
+
+.myPointContShopBtn {
+  background: #68c9d1;
+  border-radius: 10px;
+  width: 89px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  border: none;
+  margin-right: 32px;
+}
+
+.myPointUsage {
+  margin-top: 72px;
+}
+
+.myPointUsageTitle {
+  width: 97px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777777;
+}
+
+.myPointUsageContent {
+  display: flex;
+  margin-top: 7px;
+}
+
+.myPointUsagePlus {
+  width: 447px;
+  margin-right: 100px;
+  /* background-color: aquamarine; */
+}
+
+.myPointUsagePlusTitle,
+.myPointUsageMinusTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+}
+
+.myPointUsagePlusDate,
+.myPointUsageMinusDate {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 26px;
+  color: #777777;
+}
+
+.myPointUsagePlusContent,
+.myPointUsageMinusContent {
+  padding-bottom: 39px;
+  /* background-color: #89acdd; */
+}
+
+.myPointUsagePlusItem,
+.myPointUsageMinusItem {
+  display: flex;
+  margin-top: 18px;
+  align-items: center;
+  /* background-color: #f2f8a2; */
+}
+
+.myPointUsagePlusItemPoint,
+.myPointUsageMinusItemPoint {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  margin-left: 11px;
+  margin-right: 8px;
+  color: #000000;
+}
+
+.myPointUsagePlusItemSum1 {
+  width: 82px;
+  height: 23px;
+  padding: 1px 7px;
+  background: #e4ebf5;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 8px;
+  color: #89acdd;
+}
+
+.myPointUsagePlusItemCont,
+.myPointUsageMinusItemCont {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #777777;
+}
+
+.myPointUsagePlusItemSum2 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #e4f4f5;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #75b6bc;
+  margin-right: 8px;
+}
+
+.myPointUsageMinus {
+  width: 447px;
+  /* background-color: aquamarine; */
+}
+
+.myPointUsageMinusItemSum1 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #ffeaea;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #e68582;
+  margin-right: 8px;
+}
+
+.myPointUsageMinusItemSum2 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #ffefe7;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #f2a57a;
+  margin-right: 8px;
 }
