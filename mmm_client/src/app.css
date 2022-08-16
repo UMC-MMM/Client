@@ -1208,6 +1208,11 @@
   cursor: pointer;
 }
 
+.surveyListTargetTagClicked {
+  background-color: #68c9d1;
+  color: #fefefe;
+}
+
 .surveyTargetBox {
   cursor: pointer;
 }

@@ -57,7 +57,7 @@ const SurveyList = () => {
                         : "categoryListItemCircle"
                     }
                     src={RedCircle}
-                    alt="선택"
+                    alt="선택한 메뉴"
                   ></img>
                   <div
                     className={
