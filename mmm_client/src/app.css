@@ -1208,6 +1208,10 @@
   cursor: pointer;
 }
 
+.surveyTargetBox {
+  cursor: pointer;
+}
+
 .surveyListTargetBnt {
   height: 31px;
   width: 62px;
@@ -1228,7 +1232,7 @@
 .surveyListRightTop {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .surveyWriteBnt {
