@@ -12,6 +12,12 @@ import MyPage from "./pages/myPage";
 import SurveyWrite from "./pages/surveyWrite";
 
 function App() {
+  const Options = [
+    { id: "1", value: "단일선택형" },
+    { id: "2", value: "다중선택형" },
+    { id: "3", value: "서술형" },
+  ];
+
   return (
     <>
       <Routes>
