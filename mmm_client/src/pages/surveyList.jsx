@@ -5,6 +5,7 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
 import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
+import RedCircle from "../assets/semicircle-r.png";
 import SurveyListBox from "../components/surveyListBox";
 
 const SurveyList = () => {
@@ -50,15 +51,26 @@ const SurveyList = () => {
             <div className="categoryListContainerTitle">설문조사 카테고리</div>
             {surveyListArr.map((menu, index) => {
               return (
-                <div
-                  className={
-                    surveyList === index
-                      ? "categoryListItems categoryListItemClicked"
-                      : "categoryListItems"
-                  }
-                  onClick={() => handleSurveyList(index)}
-                >
-                  {menu.name}
+                <div className="categoryListItemsContainer">
+                  <img
+                    className={
+                      surveyList === index
+                        ? "categoryListItemCircle categoryListItemCircleClicked"
+                        : "categoryListItemCircle"
+                    }
+                    src={RedCircle}
+                    alt="선택한 메뉴"
+                  ></img>
+                  <div
+                    className={
+                      surveyList === index
+                        ? "categoryListItems categoryListItemClicked"
+                        : "categoryListItems"
+                    }
+                    onClick={() => handleSurveyList(index)}
+                  >
+                    {menu.name}
+                  </div>
                 </div>
               );
             })}
@@ -68,7 +80,6 @@ const SurveyList = () => {
           <div className="surveyListRightTop">
             {surveyTargetObj[surveyTargetBox]}
             <button className="surveyWriteBnt">
-              {" "}
               <Link
                 to="/surveyWrite"
                 style={{

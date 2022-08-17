@@ -9,6 +9,8 @@ import MySurvey from "../components/myPageMenu/mySurvey";
 import Notice from "../components/myPageMenu/notice";
 import Faq from "../components/myPageMenu/faq";
 
+import BlueCircle from "../assets/semicircle-b.png";
+
 const MyPage = () => {
   const [myPageMenu, setMyPageMenu] = useState(0);
 
@@ -44,15 +46,26 @@ const MyPage = () => {
               <div className="myPageListContainerTitle">마이페이지</div>
               {myPageMenuArr.map((menu, index) => {
                 return (
-                  <div
-                    className={
-                      myPageMenu === index
-                        ? "myPageListItems myPageListClicked"
-                        : "myPageListItems"
-                    }
-                    onClick={() => handleMyPageMenu(index)}
-                  >
-                    {menu.name}
+                  <div className="myPageListItemsContainer">
+                    <img
+                      className={
+                        myPageMenu === index
+                          ? "myPageListItemCircle myPageListCircleClicked"
+                          : "myPageListItemCircle"
+                      }
+                      src={BlueCircle}
+                      alt="선택한 메뉴"
+                    ></img>
+                    <div
+                      className={
+                        myPageMenu === index
+                          ? "myPageListItems myPageListClicked"
+                          : "myPageListItems"
+                      }
+                      onClick={() => handleMyPageMenu(index)}
+                    >
+                      {menu.name}
+                    </div>
                   </div>
                 );
               })}

@@ -1209,6 +1209,11 @@
   cursor: pointer;
 }
 
+.surveyListTargetTagClicked {
+  background-color: #68c9d1;
+  color: #fefefe;
+}
+
 .surveyTargetBox {
   cursor: pointer;
 }
@@ -1285,6 +1290,10 @@
   padding-right: 35px;
 }
 
+.categoryListItemsContainer {
+  display: flex;
+}
+
 .categoryListItems {
   font-style: normal;
   font-weight: 400;
@@ -1299,6 +1308,14 @@
   font-size: 16px;
   line-height: 23px;
   color: #e1605c;
+}
+
+.categoryListItemCircle {
+  visibility: hidden;
+}
+
+.categoryListItemCircleClicked {
+  visibility: visible;
 }
 
 /* 마이 페이지 */
@@ -1318,6 +1335,15 @@
 
 .myPageProfile {
   height: 373px;
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.myPageProfileModify {
+  height: 427px;
   width: 100%;
   display: flex;
   border-radius: 20px;
@@ -1385,6 +1411,18 @@
   line-height: 23px;
 }
 
+.myPageListItemsContainer {
+  display: flex;
+}
+
+.myPageListItemCircle {
+  visibility: hidden;
+}
+
+.myPageListCircleClicked {
+  visibility: visible;
+}
+
 .myPageLogoutBnt {
   width: 196px;
   height: 52px;
@@ -1423,7 +1461,7 @@
 }
 
 .myPageRightProfile {
-  flex-basis: 55.36%;
+  flex-basis: 55%;
   margin-top: 34px;
 }
 
@@ -1455,6 +1493,50 @@
   margin-top: 51px;
 }
 
+.myPageProfileModifyBox {
+  width: 216px;
+  height: 30.72px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: none;
+}
+
+.myPageProfileModifyBox:focus {
+  outline: 2px solid #68c9d1;
+}
+/* .myPageProfileModifyBox:focus {
+  outline: none;
+} */
+
+.myProfileModifyCancle,
+.myProfileModifyFin {
+  margin-top: 30px;
+  border: none;
+  height: 42px;
+  width: 80px;
+  border-radius: 10px;
+  padding: 10px, 64px, 10px, 64px;
+}
+
+.myProfileModifyCancle {
+  background: #c4e9ec;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #81a8ab;
+}
+
+.myProfileModifyFin {
+  background: #68c9d1;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ffffff;
+
+  margin-left: 8px;
+}
+
 .myPageRightChangeBnt {
   height: 42px;
   width: 134px;
@@ -1471,6 +1553,35 @@
   color: #ffffff;
 
   margin-top: 34px;
+}
+
+.myPageProfileModifyTag {
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #777777;
+  cursor: pointer;
+
+  height: 31px;
+  width: 74px;
+  line-height: 31px;
+  text-align: center;
+}
+
+.myPageProfileModifyTagClicked {
+  background: #68c9d1;
+  color: #fefefe;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.myPageProfileModifyTagIcon {
+  background-color: #89acdd;
+}
+
+.myPageProfileModifyTagIconNotChecked {
+  display: none;
 }
 
 /* 푸터 */
