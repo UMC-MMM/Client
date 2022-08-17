@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import CategoryListContainer from "../components/categoryListContainer";
 import { IoIosArrowDown } from "react-icons/io";
@@ -47,7 +48,18 @@ const SurveyList = () => {
                 className="surveyListSelectBoxArrowDown"
               />
             </div>
-            <button className="surveyWriteBnt">설문 작성하기</button>
+            <button className="surveyWriteBnt">
+              <Link
+                to="/surveyWrite"
+                style={{
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#ffffff",
+                }}
+              >
+                설문 작성하기
+              </Link>
+            </button>
           </div>
 
           <div className="surveyListSelectBoxBig" onClick={handleSelectBox}>
