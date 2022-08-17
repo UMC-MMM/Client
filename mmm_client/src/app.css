@@ -1064,7 +1064,8 @@
 
 .surveyListSelectBoxSmall {
   height: 65px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -1081,7 +1082,8 @@
 
 .surveyListSelectBoxBig {
   height: 190px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
