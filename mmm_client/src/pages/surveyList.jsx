@@ -67,7 +67,6 @@ const SurveyList = () => {
                     }
                     onClick={() => handleSurveyList(index)}
                   >
-                    {" "}
                     {menu.name}
                   </div>
                 </div>
