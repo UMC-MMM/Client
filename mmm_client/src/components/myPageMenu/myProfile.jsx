@@ -1,46 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import MyProfileView from "./myProfileView";
+import MyProfileModification from "./myProfileModification";
 
 const MyProfile = () => {
-  return (
-    <div className="myPageProfile">
-      <div className="myPageRightImgBox">
-        <div className="myPageRightImg"></div>
-      </div>
-      <div className="myPageRightProfile">
-        <div>
-          <div className="myPageProfileTitle">닉네임</div>
-          <div className="myPageProfileDetail">Sheon</div>
-        </div>
-        <div>
-          <div className="myPageProfileTitle">이름</div>
-          <div className="myPageProfileDetail">이서영</div>
-        </div>
-        <div>
-          <div className="myPageProfileTitle">성별</div>
-          <div className="myPageProfileDetail">여성</div>
-        </div>
-        <div>
-          <div className="myPageProfileTitle">나이</div>
-          <div className="myPageProfileDetail">20대</div>
-        </div>
-        <div className="myPageProfileIDEmailPW">
-          <div>
-            <div className="myPageProfileTitle">아이디</div>
-            <div className="myPageProfileDetail">abcdefg123</div>
-          </div>
-          <div>
-            <div className="myPageProfileTitle">이메일</div>
-            <div className="myPageProfileDetail">abcdefg@gmail.com</div>
-          </div>
-          <div>
-            <div className="myPageProfileTitle">비밀번호</div>
-            <div className="myPageProfileDetail">abcdefg1234.</div>
-          </div>
-        </div>
-      </div>
-      <button className="myPageRightChangeBnt">사용자 정보 변경</button>
-    </div>
-  );
+  const [myProfile, setMyProfile] = useState(0);
+
+  const handleMyProfile = () => {
+    if (myProfile === 0) {
+      setMyProfile(1);
+    } else if (myProfile === 1) {
+      setMyProfile(0);
+    }
+  };
+
+  const myProfileObj = {
+    0: <MyProfileView handleMyProfile={handleMyProfile} />,
+    1: <MyProfileModification handleMyProfile={handleMyProfile} />,
+  };
+  return <div className="myPageProfile">{myProfileObj[myProfile]}</div>;
 };
 
 export default MyProfile;

@@ -80,7 +80,6 @@ const SurveyList = () => {
           <div className="surveyListRightTop">
             {surveyTargetObj[surveyTargetBox]}
             <button className="surveyWriteBnt">
-              {" "}
               <Link
                 to="/surveyWrite"
                 style={{
