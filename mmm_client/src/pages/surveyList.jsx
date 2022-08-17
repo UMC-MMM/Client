@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import { useState } from "react";
 import Footer from "../components/footer";
-import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
-import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
+// import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
+// import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
 import RedCircle from "../assets/semicircle-r.png";
 import SurveyListBox from "../components/surveyListBox";
+import SurveyTarget from "../components/surveyTarget";
 
 const SurveyList = () => {
   const [surveyList, setSurveyList] = useState(0);
-  const [surveyTargetBox, setSurveyTargetBox] = useState(0);
+  // const [surveyTargetBox, setSurveyTargetBox] = useState(0);
 
   const surveyListArr = [
     { name: "전체" },
@@ -29,18 +30,18 @@ const SurveyList = () => {
     setSurveyList(index);
   };
 
-  const handleSurveyTarget = () => {
-    if (surveyTargetBox === 0) {
-      setSurveyTargetBox(1);
-    } else if (surveyTargetBox === 1) {
-      setSurveyTargetBox(0);
-    }
-  };
+  // const handleSurveyTarget = () => {
+  //   if (surveyTargetBox === 0) {
+  //     setSurveyTargetBox(1);
+  //   } else if (surveyTargetBox === 1) {
+  //     setSurveyTargetBox(0);
+  //   }
+  // };
 
-  const surveyTargetObj = {
-    0: <SurveyTargetBoxSmall handleSurveyTarget={handleSurveyTarget} />,
-    1: <SurveyTargetBoxBig handleSurveyTarget={handleSurveyTarget} />,
-  };
+  // const surveyTargetObj = {
+  //   0: <SurveyTargetBoxSmall handleSurveyTarget={handleSurveyTarget} />,
+  //   1: <SurveyTargetBoxBig handleSurveyTarget={handleSurveyTarget} />,
+  // };
 
   return (
     <>
@@ -78,7 +79,7 @@ const SurveyList = () => {
         </div>
         <div className="surveyListRight">
           <div className="surveyListRightTop">
-            {surveyTargetObj[surveyTargetBox]}
+            <SurveyTarget />
             <button className="surveyWriteBnt">
               <Link
                 to="/surveyWrite"
