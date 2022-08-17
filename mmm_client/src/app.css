@@ -961,7 +961,7 @@
 }
 
 .joinBox4A1 input {
-  border: 0;
+  border: none;
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
@@ -1047,8 +1047,9 @@
 /* 설문조사 게시 화면 */
 .surveyPostTitleBox {
   margin: 0 auto;
+  margin-top: 96px;
   padding: 10px;
-  width: 40%;
+  width: 60%;
   background: #eeeeee;
   border-radius: 20px;
 }
@@ -1558,4 +1559,595 @@
 
 .footerContactEmail {
   display: flex;
+}
+
+/* 설문조사 리스트 페이지-구분선 */
+.surveyListLineFirst {
+  border: 2px solid #eeeeee;
+  margin-top: 42px;
+}
+
+.surveyListLine {
+  border: 2px solid #eeeeee;
+}
+
+/* 설문조사리스트 페이지-listBox */
+.surveyListBox {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #8e8e8e; */
+}
+
+.boxTop,
+.myPageListBoxTop {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* background-color: #5c60e1; */
+}
+
+.boxTopLeft,
+.myPageListBoxTopLeft {
+  display: flex;
+  /* background-color: #56c4cd; */
+}
+
+.boxTopPoint {
+  background-color: #f3be00;
+  border-radius: 30px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  margin-top: 45px;
+  margin-right: 18px;
+}
+
+.boxTopTitle,
+.myPageListBoxTopTitle {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-top: 48px;
+  /* background-color: #78d6de; */
+}
+
+.boxTopTitleT,
+.myPageListBoxTopTitleT {
+  height: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  align-items: center;
+  color: #282828;
+}
+
+.boxTopTime,
+.myPageListBoxTopTime {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: flex-end;
+  color: #282828;
+  margin-left: 17px;
+}
+
+.boxTopProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  /* background-color: #78d6de; */
+}
+
+.boxTopProfileName {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 7px;
+}
+
+.boxSub,
+.myPageListBoxSub {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  /* background-color: #f3be00; */
+}
+
+.boxSubCond,
+.myPageListBoxSubCond {
+  display: flex;
+  margin-left: 55px;
+  /* background-color: #68c9d1; */
+}
+
+.boxSubCond1,
+.myPageListBoxSubCond1 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.boxSubCond2,
+.myPageListBoxSubCond2 {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 113px;
+  height: 33px;
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.boxSubHash,
+.myPageListBoxSubHash {
+  display: flex;
+  margin-left: 48px;
+  /* background-color: #78de87; */
+}
+
+.boxSubHash1,
+.boxSubHash2,
+.myPageListBoxSubHash1,
+.myPageListBoxSubHash2 {
+  width: 121px;
+  height: 33px;
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+  margin-right: 8px;
+}
+
+.boxSubHash3,
+.myPageListBoxSubHash3 {
+  width: 121px;
+  height: 33px;
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+}
+
+.boxBottom,
+.myPageListBoxBottom {
+  margin-top: 2px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  /* background-color: #f3be00; */
+}
+
+.boxBottomEnd,
+.myPageListBoxBottomEnd {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #282828;
+  margin-right: 17px;
+  /* background-color: #f300b6; */
+}
+
+/* myPageSurvey */
+.myPageListBox {
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.myPageListBoxTopPoint {
+  background-color: #f3be00;
+  border-radius: 30px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  margin-top: 45px;
+  margin-right: 18px;
+  margin-left: 23.19px;
+}
+
+.myPageListBoxTopRight {
+  margin-top: 20px;
+  margin-right: 23px;
+}
+
+.myPageListBoxTopPeople {
+  background: #e1605c;
+  border-radius: 10px;
+  width: 106px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 37px;
+  color: #fefefe;
+  align-items: center;
+  text-align: center;
+}
+
+.myPageListBoxBottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: #f3be00; */
+}
+
+.myPageListBoxBottomEnd {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #282828;
+  margin-right: 23px;
+  margin-bottom: 16px;
+  /* background-color: #f300b6; */
+}
+
+.myPageSurvey {
+  width: 100%;
+}
+
+/* myPageCoupon-쿠폰 */
+.myPageCoupon {
+  background: #eeeeee;
+  width: 461px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  mask: radial-gradient(circle at right, transparent 24px, #eeeeee 0px);
+}
+
+.myPageCouponTitle {
+  color: #282828;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  width: 388px;
+  height: 27px;
+  margin-top: 32px;
+  margin-left: 31px;
+}
+
+.myPageCouponDate {
+  color: #282828;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  width: 388px;
+  height: 21px;
+  margin-top: 8px;
+  margin-left: 31px;
+}
+
+.myPageCouponContent {
+  color: #777777;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  width: 388px;
+  height: 54px;
+  margin-top: 24px;
+  margin-left: 31px;
+}
+
+.myCouponTitle {
+  display: flex;
+}
+
+.myCouponTitleT {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+  width: 97px;
+  height: 30px;
+}
+
+.myCouponNum {
+  color: #68c9d1;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: right;
+  width: 41px;
+  height: 30px;
+  margin-left: 9px;
+}
+
+.myCouponItem {
+  margin-top: 24px;
+  height: 768px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: #56c4cd; */
+}
+
+/* myPage - 공지사항, 자주묻는질문 */
+.myPageNotice,
+.myPageFaq {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticeTitle,
+.faqTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+}
+
+.noticeContainer,
+.faqContainer {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #a2e3e9; */
+}
+
+.noticeItem,
+.faqItem {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background: #eeeeee;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.noticeItemNum,
+.faqItemNum {
+  width: 10px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #777777;
+  margin-left: 29.5px;
+  margin-right: 40px;
+}
+
+.noticeItemContent,
+.faqItemContent {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #282828;
+  width: 135px;
+  height: 27px;
+  margin-right: 662px;
+}
+
+.noticeItemDate,
+.faqItemDate {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777777;
+  width: 72px;
+  height: 21px;
+  margin-right: 29.5px;
+}
+
+/* myPage - 포인트 */
+.myPoint {
+  display: flex;
+  flex-direction: column;
+  width: 447px;
+  height: 117px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+}
+
+.myPointTitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 17px;
+  margin-left: 33px;
+  color: #282828;
+}
+
+.myPointContent {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  /* background-color: #e1605c; */
+}
+
+.myPointContPoint {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  color: #282828;
+  margin-left: 29px;
+  margin-right: 56px;
+}
+
+.myPointContPlusBtn {
+  background-color: #68c9d1;
+  border-radius: 10px;
+  width: 130px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  margin-right: 16px;
+}
+
+.myPointContShopBtn {
+  background: #68c9d1;
+  border-radius: 10px;
+  width: 89px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  border: none;
+  margin-right: 32px;
+}
+
+.myPointUsage {
+  margin-top: 72px;
+}
+
+.myPointUsageTitle {
+  width: 97px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777777;
+}
+
+.myPointUsageContent {
+  display: flex;
+  margin-top: 7px;
+}
+
+.myPointUsagePlus {
+  width: 447px;
+  margin-right: 100px;
+  /* background-color: aquamarine; */
+}
+
+.myPointUsagePlusTitle,
+.myPointUsageMinusTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+}
+
+.myPointUsagePlusDate,
+.myPointUsageMinusDate {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 26px;
+  color: #777777;
+}
+
+.myPointUsagePlusContent,
+.myPointUsageMinusContent {
+  padding-bottom: 39px;
+  /* background-color: #89acdd; */
+}
+
+.myPointUsagePlusItem,
+.myPointUsageMinusItem {
+  display: flex;
+  margin-top: 18px;
+  align-items: center;
+  /* background-color: #f2f8a2; */
+}
+
+.myPointUsagePlusItemPoint,
+.myPointUsageMinusItemPoint {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  margin-left: 11px;
+  margin-right: 8px;
+  color: #000000;
+}
+
+.myPointUsagePlusItemSum1 {
+  width: 82px;
+  height: 23px;
+  padding: 1px 7px;
+  background: #e4ebf5;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 8px;
+  color: #89acdd;
+}
+
+.myPointUsagePlusItemCont,
+.myPointUsageMinusItemCont {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #777777;
+}
+
+.myPointUsagePlusItemSum2 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #e4f4f5;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #75b6bc;
+  margin-right: 8px;
+}
+
+.myPointUsageMinus {
+  width: 447px;
+  /* background-color: aquamarine; */
+}
+
+.myPointUsageMinusItemSum1 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #ffeaea;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #e68582;
+  margin-right: 8px;
+}
+
+.myPointUsageMinusItemSum2 {
+  padding: 1px 7px;
+  width: 69px;
+  height: 23px;
+  background: #ffefe7;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #f2a57a;
+  margin-right: 8px;
 }

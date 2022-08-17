@@ -6,7 +6,7 @@ import MyProfile from "../components/myPageMenu/myProfile";
 import MyCoupon from "../components/myPageMenu/myCoupon";
 import MyPoint from "../components/myPageMenu/myPoint";
 import MySurvey from "../components/myPageMenu/mySurvey";
-import Notice from "../components/notice";
+import Notice from "../components/myPageMenu/notice";
 import Faq from "../components/myPageMenu/faq";
 
 import BlueCircle from "../assets/semicircle-b.png";
