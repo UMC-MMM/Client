@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
-const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
+const SurveyTargetBoxBig = ({ handleSurveyTarget }) => {
   const targetAge = [
     { key: 0, selectAge: "나이 상관없음" },
     { key: 1, selectAge: "10대" },
@@ -94,4 +94,4 @@ const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
   );
 };
 
-export default SurveyTargetBoxSmall;
+export default SurveyTargetBoxBig;
