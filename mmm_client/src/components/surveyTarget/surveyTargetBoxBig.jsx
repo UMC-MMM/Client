@@ -1,17 +1,37 @@
 import React from "react";
+import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
 const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
   const targetAge = [
-    "나이 상관없음",
-    "10대",
-    "20대",
-    "30대",
-    "40대",
-    "50대",
-    "60대 이상",
+    { key: 0, selectAge: "나이 상관없음" },
+    { key: 1, selectAge: "10대" },
+    { key: 2, selectAge: "20대" },
+    { key: 3, selectAge: "30대" },
+    { key: 4, selectAge: "40대" },
+    { key: 5, selectAge: "50대" },
+    { key: 6, selectAge: "60대 이상" },
   ];
-  const targetGender = ["성별 상관없음", "남성", "여성"];
+  // key 값으로 구분
+
+  const targetGender = [
+    { key: 0, selectGender: "성별 상관없음" },
+    { key: 1, selectGender: "남성" },
+    { key: 2, selectGender: "여성" },
+  ];
+
+  const [selectTargetAge, setSelectTargetAge] = useState(0);
+  const [selectTargetGender, setSelectTargetGender] = useState(0);
+
+  const handleTargetAge = (age) => {
+    setSelectTargetAge(age);
+    // console.log(age);
+  };
+
+  const handleTargetGender = (gender) => {
+    setSelectTargetGender(gender);
+    // console.log(gender);
+  };
 
   return (
     <div className="surveyListSelectBoxBig">
@@ -32,12 +52,30 @@ const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
       <div className="surveyListSelectBoxBigTagContainer">
         <div className="surveyListTargetAge">
           {targetAge.map((age) => (
-            <span className="surveyListTargetTag">{age}</span>
+            <span
+              className={
+                selectTargetAge === age.key
+                  ? "surveyListTargetTag surveyListTargetTagClicked"
+                  : "surveyListTargetTag"
+              }
+              onClick={() => handleTargetAge(age.key)}
+            >
+              {age.selectAge}
+            </span>
           ))}
         </div>
         <div className="surveyListTargetGender">
           {targetGender.map((gender) => (
-            <span className="surveyListTargetTag">{gender}</span>
+            <span
+              className={
+                selectTargetGender === gender.key
+                  ? "surveyListTargetTag surveyListTargetTagClicked"
+                  : "surveyListTargetTag"
+              }
+              onClick={() => handleTargetGender(gender.key)}
+            >
+              {gender.selectGender}
+            </span>
           ))}
         </div>
         <button className="surveyListTargetBnt">적용</button>
