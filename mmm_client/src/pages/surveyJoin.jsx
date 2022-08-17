@@ -1,11 +1,24 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { BsCircle } from "react-icons/bs";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 import { BsSquare } from "react-icons/bs";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 import Footer from "../components/footer";
 
 const SurveyJoin = () => {
+  const [circleCheck, setCircleCheck] = useState(false);
+  const [squareCheck, setSquareCheck] = useState(false);
+
+  const handleCircleCheck = () => {
+    setCircleCheck(!circleCheck);
+  };
+  const handleSquareCheck = () => {
+    setSquareCheck(!squareCheck);
+  };
+
   return (
     <>
       <Navbar />
@@ -48,14 +61,26 @@ const SurveyJoin = () => {
             <div className="joinBox2Q">질문1</div>
             <div className="joinBox2A">
               <div className="joinBox2A1">
-                <div className="joinBox2A1Btn">
-                  <BsCircle size="20px" />
+                <div
+                  className="joinBox2A1Btn"
+                  id="circleCheck1"
+                  onClick={handleCircleCheck}
+                >
+                  {circleCheck ? (
+                    <BsFillCheckCircleFill size="20px" />
+                  ) : (
+                    <BsCircle size="20px" />
+                  )}
                 </div>
                 <div className="joinBox2A1Text">네, 사용해 본 적 있습니다.</div>
               </div>
               <div className="joinBox2A2">
-                <div className="joinBox2A2Btn">
-                  <BsCircle size="20px" />
+                <div className="joinBox2A2Btn" onClick={handleCircleCheck}>
+                  {circleCheck ? (
+                    <BsFillCheckCircleFill size="20px" />
+                  ) : (
+                    <BsCircle size="20px" />
+                  )}
                 </div>
                 <div className="joinBox2A2Text">
                   아니요, 사용해 본 적 없습니다.
@@ -70,20 +95,32 @@ const SurveyJoin = () => {
             <div className="joinBox3Q">질문2</div>
             <div className="joinBox3A">
               <div className="joinBox3A1">
-                <div className="joinBox3A1Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A1Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A1Text">찾기가 어렵다</div>
               </div>
               <div className="joinBox3A2">
-                <div className="joinBox3A2Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A2Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A2Text">찾기가 어렵다</div>
               </div>
               <div className="joinBox3A3">
-                <div className="joinBox3A3Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A3Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A3Text">찾기가 어렵다</div>
               </div>
