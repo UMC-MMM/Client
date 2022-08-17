@@ -1047,8 +1047,9 @@
 /* 설문조사 게시 화면 */
 .surveyPostTitleBox {
   margin: 0 auto;
+  margin-top: 96px;
   padding: 10px;
-  width: 40%;
+  width: 60%;
   background: #eeeeee;
   border-radius: 20px;
 }
