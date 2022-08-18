@@ -5,28 +5,22 @@ import MultipleSelection from "../components/surveyPostKindContents/multipleSele
 import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
 
 const SurveyWrite = () => {
-  const [surveyList, setSurveyList] = useState("단일선택형");
   const [surveyNumber, setSurveyNumber] = useState(0);
 
-  const onSurveyListChange = (e) => {
-    const { value } = e.target;
-    setSurveyList(value);
-  };
-
-  const handleSurveyNumber = () => {
-    setSurveyNumber();
-  };
-
   const surveyLists = [
-    { id: "0", value: "단일선택형" },
-    { id: "1", value: "다중선택형" },
-    { id: "2", value: "서술형" },
+    { type: "단일선택형" },
+    { type: "다중선택형" },
+    { type: "서술형" },
   ];
 
   const surveyListsObj = {
     0: <SingleSelection />,
     1: <MultipleSelection />,
     2: <DescriptiveForm />,
+  };
+
+  const handleSurveyNumber = (index) => {
+    setSurveyNumber(index);
   };
 
   return (
@@ -62,20 +56,18 @@ const SurveyWrite = () => {
           </div>
           <div className="surveyPostChooseSurveyKindAndDelete">
             <div className="surveyPostChooseSurveyKind">
-              <select
-                className="surveyPostChooseSurveyKindSelect"
-                value={surveyList}
-                onChange={onSurveyListChange}
-              >
-                {surveyLists.map((surveyList) => (
-                  <option
-                    value={surveyList.id}
-                    onChange={() => handleSurveyNumber(surveyList.id)}
-                  >
-                    {surveyList.value}
-                  </option>
-                ))}
-              </select>
+              {surveyLists.map((surveyList, index) => (
+                <div
+                  className={
+                    surveyNumber === index
+                      ? "surveyPostChooseSurveyKindSelect typeSelected"
+                      : "surveyPostChooseSurveyKindSelect"
+                  }
+                  onClick={() => handleSurveyNumber(index)}
+                >
+                  {surveyList.type}
+                </div>
+              ))}
             </div>
             <div className="surveyPostDelete">삭제</div>
           </div>

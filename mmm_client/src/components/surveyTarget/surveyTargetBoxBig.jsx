@@ -31,15 +31,15 @@ const SurveyTargetBoxBig = ({ handleSurveyTarget }) => {
     setSelectTargetGender(gender);
   };
 
-  const handleSelectTarget = () => {
-    console.log(userSelectTarget.age);
-    console.log(userSelectTarget.gender);
-  };
+  // const handleSelectTarget = () => {
+  //   console.log(userSelectTarget.age);
+  //   console.log(userSelectTarget.gender);
+  // };
 
-  const userSelectTarget = {
-    age: { selectTargetAge },
-    gender: { selectTargetGender },
-  };
+  // const userSelectTarget = {
+  //   age: { selectTargetAge },
+  //   gender: { selectTargetGender },
+  // };
 
   return (
     <div className="surveyListSelectBoxBig">
@@ -86,7 +86,10 @@ const SurveyTargetBoxBig = ({ handleSurveyTarget }) => {
             </span>
           ))}
         </div>
-        <button className="surveyListTargetBnt" onClick={handleSelectTarget}>
+        <button
+          className="surveyListTargetBnt"
+          // onClick={handleSelectTarget}
+        >
           적용
         </button>
       </div>
