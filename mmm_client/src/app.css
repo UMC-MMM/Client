@@ -1045,52 +1045,6 @@
   margin-bottom: 70px;
 }
 
-/* 설문조사 게시 화면 */
-.surveyPostTitleBox {
-  margin: 0 auto;
-  margin-top: 96px;
-  padding: 10px;
-  width: 60%;
-  background: #eeeeee;
-  border-radius: 20px;
-}
-
-.surveyPostTitleInput {
-  margin: 20px 0 0 30px;
-}
-
-#surveyPostTitleInputId {
-  width: 90%;
-  border: none;
-  background-color: #eeeeee;
-  appearance: none;
-  text-decoration: none;
-  outline: 0;
-  color: #8e8e8e;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  font-family: "Noto Sans KR";
-}
-
-.surveyPostDescriptionInput {
-  margin: 20px 0 30px 30px;
-}
-
-#surveyPostDescriptionInputId {
-  width: 90%;
-  border: none;
-  background-color: #eeeeee;
-  appearance: none;
-  text-decoration: none;
-  outline: 0;
-  color: #8e8e8e;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Noto Sans KR";
-}
-
 /* 설문조사 목록 페이지 */
 
 .surveyList {
@@ -1111,7 +1065,8 @@
 
 .surveyListSelectBoxSmall {
   height: 65px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -1128,7 +1083,8 @@
 
 .surveyListSelectBoxBig {
   height: 190px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -2233,4 +2189,161 @@
   line-height: 21px;
   color: #f2a57a;
   margin-right: 8px;
+}
+
+/* 설문조사 게시화면 */
+
+.surveyPostTitleBox {
+  margin: 0 auto;
+  margin-top: 96px;
+  padding: 10px;
+  width: 45%;
+  background: #eeeeee;
+  border-radius: 20px;
+}
+
+.surveyPostTitleInput {
+  margin: 20px 0 30px 30px;
+}
+
+#surveyPostTitleInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Noto Sans KR";
+}
+
+.surveyPostDescriptionInput {
+  margin: 20px 0 30px 30px;
+}
+
+#surveyPostDescriptionInputId {
+  width: 90%;
+  border: none;
+  background-color: #eeeeee;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+  color: #8e8e8e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Noto Sans KR";
+}
+
+.surveyPostChoose {
+  margin: 16px 27px 16px 27px;
+  padding: 10px 12px 10px 16px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.surveyPostChooseText {
+  margin-left: 16px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #282828;
+}
+
+.surveyPostCircleAndText {
+  display: flex;
+}
+
+.surveyPostChoosePlusBtn {
+  margin-left: 27px;
+  margin-bottom: 45px;
+  margin-top: 24px;
+  height: 42px;
+  width: 104px;
+  border-radius: 10px;
+  background: #cfeaec;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 42px;
+  color: #31b4bf;
+}
+
+.surveyPostTitleinputAndChooseSurveyKindAndDelete {
+  display: flex;
+  justify-content: space-between;
+}
+
+.surveyPostChooseSurveyKind {
+  display: flex;
+  width: 105px;
+  height: 25px;
+  margin-top: 10px;
+  margin-right: 27px;
+  padding: 12px 14px 10px 15px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
+}
+
+.surveyPostChooseSurveyKindText {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #282828;
+}
+
+.surveyPostChooseSurveyKindAndDelete {
+  display: flex;
+  margin-right: 30px;
+}
+
+.surveyPostDelete {
+  color: #e1605c;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 22px;
+}
+
+.surveyPostPlusQuestionsBtn {
+  width: 136px;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 55px;
+  border-radius: 5px;
+  background-color: #aceaef;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 47px;
+}
+
+.surveyPostCompleteBtn {
+  width: 168px;
+  height: 52px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 105px;
+  margin-bottom: 155px;
+  background-color: #68c9d1;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 52px;
+  color: #fff;
+}
+
+.surveyPostChooseSurveyKindSelect {
+  border: none;
+  background-color: #e4e4e4;
+  font-family: NotoSansKR;
+  font-size: 14px;
+  font-weight: normal;
+  color: #282828;
+  outline: none;
 }

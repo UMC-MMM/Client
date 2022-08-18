@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
-const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
+const SurveyTargetBoxBig = ({ handleSurveyTarget }) => {
   const targetAge = [
     { key: 0, selectAge: "나이 상관없음" },
     { key: 1, selectAge: "10대" },
@@ -25,12 +25,20 @@ const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
 
   const handleTargetAge = (age) => {
     setSelectTargetAge(age);
-    // console.log(age);
   };
 
   const handleTargetGender = (gender) => {
     setSelectTargetGender(gender);
-    // console.log(gender);
+  };
+
+  const handleSelectTarget = () => {
+    console.log(userSelectTarget.age);
+    console.log(userSelectTarget.gender);
+  };
+
+  const userSelectTarget = {
+    age: { selectTargetAge },
+    gender: { selectTargetGender },
   };
 
   return (
@@ -78,10 +86,12 @@ const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
             </span>
           ))}
         </div>
-        <button className="surveyListTargetBnt">적용</button>
+        <button className="surveyListTargetBnt" onClick={handleSelectTarget}>
+          적용
+        </button>
       </div>
     </div>
   );
 };
 
-export default SurveyTargetBoxSmall;
+export default SurveyTargetBoxBig;
