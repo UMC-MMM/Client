@@ -6,7 +6,9 @@ const Login = () => {
   return (
     <>
       <div className="loginTitle logo">
-        <Survave />
+        <Link to="/">
+          <Survave />
+        </Link>
       </div>
       <div className="loginLogin">로그인</div>
       <div className="loginInputId">
