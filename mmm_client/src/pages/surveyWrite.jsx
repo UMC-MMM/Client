@@ -5,28 +5,22 @@ import MultipleSelection from "../components/surveyPostKindContents/multipleSele
 import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
 
 const SurveyWrite = () => {
-  const [surveyList, setSurveyList] = useState("단일선택형");
   const [surveyNumber, setSurveyNumber] = useState(0);
 
-  const onSurveyListChange = (e) => {
-    const { value } = e.target;
-    setSurveyList(value);
-  };
-
-  const handleSurveyNumber = () => {
-    setSurveyNumber();
-  };
-
   const surveyLists = [
-    { id: "0", value: "단일선택형" },
-    { id: "1", value: "다중선택형" },
-    { id: "2", value: "서술형" },
+    { id: 0, type: "단일선택형" },
+    { id: 1, type: "다중선택형" },
+    { id: 2, type: "서술형" },
   ];
 
   const surveyListsObj = {
     0: <SingleSelection />,
     1: <MultipleSelection />,
     2: <DescriptiveForm />,
+  };
+
+  const handleSurveyNumber = (index) => {
+    setSurveyNumber(index);
   };
 
   return (
@@ -62,20 +56,25 @@ const SurveyWrite = () => {
           </div>
           <div className="surveyPostChooseSurveyKindAndDelete">
             <div className="surveyPostChooseSurveyKind">
-              <select
+              <select className="surveyPostChooseSurveyKindSelect">
+                {surveyLists.map((survey, index) => {
+                  return (
+                    <option onClick={() => handleSurveyNumber(index)}>
+                      <div>{survey.type}</div>
+                    </option>
+                  );
+                })}
+              </select>
+              {/* <select
                 className="surveyPostChooseSurveyKindSelect"
                 value={surveyList}
                 onChange={onSurveyListChange}
+                onClick={handleSurveyNumber}
               >
                 {surveyLists.map((surveyList) => (
-                  <option
-                    value={surveyList.id}
-                    onChange={() => handleSurveyNumber(surveyList.id)}
-                  >
-                    {surveyList.value}
-                  </option>
+                  <option value={surveyList.id}>{surveyList.value}</option>
                 ))}
-              </select>
+              </select> */}
             </div>
             <div className="surveyPostDelete">삭제</div>
           </div>

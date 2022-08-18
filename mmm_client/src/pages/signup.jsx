@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
@@ -12,6 +13,43 @@ const Signup = () => {
   const handleAgree = () => {
     color === "#8e8e8e" ? setColor("#68c9d1") : setColor("#8e8e8e");
     setAgree(!agree);
+  };
+
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleIdChange = (e) => {
+    setId(e.target.value);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSubmitSignIn = async () => {
+    const body = {
+      id,
+      name,
+      email,
+      password,
+      confirmPassword,
+    };
+    await axios.post(`/user/join`, body);
   };
 
   return (
@@ -32,6 +70,7 @@ const Signup = () => {
             type="text"
             name="name"
             placeholder="실명을 입력하세요."
+            onChange={handleNameChange}
           ></input>
         </div>
         <div className="signupBoxTitle">이메일</div>
@@ -41,6 +80,7 @@ const Signup = () => {
             type="text"
             name="email"
             placeholder="이메일 주소를 입력하세요."
+            onChange={handleEmailChange}
           ></input>
         </div>
         <div className="signupBoxTitle">아이디</div>
@@ -50,6 +90,7 @@ const Signup = () => {
             type="text"
             name="id"
             placeholder="서베이브에 사용할 아이디를 입력하세요."
+            onChange={handleIdChange}
           ></input>
         </div>
         <div className="signupBoxTitle">비밀번호</div>
@@ -59,6 +100,7 @@ const Signup = () => {
             type="password"
             name="password"
             placeholder="6~16자의 영문자, 숫자, 특수문자를 사용하세요."
+            onChange={handlePasswordChange}
           ></input>
         </div>
         <div className="signupBoxTitle">비밀번호 확인</div>
@@ -69,6 +111,7 @@ const Signup = () => {
             type="text"
             name="passwordCheck"
             placeholder="비밀번호를 한번 더 입력하세요."
+            onChange={handleConfirmPasswordChange}
           ></input>
         </div>
         <div className="signupAgreeContainer" onClick={handleAgree}>
@@ -100,6 +143,7 @@ const Signup = () => {
             type="submit"
             name="submit"
             value="회원가입 하기"
+            onClick={handleSubmitSignIn}
           />
         </div>
         {/* <div className="loginFindIdandPassword findInSignup">
