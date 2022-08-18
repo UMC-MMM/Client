@@ -17,7 +17,9 @@ const Signup = () => {
   return (
     <>
       <div className="signupTitle">
-        <Survave />
+        <Link to="/">
+          <Survave />
+        </Link>
       </div>
       <div className="signupAskMember">이미 서베이브 회원이신가요?</div>
       <Link to="/login" style={{ textDecoration: "none", cursor: "pointer" }}>
