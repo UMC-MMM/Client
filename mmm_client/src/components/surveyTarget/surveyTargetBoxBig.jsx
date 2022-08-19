@@ -1,38 +1,16 @@
 import React from "react";
-import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
-const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
-  const targetAge = [
-    { key: 0, selectAge: "나이 상관없음" },
-    { key: 1, selectAge: "10대" },
-    { key: 2, selectAge: "20대" },
-    { key: 3, selectAge: "30대" },
-    { key: 4, selectAge: "40대" },
-    { key: 5, selectAge: "50대" },
-    { key: 6, selectAge: "60대 이상" },
-  ];
-  // key 값으로 구분
-
-  const targetGender = [
-    { key: 0, selectGender: "성별 상관없음" },
-    { key: 1, selectGender: "남성" },
-    { key: 2, selectGender: "여성" },
-  ];
-
-  const [selectTargetAge, setSelectTargetAge] = useState(0);
-  const [selectTargetGender, setSelectTargetGender] = useState(0);
-
-  const handleTargetAge = (age) => {
-    setSelectTargetAge(age);
-    // console.log(age);
-  };
-
-  const handleTargetGender = (gender) => {
-    setSelectTargetGender(gender);
-    // console.log(gender);
-  };
-
+const SurveyTargetBoxBig = ({
+  handleSurveyTarget,
+  targetAge,
+  targetGender,
+  handleTargetGender,
+  handleTargetAge,
+  selectTargetAge,
+  selectTargetGender,
+  handleSelectTarget,
+}) => {
   return (
     <div className="surveyListSelectBoxBig">
       <div className="surveyListSelectBoxBigTop">
@@ -78,10 +56,12 @@ const SurveyTargetBoxSmall = ({ handleSurveyTarget }) => {
             </span>
           ))}
         </div>
-        <button className="surveyListTargetBnt">적용</button>
+        <button className="surveyListTargetBnt" onClick={handleSelectTarget}>
+          적용
+        </button>
       </div>
     </div>
   );
 };
 
-export default SurveyTargetBoxSmall;
+export default SurveyTargetBoxBig;
