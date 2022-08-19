@@ -8,9 +8,6 @@ const SurveyWrite = () => {
   const [surveyNumber, setSurveyNumber] = useState(0);
 
   const surveyLists = [
-    { type: "단일선택형" },
-    { type: "다중선택형" },
-    { type: "서술형" },
   ];
 
   const surveyListsObj = {
@@ -56,18 +53,6 @@ const SurveyWrite = () => {
           </div>
           <div className="surveyPostChooseSurveyKindAndDelete">
             <div className="surveyPostChooseSurveyKind">
-              {surveyLists.map((surveyList, index) => (
-                <div
-                  className={
-                    surveyNumber === index
-                      ? "surveyPostChooseSurveyKindSelect typeSelected"
-                      : "surveyPostChooseSurveyKindSelect"
-                  }
-                  onClick={() => handleSurveyNumber(index)}
-                >
-                  {surveyList.type}
-                </div>
-              ))}
             </div>
             <div className="surveyPostDelete">삭제</div>
           </div>

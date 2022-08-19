@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
@@ -14,6 +15,43 @@ const Signup = () => {
     setAgree(!agree);
   };
 
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleIdChange = (e) => {
+    setId(e.target.value);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSubmitSignIn = async () => {
+    const body = {
+      id,
+      name,
+      email,
+      password,
+      confirmPassword,
+    };
+    await axios.post(`/user/join`, body);
+  };
+
   return (
     <>
       <div className="signupTitle">
@@ -25,17 +63,6 @@ const Signup = () => {
       <Link to="/login" style={{ textDecoration: "none", cursor: "pointer" }}>
         <div className="signUpLoginBtn">로그인 하기</div>
       </Link>
-      <form>
-        <div className="signupSignup">회원가입</div>
-        <div className="signupBoxContainer">
-          <div className="signupBoxTitle">이름</div>
-          <div className="signupInputName">
-            <input
-              id="signupInputName"
-              type="text"
-              name="name"
-              placeholder="실명을 입력하세요."
-            ></input>
           </div>
           <div className="signupBoxTitle">이메일</div>
           <div className="signupInputEmail">
@@ -95,17 +122,6 @@ const Signup = () => {
           >
             <div className="signupAgreeCheck">동의서 확인하기 →</div>
           </Link>
-
-          <div className="signupSubmitBtn">
-            <input
-              id="signupSubmitBtn"
-              className="signupSubmit"
-              type="submit"
-              name="submit"
-              value="회원가입 하기"
-            />
-          </div>
-          {/* <div className="loginFindIdandPassword findInSignup">
           <span>아이디 찾기</span>
           <span>|</span>
           <span>비밀번호 찾기</span>
