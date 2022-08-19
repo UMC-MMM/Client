@@ -53,7 +53,7 @@ const MyPage = () => {
                           ? "myPageListItemCircle myPageListCircleClicked"
                           : "myPageListItemCircle"
                       }
-                      src={BlueCirclee}
+                      src={BlueCircle}
                       alt="선택한 메뉴"
                     ></img>
                     <div
