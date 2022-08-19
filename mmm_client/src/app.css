@@ -847,7 +847,7 @@
 }
 
 .joinBox2Shape {
-  height: 239px;
+  /* height: 239px; */
   border-radius: 20px;
   background-color: #eeeeee;
   display: flex;
@@ -882,6 +882,7 @@
   font-size: 19px;
   line-height: 28px;
   color: #282828;
+  margin-bottom: 10px;
   /* background-color: #f3be00; */
 }
 
@@ -908,6 +909,7 @@
   border-radius: 10px;
   height: 42px;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .joinBox2A1Btn,
@@ -935,7 +937,7 @@
 }
 
 .joinBox3Shape {
-  height: 297px;
+  /* height: 297px; */
   border-radius: 20px;
   background-color: #eeeeee;
   display: flex;
