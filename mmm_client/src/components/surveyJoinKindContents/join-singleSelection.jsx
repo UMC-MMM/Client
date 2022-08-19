@@ -5,8 +5,23 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 const JoinSingleSelection = () => {
   const [userSelectSingleSelection, setUserSelectSingleSelection] = useState();
 
+  // 체크 표시 취소를 위한 상태 정의
+  const [userSelect, setUserSelect] = useState();
+
   const handleSelectSingleSelection = (select) => {
-    setUserSelectSingleSelection(select);
+    handleSelect(select);
+  };
+
+  const handleSelect = (select) => {
+    setUserSelect(!userSelect);
+    // 반대 상태로 변경해주기
+    if (userSelectSingleSelection === select) {
+      // 만약 이미 선택된 것 이였다면 -> 삭제해주기
+      setUserSelectSingleSelection();
+    } else {
+      // 선택된게 아니면 -> state 변경
+      setUserSelectSingleSelection(select);
+    }
   };
 
   const singleSelection = {
