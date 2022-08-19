@@ -10,6 +10,7 @@ import SurveyList from "./pages/surveyList";
 import SurveyJoin from "./pages/surveyJoin";
 import MyPage from "./pages/myPage";
 import SurveyWrite from "./pages/surveyWrite";
+import SurveyWrite2 from "./pages/surveyWrite2";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/surveyJoin" element={<SurveyJoin />}></Route>
         <Route exact path="/myPage" element={<MyPage />}></Route>
         <Route exact path="/surveyWrite" element={<SurveyWrite />}></Route>
+        <Route exact path="/surveyWrite2" element={<SurveyWrite2 />}></Route>
       </Routes>
     </>
   );

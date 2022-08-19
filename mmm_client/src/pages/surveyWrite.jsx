@@ -3,12 +3,12 @@ import Navbar from "../components/navbar";
 import SingleSelection from "../components/surveyPostKindContents/singleSelection";
 import MultipleSelection from "../components/surveyPostKindContents/multipleSelection";
 import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
+import { Link } from "react-router-dom";
 
 const SurveyWrite = () => {
   const [surveyNumber, setSurveyNumber] = useState(0);
 
-  const surveyLists = [
-  ];
+  const surveyLists = [];
 
   const surveyListsObj = {
     0: <SingleSelection />,
@@ -52,8 +52,7 @@ const SurveyWrite = () => {
             />
           </div>
           <div className="surveyPostChooseSurveyKindAndDelete">
-            <div className="surveyPostChooseSurveyKind">
-            </div>
+            <div className="surveyPostChooseSurveyKind"></div>
             <div className="surveyPostDelete">삭제</div>
           </div>
         </div>
@@ -62,7 +61,18 @@ const SurveyWrite = () => {
         </div>
       </div>
       <div className="surveyPostPlusQuestionsBtn">+질문추가</div>
-      <div className="surveyPostCompleteBtn">설문작성완료</div>
+      <div className="surveyPostCompleteBtn">
+        <Link
+          to="/surveyWrite2"
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#fefefe",
+          }}
+        >
+          설문작성완료
+        </Link>
+      </div>
     </>
   );
 };
