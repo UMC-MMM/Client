@@ -1,10 +1,15 @@
 import React from "react";
+import userProfileImg from "../../assets/userProfileImg.png";
 
 const MyProfileView = ({ handleMyProfile }) => {
   return (
     <div className="myPageProfile">
       <div className="myPageRightImgBox">
-        <div className="myPageRightImg"></div>
+        <img
+          className="myPageRightImg"
+          src={userProfileImg}
+          alt="사용자 기본 프로필 이미지"
+        ></img>
       </div>
       <div className="myPageRightProfile">
         <div>

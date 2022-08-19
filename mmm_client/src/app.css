@@ -1403,6 +1403,7 @@
 .myPageRightImgBox {
   flex-basis: 25%;
   justify-content: center;
+  text-align: center;
 }
 
 .myPageRightImg {
