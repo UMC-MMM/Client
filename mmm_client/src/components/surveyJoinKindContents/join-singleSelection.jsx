@@ -5,19 +5,19 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 const JoinSingleSelection = () => {
   const [userSelectSingleSelection, setUserSelectSingleSelection] = useState();
 
-  const handleSelectSingleSelection = () => {
-    setUserSelectSingleSelection(!userSelectSingleSelection);
+  const handleSelectSingleSelection = (select) => {
+    setUserSelectSingleSelection(select);
   };
 
   const singleSelection = {
     essential: true,
     title: "단일선택형 질문",
     selections: [
-      "네, 사용해 본 적 있습니다.",
-      "아니요, 사용해 본 적 없습니다.",
-      "단일 선택1",
-      "단일 선택2",
-      "단일 선택3",
+      { key: 0, selection: "네, 사용해 본 적 있습니다." },
+      { key: 1, selection: "아니요, 사용해 본 적 없습니다." },
+      { key: 2, selection: "단일 선택1" },
+      { key: 3, selection: "단일 선택2" },
+      { key: 4, selection: "단일 선택3" },
     ],
   };
 
@@ -31,20 +31,22 @@ const JoinSingleSelection = () => {
         <div className="joinBox2A">
           {singleSelection.selections.map((selection) => {
             return (
-              <div className="joinBox2A1">
-                <div
-                  className="joinBox2A1Btn"
-                  id="circleBtn1"
-                  onClick={() => handleSelectSingleSelection()}
-                >
-                  {userSelectSingleSelection ? (
-                    <BsFillCheckCircleFill size="20px" />
-                  ) : (
-                    <BsCircle size="20px" />
-                  )}
+              <label onClick={() => handleSelectSingleSelection(selection.key)}>
+                <div className="joinBox2A1">
+                  <div
+                    className="joinBox2A1Btn"
+                    id="circleBtn1"
+                    // onClick={() => handleSelectSingleSelection()}
+                  >
+                    {userSelectSingleSelection === selection.key ? (
+                      <BsFillCheckCircleFill size="20px" />
+                    ) : (
+                      <BsCircle size="20px" />
+                    )}
+                  </div>
+                  <div className="joinBox2A1Text">{selection.selection}</div>
                 </div>
-                <div className="joinBox2A1Text">{selection}</div>
-              </div>
+              </label>
             );
           })}
         </div>
