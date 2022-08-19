@@ -33,11 +33,7 @@ const JoinSingleSelection = () => {
             return (
               <label onClick={() => handleSelectSingleSelection(selection.key)}>
                 <div className="joinBox2A1">
-                  <div
-                    className="joinBox2A1Btn"
-                    id="circleBtn1"
-                    // onClick={() => handleSelectSingleSelection()}
-                  >
+                  <div className="joinBox2A1Btn" id="circleBtn1">
                     {userSelectSingleSelection === selection.key ? (
                       <BsFillCheckCircleFill size="20px" />
                     ) : (
