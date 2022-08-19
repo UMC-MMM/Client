@@ -12,7 +12,13 @@ const JoinMultiSelection = () => {
   const multiSelection = {
     essential: true,
     title: "다중선택형 질문",
-    selections: ["다중선택항목1", "다중선택항목2", "다중선택항목3"],
+    selections: [
+      "다중선택항목1",
+      "다중선택항목2",
+      "다중선택항목3",
+      "다중선택4",
+      "다중선택5",
+    ],
   };
 
   return (
