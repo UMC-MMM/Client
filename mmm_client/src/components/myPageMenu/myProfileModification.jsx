@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 // import { BsCheck } from "react-icons/bs";
+import userProfileImg from "../../assets/userProfileImg.png";
 
 const MyProfileModification = ({ handleMyProfile }) => {
   const userAge = [
@@ -30,7 +31,11 @@ const MyProfileModification = ({ handleMyProfile }) => {
   return (
     <div className="myPageProfileModify">
       <div className="myPageRightImgBox">
-        <div className="myPageRightImg"></div>
+        <img
+          className="myPageRightImg"
+          src={userProfileImg}
+          alt="사용자 기본 프로필 이미지"
+        ></img>
       </div>
       <div className="myPageRightProfile">
         <div>
