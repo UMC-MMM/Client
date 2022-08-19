@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import { BsCircle } from "react-icons/bs";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 import { BsSquare } from "react-icons/bs";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 import Footer from "../components/footer";
 
 const SurveyJoin = () => {
+  const [circleCheck, setCircleCheck] = useState(false);
+  const [squareCheck, setSquareCheck] = useState(false);
+
+  const handleCircleCheck = () => {
+    setCircleCheck(!circleCheck);
+  };
+  const handleSquareCheck = () => {
+    setSquareCheck(!squareCheck);
+  };
+
   return (
     <>
       <Navbar />
@@ -38,8 +50,8 @@ const SurveyJoin = () => {
         <div className="joinBox1">
           <div className="joinBox1Text">
             맥딜리버리 앱 UX UI 개선용 설문조사입니다. 맥딜리버리 앱의 사용성에
-            대한 인터뷰이 또한 모집중이니 인터뷰에 응해주실 분은 마지막
-            설문문항에 전화번호를 꼭 기입해주세요.
+            대한 인터뷰 또한 모집중이니 인터뷰에 응해주실 분은 마지막 설문문항에
+            전화번호를 꼭 기입해주세요.
           </div>
         </div>
         <div className="joinBox2">
@@ -48,14 +60,30 @@ const SurveyJoin = () => {
             <div className="joinBox2Q">질문1</div>
             <div className="joinBox2A">
               <div className="joinBox2A1">
-                <div className="joinBox2A1Btn">
-                  <BsCircle size="20px" />
+                <div
+                  className="joinBox2A1Btn"
+                  id="circleBtn1"
+                  onClick={handleCircleCheck}
+                >
+                  {circleCheck ? (
+                    <BsFillCheckCircleFill size="20px" />
+                  ) : (
+                    <BsCircle size="20px" />
+                  )}
                 </div>
                 <div className="joinBox2A1Text">네, 사용해 본 적 있습니다.</div>
               </div>
               <div className="joinBox2A2">
-                <div className="joinBox2A2Btn">
-                  <BsCircle size="20px" />
+                <div
+                  className="joinBox2A2Btn"
+                  id="circleBtn2"
+                  onClick={handleCircleCheck}
+                >
+                  {circleCheck ? (
+                    <BsFillCheckCircleFill size="20px" />
+                  ) : (
+                    <BsCircle size="20px" />
+                  )}
                 </div>
                 <div className="joinBox2A2Text">
                   아니요, 사용해 본 적 없습니다.
@@ -70,20 +98,32 @@ const SurveyJoin = () => {
             <div className="joinBox3Q">질문2</div>
             <div className="joinBox3A">
               <div className="joinBox3A1">
-                <div className="joinBox3A1Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A1Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A1Text">찾기가 어렵다</div>
               </div>
               <div className="joinBox3A2">
-                <div className="joinBox3A2Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A2Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A2Text">찾기가 어렵다</div>
               </div>
               <div className="joinBox3A3">
-                <div className="joinBox3A3Btn">
-                  <BsSquare size="20px" />
+                <div className="joinBox3A3Btn" onClick={handleSquareCheck}>
+                  {squareCheck ? (
+                    <BsFillCheckSquareFill size="20px" />
+                  ) : (
+                    <BsSquare size="20px" />
+                  )}
                 </div>
                 <div className="joinBox3A3Text">찾기가 어렵다</div>
               </div>
