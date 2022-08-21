@@ -2457,9 +2457,11 @@
 }
 
 .surveyWrite2-red-tag {
+  cursor: pointer;
   display: inline;
+  text-align: center;
   align-items: center;
-  padding: 0px 16px;
+  border: none;
   height: 30px;
   background: #fafafa;
   border-radius: 10px;
@@ -2499,6 +2501,7 @@
   color: #fff;
   margin-top: 11px;
   margin-bottom: 248px;
+  cursor: pointer;
 }
 
 .surveyWrite2-hashtag-form-container {
@@ -2564,4 +2567,26 @@
 .hashTag-delete {
   cursor: pointer;
   margin-left: 3px;
+}
+
+/* DatePicker */
+.custom-datepicker {
+  border: 1px solid blue;
+}
+.custom-day {
+  width: 28px;
+  height: 28px;
+  line-height: 1.8;
+  text-align: center;
+}
+/* .gray-day {
+  color: #aba8b9;
+}
+.selected-day {
+  background: #2e1c8b;
+  border-radius: 50%;
+  font-weight: 700;
+} */
+
+.surveyWrite2-datepicker {
 }

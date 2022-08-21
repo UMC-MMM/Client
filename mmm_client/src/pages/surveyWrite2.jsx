@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 import { VscClose } from "react-icons/vsc";
+// DataPicker import
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { ko } from "date-fns/esm/locale";
 
 const SurveyWrite2 = () => {
   const targetAge = [
@@ -35,6 +39,12 @@ const SurveyWrite2 = () => {
   const [selectTargetAge, setSelectTargetAge] = useState("");
   const [selectTargetGender, setSelectTargetGender] = useState("");
   const [selectCategory, setSelectCategory] = useState("");
+  const [finishDate, setFinishDate] = useState("");
+  // 끝나는 날짜 선언
+
+  const handleFinishDate = (date) => {
+    setFinishDate(date);
+  };
 
   // 질문 작성자가 input 창에 입력하는 해시 태그를 저장하는 상태 변수
   const [surveyHashTagInput, setSurveyHashtagInput] = useState("");
@@ -124,7 +134,17 @@ const SurveyWrite2 = () => {
           </div>
           <div className="surveyWrite2-gray-content-container">
             게시일로부터&nbsp;&nbsp;
-            <div className="surveyWrite2-red-tag">2022년 08월 21일</div>
+            <DatePicker
+              className="surveyWrite2-red-tag surveyWrite2-datepicker" // 클래스 명 지정 css주기 위해
+              locale={ko}
+              dateFormat="yyyy년 MM월 dd일"
+              selected={finishDate}
+              minDate={new Date()}
+              closeOnScroll={true} // 스크롤을 움직였을 때 자동으로 닫히도록 설정 기본값 false
+              placeholderText="설문조사 기한"
+              onChange={(date) => handleFinishDate(date)}
+              // maxDate = {addMonths(new Date(),5)} 최대 기간은 안정함
+            />
             &nbsp;&nbsp;까지
           </div>
         </div>
