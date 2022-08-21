@@ -2569,24 +2569,12 @@
   margin-left: 3px;
 }
 
-/* DatePicker */
-.custom-datepicker {
-  border: 1px solid blue;
+.surveyWrite2-finish-letter {
+  display: inline;
 }
-.custom-day {
-  width: 28px;
-  height: 28px;
-  line-height: 1.8;
-  text-align: center;
-}
-/* .gray-day {
-  color: #aba8b9;
-}
-.selected-day {
-  background: #2e1c8b;
-  border-radius: 50%;
-  font-weight: 700;
-} */
 
+/* DatePicker */
 .surveyWrite2-datepicker {
+  cursor: pointer;
+  display: inline;
 }

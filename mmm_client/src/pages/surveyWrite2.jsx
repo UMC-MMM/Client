@@ -133,9 +133,11 @@ const SurveyWrite2 = () => {
             </div>
           </div>
           <div className="surveyWrite2-gray-content-container">
-            게시일로부터&nbsp;&nbsp;
+            {/* <div className="surveyWrite2-finish-letter">
+              게시일로부터&nbsp;&nbsp;
+            </div> */}
             <DatePicker
-              className="surveyWrite2-red-tag surveyWrite2-datepicker" // 클래스 명 지정 css주기 위해
+              className="surveyWrite2-red-tag surveyWrite2-datepicker"
               locale={ko}
               dateFormat="yyyy년 MM월 dd일"
               selected={finishDate}
@@ -145,7 +147,7 @@ const SurveyWrite2 = () => {
               onChange={(date) => handleFinishDate(date)}
               // maxDate = {addMonths(new Date(),5)} 최대 기간은 안정함
             />
-            &nbsp;&nbsp;까지
+            {/* <div className="surveyWrite2-finish-letter">&nbsp;&nbsp;까지</div> */}
           </div>
         </div>
         <div className="surveyWrite2-gray-container">
