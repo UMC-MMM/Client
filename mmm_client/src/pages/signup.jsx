@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
+import { useNavigate } from "react-router-dom"; // 회원가입 후 로그인 페이지 이동할 때 쓰는 문법ㅃ
 
 const Signup = () => {
   // 동의 초기값 회색색상
@@ -15,41 +16,47 @@ const Signup = () => {
     setAgree(!agree);
   };
 
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [userId, setUserId] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleIdChange = (e) => {
-    setId(e.target.value);
+    setUserId(e.target.value);
   };
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setUserName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    setUserEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+    setUserPassword(e.target.value);
   };
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
+  // const handleConfirmPasswordChange = (e) => {
+  //   setConfirmPassword(e.target.value);
+  // };
 
   const handleSubmitSignIn = async () => {
     const body = {
-      id,
-      name,
-      email,
-      password,
-      confirmPassword,
+      userPassword,
+      userId,
+      userName,
+      userEmail,
     };
-    await axios.post(`/user/join`, body);
+    await axios.post(`/users/join`, body).then((response) => {
+      console.log(response);
+      if (response.status === 1000) {
+        console.log("성공");
+        navigate("/login");
+      }
+    });
   };
 
   return (
@@ -103,9 +110,9 @@ const Signup = () => {
             onChange={handlePasswordChange}
           ></input>
         </div>
-        <div className="signupBoxTitle">비밀번호 확인</div>
+        {/* <div className="signupBoxTitle">비밀번호 확인</div> */}
         {/* <div className="signupBoxError">오류메세지</div> */}
-        <div className="signupInputPasswordCheck">
+        {/* <div className="signupInputPasswordCheck">
           <input
             id="signupInputPasswordCheck"
             type="text"
@@ -113,7 +120,7 @@ const Signup = () => {
             placeholder="비밀번호를 한번 더 입력하세요."
             onChange={handleConfirmPasswordChange}
           ></input>
-        </div>
+        </div> */}
         <div className="signupAgreeContainer" onClick={handleAgree}>
           <div
             className="signupAgree"
