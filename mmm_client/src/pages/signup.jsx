@@ -16,61 +16,62 @@ const Signup = () => {
     setAgree(!agree);
   };
 
-  const [userId, setUserId] = useState("");
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
   const handleIdChange = (e) => {
-    setUserId(e.target.value);
+    setId(e.target.value);
   };
 
   const handleNameChange = (e) => {
-    setUserName(e.target.value);
+    setName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
-    setUserEmail(e.target.value);
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
-    setUserPassword(e.target.value);
+    setPassword(e.target.value);
   };
 
-  // const handleConfirmPasswordChange = (e) => {
-  //   setConfirmPassword(e.target.value);
-  // };
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
 
-  const handleSubmitSignIn = async () => {
+  const handleSubmitSignIn = async (e) => {
+    e.preventDefault();
     const body = {
-      userPassword,
-      userId,
-      userName,
-      userEmail,
+      id,
+      name,
+      email,
+      password,
+      confirmPassword,
     };
-    await axios.post(`/users/join`, body).then((response) => {
-      console.log(response);
-      if (response.status === 1000) {
-        console.log("성공");
-        navigate("/login");
-      }
-    });
+    await axios
+      .post(`http://localhost:9000/users/join`, body)
+      .then((response) => {
+        console.log(response);
+        if (response.status === 1000) {
+          console.log("성공");
+          navigate("/login");
+        }
+      });
   };
 
   return (
     <>
       <div className="signupTitle">
-        <Link to="/">
-          <Survave />
-        </Link>
+        <Survave />
       </div>
       <div className="signupAskMember">이미 서베이브 회원이신가요?</div>
       <Link to="/login" style={{ textDecoration: "none", cursor: "pointer" }}>
         <div className="signUpLoginBtn">로그인 하기</div>
       </Link>
-<<<<<<< HEAD
       <div className="signupSignup">회원가입</div>
       <div className="signupBoxContainer">
         <div className="signupBoxTitle">이름</div>
@@ -113,9 +114,9 @@ const Signup = () => {
             onChange={handlePasswordChange}
           ></input>
         </div>
-        {/* <div className="signupBoxTitle">비밀번호 확인</div> */}
+        <div className="signupBoxTitle">비밀번호 확인</div>
         {/* <div className="signupBoxError">오류메세지</div> */}
-        {/* <div className="signupInputPasswordCheck">
+        <div className="signupInputPasswordCheck">
           <input
             id="signupInputPasswordCheck"
             type="text"
@@ -123,7 +124,7 @@ const Signup = () => {
             placeholder="비밀번호를 한번 더 입력하세요."
             onChange={handleConfirmPasswordChange}
           ></input>
-        </div> */}
+        </div>
         <div className="signupAgreeContainer" onClick={handleAgree}>
           <div
             className="signupAgree"
@@ -131,73 +132,37 @@ const Signup = () => {
             style={{ color: color }}
           >
             서베이브의 개인정보 수집 및 이용에 동의합니다.
-=======
->>>>>>> 4fbcb8624b211363728342ab2bffd491ebc6522f
           </div>
-          <div className="signupBoxTitle">이메일</div>
-          <div className="signupInputEmail">
-            <input
-              id="signupInputEmail"
-              type="text"
-              name="email"
-              placeholder="이메일 주소를 입력하세요."
-            ></input>
-          </div>
-          <div className="signupBoxTitle">아이디</div>
-          <div className="signupInputId">
-            <input
-              id="signupInputId"
-              type="text"
-              name="id"
-              placeholder="서베이브에 사용할 아이디를 입력하세요."
-            ></input>
-          </div>
-          <div className="signupBoxTitle">비밀번호</div>
-          <div className="signupInputPassword">
-            <input
-              id="signupInputPassword"
-              type="password"
-              name="password"
-              placeholder="6~16자의 영문자, 숫자, 특수문자를 사용하세요."
-            ></input>
-          </div>
-          <div className="signupBoxTitle">비밀번호 확인</div>
-          {/* <div className="signupBoxError">오류메세지</div> */}
-          <div className="signupInputPasswordCheck">
-            <input
-              id="signupInputPasswordCheck"
-              type="text"
-              name="passwordCheck"
-              placeholder="비밀번호를 한번 더 입력하세요."
-            ></input>
-          </div>
-          <div className="signupAgreeContainer" onClick={handleAgree}>
-            <div
-              className="signupAgree"
-              onClick={handleAgree}
-              style={{ color: color }}
-            >
-              서베이브의 개인정보 수집 및 이용에 동의합니다.
-            </div>
-            <BsCheckCircleFill
-              className="signupAgreeIcon"
-              size="28px"
-              color={color}
-              onClick={handleAgree}
-            />
-          </div>
-          <Link
-            to="/agreement"
-            style={{ textDecoration: "none", cursor: "pointer" }}
-          >
-            <div className="signupAgreeCheck">동의서 확인하기 →</div>
-          </Link>
+          <BsCheckCircleFill
+            className="signupAgreeIcon"
+            size="28px"
+            color={color}
+            onClick={handleAgree}
+          />
+        </div>
+        <Link
+          to="/agreement"
+          style={{ textDecoration: "none", cursor: "pointer" }}
+        >
+          <div className="signupAgreeCheck">동의서 확인하기 →</div>
+        </Link>
+
+        <div className="signupSubmitBtn">
+          <input
+            id="signupSubmitBtn"
+            className="signupSubmit"
+            type="submit"
+            name="submit"
+            value="회원가입 하기"
+            onClick={handleSubmitSignIn}
+          />
+        </div>
+        {/* <div className="loginFindIdandPassword findInSignup">
           <span>아이디 찾기</span>
           <span>|</span>
           <span>비밀번호 찾기</span>
         </div> */}
-        </div>
-      </form>
+      </div>
     </>
   );
 };
