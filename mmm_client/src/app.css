@@ -962,6 +962,7 @@
 
 .joinBox4A1 input {
   border: none;
+  outline: none;
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
@@ -1064,7 +1065,8 @@
 
 .surveyListSelectBoxSmall {
   height: 65px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -1081,7 +1083,8 @@
 
 .surveyListSelectBoxBig {
   height: 190px;
-  width: 67.69%;
+  /* width: 67.69%; */
+  width: 683px;
   border-radius: 10px;
   background: #fefefe;
   border: 2px solid #eeeeee;
@@ -1187,6 +1190,10 @@
 
   float: right;
   cursor: pointer;
+}
+
+.surveyListTargetBnt:active {
+  background: #e1605c;
 }
 
 .surveyListRightTop {
@@ -1401,6 +1408,7 @@
 .myPageRightImgBox {
   flex-basis: 25%;
   justify-content: center;
+  text-align: center;
 }
 
 .myPageRightImg {
@@ -2335,12 +2343,23 @@
   color: #fff;
 }
 
+.surveyPostChooseSurveyKind {
+  display: flex;
+}
+
 .surveyPostChooseSurveyKindSelect {
-  border: none;
   background-color: #e4e4e4;
-  font-family: NotoSansKR;
   font-size: 14px;
   font-weight: normal;
   color: #282828;
   outline: none;
+  height: 41px;
+  width: 117px;
+  border-radius: 10px;
+}
+
+.typeSelected {
+  background-color: #68c9d1;
+  color: #fefefe;
+  font-weight: 500;
 }
