@@ -2,15 +2,16 @@ import React from "react";
 
 const DescriptiveForm = () => {
   return (
-    <div className="joinBoxy">
-      <div className="joinBox4Shape">
-        <div className="joinBox4A">
-          <div className="joinBox4A1">
-            <input type="text" placeholder="내 답변" />
-          </div>
+    <>
+      <div className="surveyDescriptiveForm">
+        <div className="surveyDescriptiveText">
+          <input id="surveyDescriptiveText" placeholder="서술형 응답"></input>
+        </div>
+        <div className="surveyDescriptiveText">
+          <input id="surveyDescriptiveText"></input>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

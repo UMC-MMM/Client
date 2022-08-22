@@ -2627,12 +2627,36 @@
 
 /* 설문조사 게시화면->선택지 커스텀 */
 #surveyQuestionDistractor {
+  width: 680px;
   border: none;
   background-color: #fafafa;
   font-family: NotoSansKR;
   font-size: 15px;
   font-weight: normal;
   color: #282828;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* 설문조사 게시화면->서술형 폼 커스텀 */
+.surveyDescriptiveForm {
+  width: 94%;
+  margin-left: 27px;
+  margin-bottom: 70px;
+}
+.surveyDescriptiveText {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #8e8e8e;
+}
+#surveyDescriptiveText {
+  border: none;
+  background-color: #eeeeee;
+  font-family: NotoSansKR;
+  font-size: 14px;
+  font-weight: normal;
+  color: #8e8e8e;
   appearance: none;
   text-decoration: none;
   outline: 0;

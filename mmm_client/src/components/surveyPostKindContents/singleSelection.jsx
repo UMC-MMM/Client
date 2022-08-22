@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import { BsCircle } from "react-icons/bs";
+import { BsX } from "react-icons/bs";
 
 const SingleSelection = () => {
-  const singleSelection = {
-    essential: true,
-    title: "단일선택형 질문",
-    selections: [{ key: 0 }, { key: 1 }],
+  const [selections, setSelections] = useState([{ key: 0 }, { key: 1 }]);
+
+  const handleSurveyPostChoosePlusBtn = () => {
+    const newSelections = [...selections, { key: Date.now() }];
+    setSelections(newSelections);
+  };
+
+  const handleJoinBoxDelete = (survey) => {
+    const newSelections = selections.filter((item) => item.key !== survey.key);
+    setSelections(newSelections);
   };
 
   return (
     <div className="joinBoxy">
       <div className="joinBox2Shape">
         <div className="joinBox2A">
-          {singleSelection.selections.map(() => {
+          {selections.map((selection) => {
             return (
               <label>
                 <div className="joinBox2A1">
@@ -27,13 +34,21 @@ const SingleSelection = () => {
                       placeholder="선택지"
                     ></input>
                   </div>
+                  <div onClick={() => handleJoinBoxDelete(selection)}>
+                    <BsX size="30" />
+                  </div>
                 </div>
               </label>
             );
           })}
         </div>
       </div>
-      <div className="surveyPostChoosePlusBtn">선택지 추가</div>
+      <div
+        className="surveyPostChoosePlusBtn"
+        onClick={handleSurveyPostChoosePlusBtn}
+      >
+        선택지 추가
+      </div>
     </div>
   );
 };
