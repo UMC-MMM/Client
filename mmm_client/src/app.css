@@ -847,7 +847,7 @@
 }
 
 .joinBox2Shape {
-  height: 239px;
+  /* height: 239px; */
   border-radius: 20px;
   background-color: #eeeeee;
   display: flex;
@@ -882,6 +882,7 @@
   font-size: 19px;
   line-height: 28px;
   color: #282828;
+  margin-bottom: 10px;
   /* background-color: #f3be00; */
 }
 
@@ -908,6 +909,7 @@
   border-radius: 10px;
   height: 42px;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .joinBox2A1Btn,
@@ -935,7 +937,7 @@
 }
 
 .joinBox3Shape {
-  height: 297px;
+  /* height: 297px; */
   border-radius: 20px;
   background-color: #eeeeee;
   display: flex;
@@ -2264,9 +2266,8 @@
 }
 
 .surveyPostChoosePlusBtn {
-  margin-left: 27px;
+  margin-left: 32px;
   margin-bottom: 45px;
-  margin-top: 24px;
   height: 42px;
   width: 104px;
   border-radius: 10px;
@@ -2362,4 +2363,277 @@
   background-color: #68c9d1;
   color: #fefefe;
   font-weight: 500;
+}
+
+/* 설문조사 작성2 페이지 */
+.surveyWrite2 {
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 96px;
+}
+
+.surveyWrite2-Title-container {
+  height: 91px;
+  width: 100%;
+  border-radius: 20px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.surveyWrite2-Title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+  margin-left: 32px;
+}
+
+.surveyWrite2-edit {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #68c9d1;
+  margin-right: 41px;
+}
+
+.surveyWrite2-time {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #282828;
+  text-align: center;
+  margin-top: 67px;
+}
+
+.surveyWrite2-point {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #e1605c;
+  text-align: center;
+  margin-top: 27px;
+}
+
+.surveyWrite2-gray-container {
+  width: 100%;
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+.surveyWrite2-gray-Title-container {
+  display: flex;
+  margin-left: 32px;
+  align-items: center;
+  margin-top: 87px;
+  padding-top: 24.67px;
+  padding-bottom: 21px;
+}
+
+.surveyWrite2-gray-Title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #282828;
+  padding-right: 30px;
+}
+
+.surveyWrite2-gray-Detail {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #282828;
+}
+
+.surveyWrite2-gray-content-container {
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-bottom: 40px;
+}
+
+.surveyWrite2-red-tag {
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+  align-items: center;
+  border: none;
+  height: 30px;
+  background: #fafafa;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1605c;
+  padding: 4.5px 16px;
+}
+
+.surveyWrite2-lightGrayTag {
+  background-color: #fafafa;
+}
+
+.surveyWrite2-point-deduct {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #e1605c;
+}
+
+.surveyWrite2-point-deduct {
+  padding-top: 62px;
+}
+
+.surveyWrite2-finish-btn {
+  width: 168px;
+  height: 52px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: #68c9d1;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 52px;
+  color: #fff;
+  margin-top: 11px;
+  margin-bottom: 248px;
+  cursor: pointer;
+}
+
+.surveyWrite2-hashtag-form-container {
+  display: flex;
+  align-items: center;
+}
+
+.surveyWrite2-hashtag-input {
+  height: 45px;
+  width: 289px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: none;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.surveyWrite2-hashtag-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8e8e8e;
+}
+
+.surveyWrite2-hashtag-input-btn {
+  width: 58px;
+  height: 33px;
+  background: #68c9d1;
+  border-radius: 10px;
+  margin-left: 18px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fefefe;
+  text-align: center;
+}
+
+.surveyWrite2-hashTags-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.surveyWrite2-hashTag {
+  height: 33px;
+  background: #fafafa;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #68c9d1;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 16px;
+  padding-right: 10px;
+
+  margin-top: 21px;
+  margin-right: 16px;
+}
+
+.hashTag-delete {
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.surveyWrite2-finish-letter {
+  display: inline;
+}
+
+/* DatePicker */
+.surveyWrite2-datepicker {
+  cursor: pointer;
+  display: inline;
+}
+
+/* Dropdown */
+.dropdown {
+  width: 85px;
+  position: relative;
+  user-select: none;
+  margin-top: 10px;
+  margin-right: 45px;
+}
+
+.dropdownBtn {
+  padding: 15px;
+  text-align: center;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 110%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  padding: 15px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+/* 설문조사 게시화면->선택지 커스텀 */
+#surveyQuestionDistractor {
+  border: none;
+  background-color: #fafafa;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: normal;
+  color: #282828;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
 }
