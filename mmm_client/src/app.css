@@ -2266,9 +2266,8 @@
 }
 
 .surveyPostChoosePlusBtn {
-  margin-left: 27px;
+  margin-left: 32px;
   margin-bottom: 45px;
-  margin-top: 24px;
   height: 42px;
   width: 104px;
   border-radius: 10px;
@@ -2577,4 +2576,64 @@
 .surveyWrite2-datepicker {
   cursor: pointer;
   display: inline;
+}
+
+/* Dropdown */
+.dropdown {
+  width: 85px;
+  position: relative;
+  user-select: none;
+  margin-top: 10px;
+  margin-right: 45px;
+}
+
+.dropdownBtn {
+  padding: 15px;
+  text-align: center;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 110%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  padding: 15px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+/* 설문조사 게시화면->선택지 커스텀 */
+#surveyQuestionDistractor {
+  border: none;
+  background-color: #fafafa;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: normal;
+  color: #282828;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
 }

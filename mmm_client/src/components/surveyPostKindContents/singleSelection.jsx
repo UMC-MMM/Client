@@ -1,26 +1,40 @@
-import React from "react";
-import { BiCircle } from "react-icons/bi";
-import { GrClose } from "react-icons/gr";
+import React, { useState } from "react";
+import { BsCircle } from "react-icons/bs";
 
 const SingleSelection = () => {
+  const singleSelection = {
+    essential: true,
+    title: "단일선택형 질문",
+    selections: [{ key: 0 }, { key: 1 }],
+  };
+
   return (
-    <>
-      <div className="surveyPostChoose">
-        <div className="surveyPostCircleAndText">
-          <BiCircle color="#68c9d1" size="20" />
-          <div className="surveyPostChooseText">남성</div>
+    <div className="joinBoxy">
+      <div className="joinBox2Shape">
+        <div className="joinBox2A">
+          {singleSelection.selections.map(() => {
+            return (
+              <label>
+                <div className="joinBox2A1">
+                  <div className="joinBox2A1Btn" id="circleBtn1">
+                    <BsCircle size="20px" />
+                  </div>
+                  <div clssName="joinBox2A1Text">
+                    <input
+                      id="surveyQuestionDistractor"
+                      type="text"
+                      name="text"
+                      placeholder="선택지"
+                    ></input>
+                  </div>
+                </div>
+              </label>
+            );
+          })}
         </div>
-        <GrClose color="#8e8e8e" size="15" />
-      </div>
-      <div className="surveyPostChoose">
-        <div className="surveyPostCircleAndText">
-          <BiCircle color="#68c9d1" size="20" />
-          <div className="surveyPostChooseText">여성</div>
-        </div>
-        <GrClose color="#8e8e8e" size="15" />
       </div>
       <div className="surveyPostChoosePlusBtn">선택지 추가</div>
-    </>
+    </div>
   );
 };
 

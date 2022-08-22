@@ -3,12 +3,22 @@ import Navbar from "../components/navbar";
 import SingleSelection from "../components/surveyPostKindContents/singleSelection";
 import MultipleSelection from "../components/surveyPostKindContents/multipleSelection";
 import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
-import { Link } from "react-router-dom";
+import Dropdown from "../components/dropdown";
 
 const SurveyWrite = () => {
-  const [surveyNumber, setSurveyNumber] = useState(0);
+  const [surveyNumber, setSurveyNumber] = useState();
 
-  const surveyLists = [];
+  const handleSurveyPostPlusQustion = () => {};
+
+  const surveyKind = (x) => {
+    if (x === "단일선택형") {
+      setSurveyNumber(0);
+    } else if (x === "다중선택형") {
+      setSurveyNumber(1);
+    } else if (x === "서술형") {
+      setSurveyNumber(2);
+    }
+  };
 
   const surveyListsObj = {
     0: <SingleSelection />,
@@ -16,9 +26,7 @@ const SurveyWrite = () => {
     2: <DescriptiveForm />,
   };
 
-  const handleSurveyNumber = (index) => {
-    setSurveyNumber(index);
-  };
+  const surveyBoxs = [{ key: 0 }, { key: 1 }];
 
   return (
     <>
@@ -52,7 +60,7 @@ const SurveyWrite = () => {
             />
           </div>
           <div className="surveyPostChooseSurveyKindAndDelete">
-            <div className="surveyPostChooseSurveyKind"></div>
+            <Dropdown surveyKind={surveyKind} />
             <div className="surveyPostDelete">삭제</div>
           </div>
         </div>
@@ -60,19 +68,13 @@ const SurveyWrite = () => {
           {surveyListsObj[surveyNumber]}
         </div>
       </div>
-      <div className="surveyPostPlusQuestionsBtn">+질문추가</div>
-      <div className="surveyPostCompleteBtn">
-        <Link
-          to="/surveyWrite2"
-          style={{
-            textDecoration: "none",
-            cursor: "pointer",
-            color: "#fefefe",
-          }}
-        >
-          설문작성완료
-        </Link>
+      <div
+        className="surveyPostPlusQuestionsBtn"
+        onClick={handleSurveyPostPlusQustion}
+      >
+        +질문추가
       </div>
+      <div className="surveyPostCompleteBtn">설문작성완료</div>
     </>
   );
 };
