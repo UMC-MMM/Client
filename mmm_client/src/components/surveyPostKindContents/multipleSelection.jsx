@@ -1,25 +1,32 @@
 import React, { useState } from "react";
 import { BsSquare } from "react-icons/bs";
+import { BsX } from "react-icons/bs";
 
 const MultipleSelection = () => {
-  const multiSelection = {
-    essential: true,
-    title: "다중선택형 질문",
-    selections: [{ key: 0 }, { key: 1 }, { key: 2 }],
+  const [selections, setSelections] = useState([{ key: 0 }, { key: 1 }]);
+
+  const handleSurveyPostChoosePlusBtn = () => {
+    const newSelections = [...selections, { key: Date.now() }];
+    setSelections(newSelections);
+  };
+
+  const handleJoinBoxDelete = (survey) => {
+    const newSelections = selections.filter((item) => item.key !== survey.key);
+    setSelections(newSelections);
   };
 
   return (
     <div className="joinBoxy">
-      <div className="joinBox3Shape">
-        <div className="joinBox3A">
-          {multiSelection.selections.map(() => {
+      <div className="joinBox2Shape">
+        <div className="joinBox2A">
+          {selections.map((selection) => {
             return (
               <label>
-                <div className="joinBox3A1">
-                  <div className="joinBox3A1Btn">
+                <div className="joinBox2A1">
+                  <div className="joinBox2A1Btn" id="circleBtn1">
                     <BsSquare size="20px" />
                   </div>
-                  <div className="joinBox3A1Text">
+                  <div clssName="joinBox2A1Text">
                     <input
                       id="surveyQuestionDistractor"
                       type="text"
@@ -27,13 +34,21 @@ const MultipleSelection = () => {
                       placeholder="선택지"
                     ></input>
                   </div>
+                  <div onClick={() => handleJoinBoxDelete(selection)}>
+                    <BsX size="30" />
+                  </div>
                 </div>
               </label>
             );
           })}
         </div>
       </div>
-      <div className="surveyPostChoosePlusBtn">선택지 추가</div>
+      <div
+        className="surveyPostChoosePlusBtn"
+        onClick={handleSurveyPostChoosePlusBtn}
+      >
+        선택지 추가
+      </div>
     </div>
   );
 };
