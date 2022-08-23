@@ -1,32 +1,52 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
 
 const Login = () => {
-  const [userId, setUserId] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const [errorIdMessage, setErrorIdMessage] = useState("");
+  const [errorPasswordMessage, setErrorPasswordMessage] = useState("");
 
   const handleIdChange = (e) => {
-    setUserId(e.target.value);
+    setId(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
-    setUserPassword(e.target.value);
+    setPassword(e.target.value);
   };
 
   const handleSubmitClick = async () => {
     const body = {
-      userId,
-      userPassword,
+
+      id,
+      password,
     };
+
     console.log(body);
     const loginApi = await axios.post(
       `https://www.survave.com/users/login`,
       body
     );
     console.log(loginApi);
+
+    if (loginApi.data.code === 1000) {
+      navigate("/");
+      localStorage.setItem("token", loginApi.data.result.jwt);
+      localStorage.setItem("userId", loginApi.data.result.userIdx);
+    } else if (loginApi.data.code === 2010) {
+      setErrorIdMessage(loginApi.data.message);
+    } else if (loginApi.data.code === 2030) {
+      setErrorPasswordMessage(loginApi.data.message);
+    } else if (loginApi.data.code === 3014) {
+      setErrorPasswordMessage(loginApi.data.message);
+    }
+
   };
 
   return (
@@ -46,6 +66,7 @@ const Login = () => {
           onChange={handleIdChange}
         />
       </div>
+      <div className="loginErrorMessage">{errorIdMessage}</div>
       <div className="loginInputPassword">
         <input
           id="loginInputPassword"
@@ -55,6 +76,7 @@ const Login = () => {
           onChange={handlePasswordChange}
         />
       </div>
+      <div className="loginErrorMessage">{errorPasswordMessage}</div>
       <div className="loginSubmitBtn">
         <input
           id="loginSubmitBtn"
