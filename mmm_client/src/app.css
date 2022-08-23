@@ -783,6 +783,17 @@
   align-items: center;
 }
 
+.joinSubHash1 {
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+  margin-right: 8px;
+}
 .joinSubCond {
   display: flex;
   justify-content: space-between;

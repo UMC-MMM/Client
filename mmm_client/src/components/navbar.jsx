@@ -33,6 +33,7 @@ const Navbar = () => {
               <li className="navbarMenuItem">
                 <Link
                   to="/surveyList"
+                  state={{ surveyIdx: 0 }}
                   style={{
                     textDecoration: "none",
                     cursor: "pointer",

@@ -11,8 +11,25 @@ import Faq from "../components/myPageMenu/faq";
 
 import BlueCircle from "../assets/semicircle-b.png";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const MyPage = () => {
+  const token = localStorage.getItem("token");
+  const userIdx = localStorage.getItem("userIdx");
+
+  const [aboutUser, setAboutUser] = useState("");
+
+  axios
+    .get(`https://www.survave.com/users/${userIdx}/profile`, {
+      headers: { "X-ACCESS-TOKEN": token },
+    })
+    .then(function (response) {
+      setAboutUser(response.data.result);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
   const navigate = useNavigate();
 
   const [myPageMenu, setMyPageMenu] = useState(0);
@@ -27,7 +44,7 @@ const MyPage = () => {
   ];
 
   const myPageMenuObj = {
-    0: <MyProfile />,
+    0: <MyProfile aboutUser={aboutUser} />,
     1: <MySurvey />,
     2: <MyPoint />,
     3: <MyCoupon />,
