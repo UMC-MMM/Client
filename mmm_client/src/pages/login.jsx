@@ -23,14 +23,18 @@ const Login = () => {
 
   const handleSubmitClick = async () => {
     const body = {
+
       id,
       password,
     };
+
+    console.log(body);
     const loginApi = await axios.post(
       `https://www.survave.com/users/login`,
       body
     );
     console.log(loginApi);
+
     if (loginApi.data.code === 1000) {
       navigate("/");
       localStorage.setItem("token", loginApi.data.result.jwt);
@@ -42,6 +46,7 @@ const Login = () => {
     } else if (loginApi.data.code === 3014) {
       setErrorPasswordMessage(loginApi.data.message);
     }
+
   };
 
   return (
