@@ -2,13 +2,23 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import SurveyQustionBox from "../components/surveyQustionBox";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SurveyWrite = () => {
-  const navigate = useNavigate();
+  const [surveyIntroduction, setSurveyIntroduction] = useState("");
+  const [surveyTitle, setSurveyTitle] = useState("");
 
-  const handleSurveyPostCompleteBtn = () => {
-    navigate("/surveyWrite2");
+  const surveyBody = {
+    surveyIntroduction,
+    surveyTitle,
+  };
+
+  const handleSurveyTitle = (e) => {
+    setSurveyTitle(e.target.value);
+  };
+
+  const handleSurveyIntroduction = (e) => {
+    setSurveyIntroduction(e.target.value);
   };
 
   const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([
@@ -38,6 +48,7 @@ const SurveyWrite = () => {
             type="text"
             name="id"
             placeholder="설문조사의 제목을 입력하세요."
+            onChange={handleSurveyTitle}
           />
         </div>
         <div className="surveyPostDescriptionInput">
@@ -46,6 +57,7 @@ const SurveyWrite = () => {
             type="text"
             name="id"
             placeholder="설문조사의 설명을 입력하세요."
+            onChange={handleSurveyIntroduction}
           />
         </div>
       </div>
@@ -63,12 +75,17 @@ const SurveyWrite = () => {
       >
         +질문추가
       </div>
-      <div
-        className="surveyPostCompleteBtn"
-        onClick={handleSurveyPostCompleteBtn}
+      <Link
+        to="/surveyWrite2"
+        surveyBody={surveyBody}
+        style={{
+          textDecoration: "none",
+          cursor: "pointer",
+          color: "#282828",
+        }}
       >
-        설문작성완료
-      </div>
+        <div className="surveyPostCompleteBtn">설문작성완료</div>
+      </Link>
     </>
   );
 };
