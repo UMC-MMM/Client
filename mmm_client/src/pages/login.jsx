@@ -22,8 +22,9 @@ const Login = () => {
   };
 
   const handleSubmitClick = async () => {
+    setErrorIdMessage("");
+    setErrorPasswordMessage("");
     const body = {
-
       id,
       password,
     };
@@ -46,7 +47,6 @@ const Login = () => {
     } else if (loginApi.data.code === 3014) {
       setErrorPasswordMessage(loginApi.data.message);
     }
-
   };
 
   return (

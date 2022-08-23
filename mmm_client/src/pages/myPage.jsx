@@ -10,8 +10,11 @@ import Notice from "../components/myPageMenu/notice";
 import Faq from "../components/myPageMenu/faq";
 
 import BlueCircle from "../assets/semicircle-b.png";
+import { useNavigate } from "react-router-dom";
 
 const MyPage = () => {
+  const navigate = useNavigate();
+
   const [myPageMenu, setMyPageMenu] = useState(0);
 
   const myPageMenuArr = [
@@ -34,6 +37,12 @@ const MyPage = () => {
 
   const handleMyPageMenu = (index) => {
     setMyPageMenu(index);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userIdx");
+    navigate("/login");
   };
 
   return (
@@ -70,7 +79,7 @@ const MyPage = () => {
                 );
               })}
             </div>
-            <div className="myPageListContainerBottom">
+            <div className="myPageListContainerBottom" onClick={handleLogout}>
               <button className="myPageLogoutBnt">로그아웃</button>
             </div>
           </div>
