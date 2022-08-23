@@ -525,6 +525,16 @@
   color: #68c9d1;
 }
 
+.loginErrorMessage {
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+  width: 420px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+}
+
 /* signup page CSS */
 .signupTitle {
   margin: 0 auto;
