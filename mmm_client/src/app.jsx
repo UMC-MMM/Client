@@ -10,7 +10,8 @@ import SurveyList from "./pages/surveyList";
 import SurveyJoin from "./pages/surveyJoin";
 import MyPage from "./pages/myPage";
 import SurveyWrite from "./pages/surveyWrite";
-import RankBox from "./components/rankBox";
+import SurveyWrite2 from "./pages/surveyWrite2";
+import SurveyResult from "./pages/surveyResult";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route exact path="/surveyJoin" element={<SurveyJoin />}></Route>
         <Route exact path="/myPage" element={<MyPage />}></Route>
         <Route exact path="/surveyWrite" element={<SurveyWrite />}></Route>
-        <Route exact path="/rankBox" element={<RankBox />}></Route>
+        <Route exact path="/surveyWrite2" element={<SurveyWrite2 />}></Route>
+        <Route exact path="/surveyResult" element={<SurveyResult />}></Route>
       </Routes>
     </>
   );

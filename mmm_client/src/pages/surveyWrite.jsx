@@ -1,26 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import Navbar from "../components/navbar";
-import SingleSelection from "../components/surveyPostKindContents/singleSelection";
-import MultipleSelection from "../components/surveyPostKindContents/multipleSelection";
-import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
+import SurveyQustionBox from "../components/surveyQustionBox";
 
 const SurveyWrite = () => {
-  const [surveyNumber, setSurveyNumber] = useState(0);
+  const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([
+    { key: 0 },
+    { key: 1 },
+  ]);
 
-  const surveyLists = [
-    { type: "단일선택형" },
-    { type: "다중선택형" },
-    { type: "서술형" },
-  ];
-
-  const surveyListsObj = {
-    0: <SingleSelection />,
-    1: <MultipleSelection />,
-    2: <DescriptiveForm />,
+  const handlesurveyPostPlusQuestionsBtn = () => {
+    const newSurveyQustionBoxs = [...surveyQustionBoxs, { key: Date.now() }];
+    setSurveyQustionBoxs(newSurveyQustionBoxs);
   };
 
-  const handleSurveyNumber = (index) => {
-    setSurveyNumber(index);
+  const handleSurveyPostDelete = (survey) => {
+    const newSurveyQustionBoxs = surveyQustionBoxs.filter(
+      (item) => item.key !== survey.key
+    );
+    setSurveyQustionBoxs(newSurveyQustionBoxs);
   };
 
   return (
@@ -44,39 +42,20 @@ const SurveyWrite = () => {
           />
         </div>
       </div>
-      <div className="surveyPostTitleBox">
-        <div className="surveyPostTitleinputAndChooseSurveyKindAndDelete">
-          <div className="surveyPostTitleInput">
-            <input
-              id="surveyPostTitleInputId"
-              type="text"
-              name="id"
-              placeholder="질문을 입력하세요."
-            />
-          </div>
-          <div className="surveyPostChooseSurveyKindAndDelete">
-            <div className="surveyPostChooseSurveyKind">
-              {surveyLists.map((surveyList, index) => (
-                <div
-                  className={
-                    surveyNumber === index
-                      ? "surveyPostChooseSurveyKindSelect typeSelected"
-                      : "surveyPostChooseSurveyKindSelect"
-                  }
-                  onClick={() => handleSurveyNumber(index)}
-                >
-                  {surveyList.type}
-                </div>
-              ))}
-            </div>
-            <div className="surveyPostDelete">삭제</div>
-          </div>
-        </div>
-        <div className="surveyPostkindContent">
-          {surveyListsObj[surveyNumber]}
-        </div>
+      {surveyQustionBoxs.map((surveyQustionBox) => {
+        return (
+          <SurveyQustionBox
+            handleSurveyPostDelete={handleSurveyPostDelete}
+            surveyQustionBox={surveyQustionBox}
+          />
+        );
+      })}
+      <div
+        className="surveyPostPlusQuestionsBtn"
+        onClick={handlesurveyPostPlusQuestionsBtn}
+      >
+        +질문추가
       </div>
-      <div className="surveyPostPlusQuestionsBtn">+질문추가</div>
       <div className="surveyPostCompleteBtn">설문작성완료</div>
     </>
   );

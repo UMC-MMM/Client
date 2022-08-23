@@ -2,6 +2,7 @@ import React from "react";
 
 const ResultSingleSelection = () => {
   const singleSelection = {
+    number: 10,
     essential: true,
     title: "단일선택형 질문",
     selections: [
@@ -15,18 +16,26 @@ const ResultSingleSelection = () => {
 
   return (
     <>
-      <div>
-        <div>
-          <div>응답</div>
-          <div>객관식</div>
-        </div>
-        <div>
-          <div>
-            <div>필수</div>
-            <div>질문</div>
+      <div className="resultSingle">
+        <div className="resultSingleTop">
+          <div className="resultSingleTopItem1">
+            응답 {singleSelection.number}개
           </div>
-          <div></div> //결과 그래프
+          <div className="resultSingleTopItem2">객관식</div>
         </div>
+        <div className="resultSingleQ">
+          <div
+            className={
+              singleSelection.essential === true
+                ? "resultSingleQItem1"
+                : "resultSingleQItem1-2"
+            }
+          >
+            {singleSelection.essential === true ? "필수" : ""}
+          </div>
+          <div className="resultSingleQItem2">{singleSelection.title}</div>
+        </div>
+        <div className="resultSingleA"></div> //결과 그래프
       </div>
     </>
   );

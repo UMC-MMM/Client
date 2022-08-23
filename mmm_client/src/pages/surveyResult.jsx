@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { FaUserCircle } from "react-icons/fa";
+import ResultSingleSelection from "../components/surveyResultKindContents/result-singleSelection";
+import ResultMultipleSelection from "../components/surveyResultKindContents/result-multipleSelection";
+import ResultDescriptiveForm from "../components/surveyResultKindContents/result-descriptiveForm";
 
 const SurveyResult = () => {
   const AboutResult = {
@@ -21,11 +25,12 @@ const SurveyResult = () => {
   return (
     <>
       <Navbar />
-      <div>
-        <div>응답</div>
-        <div>{AboutResult.number}개</div>
-      </div>
       <div className="join">
+        <div className="resultTop">
+          <div className="resultTopItem1">응답</div>
+          <div className="resultTopItem2">{AboutResult.number}개</div>
+        </div>
+
         <div className="joinTop">
           <div className="joinTopPoint">{AboutResult.point}p</div>
           <div className="joinTopProfile">
@@ -54,10 +59,9 @@ const SurveyResult = () => {
         <div className="joinBox1">
           <div className="joinBox1Text">{AboutResult.detail}</div>
         </div>
-        /*결과 집계 컴포넌트들*/
-        <div className="joinFinal">
-          <button type="submit">설문 제출하기</button>
-        </div>
+        <ResultSingleSelection />
+        <ResultMultipleSelection />
+        <ResultDescriptiveForm />
       </div>
       <Footer />
     </>
