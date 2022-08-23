@@ -1609,16 +1609,15 @@
 
 /* 설문조사 리스트 페이지-구분선 */
 .surveyListLineFirst {
-  border: 2px solid #eeeeee;
+  /* border: 2px solid #eeeeee; */
   margin-top: 42px;
-}
-
-.surveyListLine {
-  border: 2px solid #eeeeee;
 }
 
 /* 설문조사리스트 페이지-listBox */
 .surveyListBox {
+  border: 2px solid #eeeeee;
+  border-right: none;
+  border-left: none;
   display: flex;
   flex-direction: column;
   /* background-color: #8e8e8e; */
