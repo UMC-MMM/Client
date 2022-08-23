@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import SurveyQustionBox from "../components/surveyQustionBox";
+
 import { Link } from "react-router-dom";
 
 const SurveyWrite = () => {
@@ -19,6 +20,7 @@ const SurveyWrite = () => {
 
   const handleSurveyIntroduction = (e) => {
     setSurveyIntroduction(e.target.value);
+
   };
 
   const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([
