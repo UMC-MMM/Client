@@ -108,8 +108,8 @@ const SurveyList = () => {
   // const userIdx = localStorage.getItem("userIdx");
 
   axios
-    .get("https://www.survave.com/survey", {
-      "X-ACCESS-TOKEN": token,
+    .get("https://www.survave.com/survey/", {
+      headers: { "X-ACCESS-TOKEN": token },
     })
     .then(function (response) {
       setSurveyBox(response.data.result);
@@ -175,7 +175,7 @@ const SurveyList = () => {
               surveyBox.map((survey) => {
                 return (
                   <SurveyListBox
-                    key={survey.surveyIdx}
+                    surveyNo={survey.surveyIdx}
                     title={survey.surveyTitle}
                     point={survey.surveyPointValue}
                     time={survey.surveyTime}
@@ -192,7 +192,7 @@ const SurveyList = () => {
                 .map((survey) => {
                   return (
                     <SurveyListBox
-                      key={survey.surveyIdx}
+                      surveyNo={survey.surveyIdx}
                       title={survey.surveyTitle}
                       point={survey.surveyPointValue}
                       time={survey.surveyTime}
