@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { BsBellFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
@@ -7,6 +7,18 @@ import { FaUserCircle } from "react-icons/fa";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const token = localStorage.getItem("token");
+
+  const handleLoginOrMypage = () => {
+    if (token) {
+      navigate("/mypage");
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -59,11 +71,9 @@ const Navbar = () => {
                   <BsBellFill color="#C2C2C2" size="35px" />
                 </span>
               </li>
-              <li className="navbarMypageIcon">
+              <li className="navbarMypageIcon" onClick={handleLoginOrMypage}>
                 <span>
-                  <Link to="/login">
-                    <FaUserCircle color="#C2C2C2" size="35px" />
-                  </Link>
+                  <FaUserCircle color="#C2C2C2" size="35px" />
                 </span>
               </li>
             </ul>

@@ -104,14 +104,19 @@ const SurveyList = () => {
     setSurveyList(index);
   };
 
+  const token = localStorage.getItem("token");
+  // const userIdx = localStorage.getItem("userIdx");
+
   axios
-    .get("https://www.survave.com/survey")
+    .get("https://www.survave.com/survey", {
+      "X-ACCESS-TOKEN": token,
+    })
     .then(function (response) {
       setSurveyBox(response.data.result);
     })
     .catch(function (error) {
-      console.log(error);
-      // 되긴 되는데 에러도 출력나는 것 같음
+      // console.log(error);
+      // 되긴 되는데 에러
     });
 
   return (
