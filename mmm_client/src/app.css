@@ -2672,3 +2672,97 @@
   text-decoration: none;
   outline: 0;
 }
+
+/* 설문조사 결과화면 */
+.resultTop {
+  display: flex;
+  width: 44%;
+  align-items: center;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  height: 57px;
+  margin-bottom: 75px;
+}
+
+.resultTopItem1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+  margin-left: 28px;
+}
+
+.resultTopItem2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #e1605c;
+  margin-left: 19px;
+}
+
+.resultSingle {
+  background: #eeeeee;
+  border-radius: 20px;
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 88px;
+  /* align-items: center; */
+}
+
+.resultSingleTop {
+  display: flex;
+  align-items: center;
+  margin-top: 21px;
+}
+
+.resultSingleTopItem1 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  color: #282828;
+  margin-left: 30px;
+}
+
+.resultSingleTopItem2 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #282828;
+  margin-left: 15.66px;
+}
+
+.resultSingleQ {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.resultSingleQItem1 {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1605c;
+}
+
+.resultSingleQItem1-2 {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #68c9d1;
+}
+
+.resultSingleQItem2 {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #282828;
+  margin-left: 10px;
+}
+
+.resultSingleA {
+  margin-top: 47px;
+  margin-left: 89px;
+}
