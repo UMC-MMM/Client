@@ -22,6 +22,8 @@ const Login = () => {
   };
 
   const handleSubmitClick = async () => {
+    setErrorIdMessage("");
+    setErrorPasswordMessage("");
     const body = {
       id,
       password,
