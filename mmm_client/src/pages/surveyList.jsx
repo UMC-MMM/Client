@@ -104,26 +104,20 @@ const SurveyList = () => {
     setSurveyList(index);
   };
 
+  const token = localStorage.getItem("token");
+  // const userIdx = localStorage.getItem("userIdx");
+
   axios
-    .get("https://www.survave.com/survey")
+    .get("https://www.survave.com/survey", {
+      "X-ACCESS-TOKEN": token,
+    })
     .then(function (response) {
       setSurveyBox(response.data.result);
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
       // 되긴 되는데 에러
     });
-
-  const onClickSurveyList = (surveyidx) => {
-    axios
-      .get(`https://www.survave.com/survey/${surveyidx}`)
-      .then(function (resoponse) {
-        console.log(resoponse);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
 
   return (
     <>
@@ -190,7 +184,6 @@ const SurveyList = () => {
                     gender={survey.preferGender}
                     hashtag={survey.hashtag}
                     date={survey.deadlineAt}
-                    onClickSurveyList={onClickSurveyList(survey.surveyIdx)}
                   />
                 );
               })
@@ -208,7 +201,6 @@ const SurveyList = () => {
                       gender={survey.preferGender}
                       hashtag={survey.hashtag}
                       date={survey.deadlineAt}
-                      onClickSurveyList={onClickSurveyList(survey.surveyIdx)}
                     />
                   );
                 })}
