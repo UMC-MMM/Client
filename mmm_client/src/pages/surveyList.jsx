@@ -111,8 +111,19 @@ const SurveyList = () => {
     })
     .catch(function (error) {
       console.log(error);
-      // 되긴 되는데 에러도 출력나는 것 같음
+      // 되긴 되는데 에러
     });
+
+  const onClickSurveyList = (surveyidx) => {
+    axios
+      .get(`https://www.survave.com/survey/${surveyidx}`)
+      .then(function (resoponse) {
+        console.log(resoponse);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -179,6 +190,7 @@ const SurveyList = () => {
                     gender={survey.preferGender}
                     hashtag={survey.hashtag}
                     date={survey.deadlineAt}
+                    onClickSurveyList={onClickSurveyList(survey.surveyIdx)}
                   />
                 );
               })
@@ -196,6 +208,7 @@ const SurveyList = () => {
                       gender={survey.preferGender}
                       hashtag={survey.hashtag}
                       date={survey.deadlineAt}
+                      onClickSurveyList={onClickSurveyList(survey.surveyIdx)}
                     />
                   );
                 })}
