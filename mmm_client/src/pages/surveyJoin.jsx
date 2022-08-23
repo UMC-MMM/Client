@@ -53,7 +53,7 @@ const SurveyJoin = () => {
         </div>
         <div className="joinSub">
           <div className="joinSubCond">
-            <div className="joinSubCond1">{surveyContent.preferAge}</div>
+            <div className="joinSubCond1">{surveyContent.preferAge}대</div>
             <div className="joinSubCond1">{surveyContent.preferGender}</div>
           </div>
           <div className="joinSubHash">
@@ -63,9 +63,10 @@ const SurveyJoin = () => {
         </div>
         <div className="joinBox1">
           <div className="joinBox1Text">설문조사 설명</div>
+          <div className="joinBox1Text"></div>
         </div>
         {/* {surveyQuestions.map((question) => {
-          return <div>{question}</div>;
+          return <div>{question.questionContent}</div>;
         })} */}
         <JoinSingleSelection />
         <JoinMultiSelection />
