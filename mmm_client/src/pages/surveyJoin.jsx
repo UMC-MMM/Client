@@ -18,7 +18,7 @@ const SurveyJoin = () => {
   // 설문조사 전체 내용을 담을 변수
   const [surveyContent, setSurveyContent] = useState([]);
   // 설문조사 질문들만 담을 변수
-  // const [surveyQuestions, setSurveyQuestions] = useState([]);
+  // const [surveyQuestions, setSurveyQuestions] = useState();
 
   axios
     .get(`https://www.survave.com/survey/${surveyIdx}`, {
@@ -26,10 +26,10 @@ const SurveyJoin = () => {
     })
     .then(function (survey) {
       setSurveyContent(survey.data.result.getSurveyRes);
-      // setSurveyQuestions(survey.data.result.surveyQuestionRes);
+      console.log(survey.data.result.surveyQuestionRes);
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
 
   return (
