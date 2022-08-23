@@ -579,7 +579,7 @@
   flex-direction: row;
   margin: 0 auto;
   margin-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   padding-left: 24px;
   width: 400px;
   height: 60px;
@@ -626,11 +626,18 @@
   width: 420px;
   display: block;
   margin: auto;
+  padding-top: 20px;
 }
 
-/* .signupBoxError {
+.signupErrorMessage {
+  width: 420px;
+  font-size: 14px;
+  font-weight: 700;
+  color: red;
+  text-align: left;
+  margin: auto;
   display: block;
-} */
+}
 
 .signupAgreeContainer {
   display: flex;
@@ -2267,6 +2274,7 @@
 
 .surveyPostChoosePlusBtn {
   margin-left: 32px;
+  cursor: pointer;
   margin-bottom: 45px;
   height: 42px;
   width: 104px;
@@ -2309,6 +2317,7 @@
 }
 
 .surveyPostDelete {
+  cursor: pointer;
   color: #e1605c;
   font-size: 15px;
   font-weight: 500;
@@ -2316,6 +2325,7 @@
 }
 
 .surveyPostPlusQuestionsBtn {
+  cursor: pointer;
   width: 136px;
   height: 47px;
   margin: 0 auto;
@@ -2330,6 +2340,7 @@
 }
 
 .surveyPostCompleteBtn {
+  cursor: pointer;
   width: 168px;
   height: 52px;
   border-radius: 5px;
