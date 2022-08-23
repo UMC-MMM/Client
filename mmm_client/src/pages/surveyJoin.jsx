@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import Footer from "../components/footer";
+import axios from "axios";
 
 import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
 import JoinMultiSelection from "../components/surveyJoinKindContents/join-multiSelection";
