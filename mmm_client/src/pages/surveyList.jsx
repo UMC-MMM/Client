@@ -9,8 +9,12 @@ import axios from "axios";
 
 import SurveyTargetBoxSmall from "../components/surveyTarget/surveyTargetBoxSmall";
 import SurveyTargetBoxBig from "../components/surveyTarget/surveyTargetBoxBig";
-
+import { useLocation } from "react-router-dom";
 const SurveyList = () => {
+  // main화면에서 설문조사 카테고리 눌렀을 때
+  const location = useLocation();
+  const surveyIdx = location.state.surveyIdx;
+
   const targetAge = [
     { key: 0, selectAge: "나이 상관없음" },
     { key: 1, selectAge: "10대" },
@@ -81,7 +85,7 @@ const SurveyList = () => {
   };
 
   // 어떤 카테고리에 해당하는 설문을 볼것인가요..
-  const [surveyList, setSurveyList] = useState(0);
+  const [surveyList, setSurveyList] = useState(surveyIdx);
 
   // 받아온 설문조사목록에 대한 데이터를 저장할
   const [surveyBox, setSurveyBox] = useState([]);
@@ -89,8 +93,8 @@ const SurveyList = () => {
   // surveyCategoryIdx 와 key값 연결
   const surveyListArr = [
     { key: 0, name: "전체" },
-    { key: 2, name: "경영·경제" },
     { key: 1, name: "인문·사회" },
+    { key: 2, name: "경영·경제" },
     { key: 3, name: "과학" },
     { key: 4, name: "IT" },
     { key: 5, name: "문화·예술" },

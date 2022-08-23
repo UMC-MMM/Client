@@ -10,6 +10,7 @@ import { FaEnvira } from "react-icons/fa";
 import { FaDog } from "react-icons/fa";
 import { CgInbox } from "react-icons/cg";
 import { BsFillGridFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const SurveyCategory = () => {
   return (
@@ -21,33 +22,123 @@ const SurveyCategory = () => {
         <div className="surveyCategoryTitleName">설문조사 카테고리</div>
       </div>
       <div className="surveyCategoryContainer">
-        <CategoryButton
-          title="경영·경제"
-          icon={<FaCommentDollar size="35px" color="#282828" />}
-        />
-        <CategoryButton
-          title="인문·사회"
-          icon={<AiFillRead size="35px" color="#282828" />}
-        />
-        <CategoryButton
-          title="과학"
-          icon={<AiFillExperiment size="35px" color="#282828" />}
-        />
-        <CategoryButton
-          title="IT"
-          icon={<GrTechnology size="35px" color="#282828" />}
-        />
-        <CategoryButton
-          title="문화·예술"
-          icon={<FaPaintBrush size="35px" color="#282828" />}
-        />
-        <CategoryButton
-          title="건강·운동"
-          icon={<MdOutlineSportsVolleyball size="35px" />}
-        />
-        <CategoryButton title="환경" icon={<FaEnvira size="35px" />} />
-        <CategoryButton title="반려동물" icon={<FaDog size="35px" />} />
-        <CategoryButton title="기타" icon={<CgInbox size="35px" />} />
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 1 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="인문·사회"
+            icon={<AiFillRead size="35px" color="#282828" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 2 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="경영·경제"
+            icon={<FaCommentDollar size="35px" color="#282828" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 3 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="과학"
+            icon={<AiFillExperiment size="35px" color="#282828" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 4 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="IT"
+            icon={<GrTechnology size="35px" color="#282828" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 5 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="문화·예술"
+            icon={<FaPaintBrush size="35px" color="#282828" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 6 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton
+            title="건강·운동"
+            icon={<MdOutlineSportsVolleyball size="35px" />}
+          />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 7 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton title="환경" icon={<FaEnvira size="35px" />} />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 8 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton title="반려동물" icon={<FaDog size="35px" />} />
+        </Link>
+        <Link
+          to="/surveyList"
+          state={{ surveyIdx: 9 }}
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#282828",
+          }}
+        >
+          <CategoryButton title="기타" icon={<CgInbox size="35px" />} />
+        </Link>
       </div>
     </div>
   );

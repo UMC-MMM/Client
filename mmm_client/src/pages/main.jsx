@@ -10,6 +10,9 @@ import { useState } from "react";
 const Main = () => {
   const [surveyTopThree, setSurveyTopThree] = useState();
 
+  // 어떤 설문조사 카테고리를 선택?
+  // const [surveyCategoryIdx, setSurveyCategoryIdx] = useState();
+
   axios
     .get("https://www.survave.com/")
     .then(function (response) {
