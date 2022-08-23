@@ -4,10 +4,14 @@ import { useState } from "react";
 import MyPageListBox from "../myPageListBox";
 
 const MySurvey = () => {
+  const token = localStorage.getItem("token");
+
   const [mySurveyBox, setMySurveyBox] = useState([]);
 
   axios
-    .get("https://www.survave.com/users/mysurveys")
+    .get("https://www.survave.com/users/mysurveys", {
+      headers: { "X-ACCESS-TOKEN": token },
+    })
     .then(function (response) {
       setMySurveyBox(response.data.result);
     })
