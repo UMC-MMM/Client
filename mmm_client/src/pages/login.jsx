@@ -23,7 +23,6 @@ const Login = () => {
 
   const handleSubmitClick = async () => {
     const body = {
-
       id,
       password,
     };
@@ -36,9 +35,9 @@ const Login = () => {
     console.log(loginApi);
 
     if (loginApi.data.code === 1000) {
-      navigate("/");
       localStorage.setItem("token", loginApi.data.result.jwt);
-      localStorage.setItem("userId", loginApi.data.result.userIdx);
+      localStorage.setItem("userIdx", loginApi.data.result.userIdx);
+      navigate("/");
     } else if (loginApi.data.code === 2010) {
       setErrorIdMessage(loginApi.data.message);
     } else if (loginApi.data.code === 2030) {
@@ -46,7 +45,6 @@ const Login = () => {
     } else if (loginApi.data.code === 3014) {
       setErrorPasswordMessage(loginApi.data.message);
     }
-
   };
 
   return (
