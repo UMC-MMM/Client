@@ -2,8 +2,15 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import SurveyQustionBox from "../components/surveyQustionBox";
+import { useNavigate } from "react-router-dom";
 
 const SurveyWrite = () => {
+  const navigate = useNavigate();
+
+  const handleSurveyPostCompleteBtn = () => {
+    navigate("/surveyWrite2");
+  };
+
   const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([
     { key: 0 },
     { key: 1 },
@@ -56,7 +63,12 @@ const SurveyWrite = () => {
       >
         +질문추가
       </div>
-      <div className="surveyPostCompleteBtn">설문작성완료</div>
+      <div
+        className="surveyPostCompleteBtn"
+        onClick={handleSurveyPostCompleteBtn}
+      >
+        설문작성완료
+      </div>
     </>
   );
 };

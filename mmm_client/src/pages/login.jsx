@@ -1,8 +1,34 @@
+import axios from "axios";
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
 
 const Login = () => {
+  const [userId, setUserId] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  const handleIdChange = (e) => {
+    setUserId(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setUserPassword(e.target.value);
+  };
+
+  const handleSubmitClick = async () => {
+    const body = {
+      userId,
+      userPassword,
+    };
+    console.log(body);
+    const loginApi = await axios.post(
+      `https://www.survave.com/users/login`,
+      body
+    );
+    console.log(loginApi);
+  };
+
   return (
     <>
       <div className="loginTitle logo">
@@ -17,6 +43,7 @@ const Login = () => {
           type="text"
           name="id"
           placeholder="아이디를 입력하세요."
+          onChange={handleIdChange}
         />
       </div>
       <div className="loginInputPassword">
@@ -25,6 +52,7 @@ const Login = () => {
           type="password"
           name="password"
           placeholder="비밀번호를 입력하세요."
+          onChange={handlePasswordChange}
         />
       </div>
       <div className="loginSubmitBtn">
@@ -34,6 +62,7 @@ const Login = () => {
           type="submit"
           name="submit"
           value="로그인하기"
+          onClick={handleSubmitClick}
         />
       </div>
       {/* <div className="loginFindIdandPassword">

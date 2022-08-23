@@ -5,7 +5,7 @@ import { VscClose } from "react-icons/vsc";
 // DataPicker import
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { ko } from "date-fns/esm/locale";
+// import { ko } from "date-fns/esm/locale";
 
 const SurveyWrite2 = () => {
   const targetAge = [
@@ -138,7 +138,7 @@ const SurveyWrite2 = () => {
             </div> */}
             <DatePicker
               className="surveyWrite2-red-tag surveyWrite2-datepicker"
-              locale={ko}
+              // locale={ko}
               dateFormat="yyyy년 MM월 dd일"
               selected={finishDate}
               minDate={new Date()}

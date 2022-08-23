@@ -16,51 +16,73 @@ const Signup = () => {
     setAgree(!agree);
   };
 
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  //  오류 메세지 처리
+  const [errorEmailMessage, setErrorEmailMessage] = useState("");
+  const [errorIdMessage, setErrorIdMessage] = useState("");
+  const [errorPasswordMessage, setErrorPasswordMessage] = useState("");
+
+  const [userId, setUserId] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  // 페이지 이동
   const navigate = useNavigate();
 
   const handleIdChange = (e) => {
-    setId(e.target.value);
+    setUserId(e.target.value);
   };
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setUserName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    setUserEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+    setUserPassword(e.target.value);
   };
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
+  const handleSubmitSignIn = async () => {
+    // 에러 메시지 초기화
+    setErrorEmailMessage("");
+    setErrorIdMessage("");
+    setErrorPasswordMessage("");
 
-  const handleSubmitSignIn = async (e) => {
-    e.preventDefault();
     const body = {
-      id,
-      name,
-      email,
-      password,
-      confirmPassword,
+      userId,
+      userPassword,
+      userName,
+      userEmail,
     };
-    await axios
-      .post(`http://localhost:9000/users/join`, body)
-      .then((response) => {
-        console.log(response);
-        if (response.status === 1000) {
-          console.log("성공");
-          navigate("/login");
-        }
-      });
+    const singUpApi = await axios.post(
+      `https://www.survave.com/users/join`,
+      body
+    );
+    console.log(singUpApi.data.code);
+    if (singUpApi.data.code === 1000) {
+      navigate("/login");
+    } else if (singUpApi.data.code === 2010) {
+      setErrorIdMessage(singUpApi.data.message);
+      console.log("아이디오류");
+    } else if (singUpApi.data.code === 2011) {
+      setErrorIdMessage(singUpApi.data.message);
+      console.log("아이디오류");
+    } else if (singUpApi.data.code === 2015) {
+      setErrorEmailMessage(singUpApi.data.message);
+      console.log("이메일오류");
+    } else if (singUpApi.data.code === 2016) {
+      setErrorEmailMessage(singUpApi.data.message);
+      console.log("이메일오류");
+    } else if (singUpApi.data.code === 2017) {
+      setErrorEmailMessage(singUpApi.data.message);
+      console.log("이메일오류");
+    } else if (singUpApi.data.code === 2030) {
+      setErrorPasswordMessage(singUpApi.data.message);
+      console.log("비밀번호오류");
+    }
   };
 
   return (
@@ -94,6 +116,7 @@ const Signup = () => {
             onChange={handleEmailChange}
           ></input>
         </div>
+        <div className="signupErrorMessage">{errorEmailMessage}</div>
         <div className="signupBoxTitle">아이디</div>
         <div className="signupInputId">
           <input
@@ -104,6 +127,7 @@ const Signup = () => {
             onChange={handleIdChange}
           ></input>
         </div>
+        <div className="signupErrorMessage">{errorIdMessage}</div>
         <div className="signupBoxTitle">비밀번호</div>
         <div className="signupInputPassword">
           <input
@@ -114,17 +138,7 @@ const Signup = () => {
             onChange={handlePasswordChange}
           ></input>
         </div>
-        <div className="signupBoxTitle">비밀번호 확인</div>
-        {/* <div className="signupBoxError">오류메세지</div> */}
-        <div className="signupInputPasswordCheck">
-          <input
-            id="signupInputPasswordCheck"
-            type="text"
-            name="passwordCheck"
-            placeholder="비밀번호를 한번 더 입력하세요."
-            onChange={handleConfirmPasswordChange}
-          ></input>
-        </div>
+        <div className="signupErrorMessage">{errorPasswordMessage}</div>
         <div className="signupAgreeContainer" onClick={handleAgree}>
           <div
             className="signupAgree"
@@ -154,6 +168,7 @@ const Signup = () => {
             type="submit"
             name="submit"
             value="회원가입 하기"
+            disabled={!agree}
             onClick={handleSubmitSignIn}
           />
         </div>
