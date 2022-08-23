@@ -36,7 +36,6 @@ const SurveyListBox = (props) => {
             <div className="boxSubHash3">#설문종류</div> */}
           </div>
         </div>
-
         <div className="boxBottom">
           <div className="boxBottomEnd">{props.date}</div>
         </div>
