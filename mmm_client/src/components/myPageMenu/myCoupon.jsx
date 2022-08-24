@@ -6,7 +6,7 @@ const MyCoupon = () => {
     <div>
       <div className="myCouponTitle">
         <div className="myCouponTitleT">보유한 쿠폰</div>
-        <div className="myCouponNum">5개</div>
+        <div className="myCouponNum">3개</div>
       </div>
       <div className="myCouponItem">
         <MyPageCoupon
