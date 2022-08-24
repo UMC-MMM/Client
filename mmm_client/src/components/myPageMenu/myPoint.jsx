@@ -26,7 +26,7 @@ const MyPoint = () => {
                 <div className="myPointUsagePlusItemPoint">5P</div>
                 <div className="myPointUsagePlusItemSum1">포인트 충전</div>
                 <div className="myPointUsagePlusItemCont">
-                  ‘결제방법or결제수단’으로 포인트 충전했다는 설명
+                  카드결제 이용 포인트 충전
                 </div>
               </div>
               <div className="myPointUsagePlusItem">
@@ -34,7 +34,7 @@ const MyPoint = () => {
                 <div className="myPointUsagePlusItemPoint">5P</div>
                 <div className="myPointUsagePlusItemSum2">설문 참여</div>
                 <div className="myPointUsagePlusItemCont">
-                  맥딜리버리앱 UX UI 개선용 설문조사 참여
+                  “현대 사회의 투표율에 관한 실태조사” 참여
                 </div>
               </div>
               <div className="myPointUsagePlusItem">
@@ -42,7 +42,7 @@ const MyPoint = () => {
                 <div className="myPointUsagePlusItemPoint">5P</div>
                 <div className="myPointUsagePlusItemSum2">설문 참여</div>
                 <div className="myPointUsagePlusItemCont">
-                  맥딜리버리앱 UX UI 개선용 설문조사 참여
+                  “보이스피싱 범죄 관련 설문조사” 참여
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const MyPoint = () => {
                 <div className="myPointUsagePlusItemPoint">5P</div>
                 <div className="myPointUsagePlusItemSum1">포인트 충전</div>
                 <div className="myPointUsagePlusItemCont">
-                  ‘결제방법or결제수단’으로 포인트 충전했다는 설명
+                  무통장 입금 이용 포인트 충전
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const MyPoint = () => {
                   <div className="myPointUsageMinusItemPoint">5P</div>
                   <div className="myPointUsageMinusItemSum1">설문 게시</div>
                   <div className="myPointUsageMinusItemCont">
-                    맥딜리버리앱 UX UI 개선용 설문조사 게시
+                    “유기견 입양에 관한 실태조사” 게시
                   </div>
                 </div>
                 <div className="myPointUsageMinusItem">
@@ -76,7 +76,7 @@ const MyPoint = () => {
                   <div className="myPointUsageMinusItemPoint">5P</div>
                   <div className="myPointUsageMinusItemSum2">포인트 샵</div>
                   <div className="myPointUsageMinusItemCont">
-                    포인트를 ‘상품이름’으로 교체했다는 설명
+                    포인트 샵 이용
                   </div>
                 </div>
               </div>
