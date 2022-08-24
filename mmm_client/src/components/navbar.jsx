@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { BsBellFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
+import { FaUserPlus } from "react-icons/fa";
 
 import { ReactComponent as Survave } from "../assets/survaveLogo.svg";
 
@@ -73,9 +74,18 @@ const Navbar = () => {
                 </span>
               </li>
               <li className="navbarMypageIcon" onClick={handleLoginOrMypage}>
-                <span>
+                {token === null ? (
+                  <span>
+                    <FaUserPlus color="#C2C2C2" size="35px" />
+                  </span>
+                ) : (
+                  <span>
+                    <FaUserCircle color="#C2C2C2" size="35px" />
+                  </span>
+                )}
+                {/* <span>
                   <FaUserCircle color="#C2C2C2" size="35px" />
-                </span>
+                </span> */}
               </li>
             </ul>
           </div>
