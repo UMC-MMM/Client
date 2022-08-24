@@ -1,5 +1,6 @@
 import React from "react";
 import StoryBox from "./storyBox";
+import { MdOutlineMenuBook } from "react-icons/md";
 import StoryImg1 from "../assets/story-1.jpeg";
 import StoryImg2 from "../assets/story-2.jpeg";
 import StoryImg3 from "../assets/story-3.jpeg";
@@ -8,7 +9,12 @@ import StoryImg4 from "../assets/story-4.jpeg";
 const PopularityStory = (props) => {
   return (
     <div className="popularityStory">
-      <div className="popularityStoryTitle">인기 스토리</div>
+      <div className="popularityStoryTitle">
+        <div>
+          <MdOutlineMenuBook color="#E1605C" size="30px" />
+        </div>
+        <div className="popularityStoryTitleTitle">인기 스토리</div>
+      </div>
       <div className="popularityStoryContainer">
         <StoryBox
           img={StoryImg1}

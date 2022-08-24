@@ -30,7 +30,7 @@ const SurveyListBox = (props) => {
           <div className="boxSub">
             <div className="boxSubCond">
               <div className="boxSubCond1">
-                {props.age === 0 ? "나이 상관없음" : props.age + "대"}
+                {props.age === null ? "나이 상관없음" : props.age + "대"}
               </div>
               <div className="boxSubCond2">
                 {props.gender === null ? "성별 상관없음" : props.gender}

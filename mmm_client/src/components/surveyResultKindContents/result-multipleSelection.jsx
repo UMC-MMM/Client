@@ -35,7 +35,9 @@ const ResultMultipleSelection = () => {
           </div>
           <div className="resultSingleQItem2">{multiSelection.title}</div>
         </div>
-        <div className="resultSingleA"></div> //결과 그래프
+        <div className="resultSingleA">
+          <div className="resultSingleADescrip"></div>
+        </div>
       </div>
     </>
   );

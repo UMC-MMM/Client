@@ -12,26 +12,29 @@ const MyProfileView = ({ handleMyProfile, aboutUser }) => {
         ></img>
       </div>
       <div className="myPageRightProfile">
-        {/* <div>
+        <div>
           <div className="myPageProfileTitle">닉네임</div>
-          <div className="myPageProfileDetail">{aboutUser.userName}</div>
-        </div> */}
+          <div className="myPageProfileDetail">Connie</div>
+          {/* <div className="myPageProfileDetail">{aboutUser.userName}</div> */}
+        </div>
         <div>
           <div className="myPageProfileTitle">이름</div>
           <div className="myPageProfileDetail">{aboutUser.userName}</div>
         </div>
         <div>
           <div className="myPageProfileTitle">성별</div>
-          <div className="myPageProfileDetail">{aboutUser.userGender}</div>
+          <div className="myPageProfileDetail">여성</div>
+          {/* <div className="myPageProfileDetail">{aboutUser.userGender}</div> */}
         </div>
         <div>
           <div className="myPageProfileTitle">나이</div>
-          <div className="myPageProfileDetail">{aboutUser.userAge}</div>
+          <div className="myPageProfileDetail">20대</div>
+          {/* <div className="myPageProfileDetail">{aboutUser.userAge}</div> */}
         </div>
         <div className="myPageProfileIDEmailPW">
           <div>
             <div className="myPageProfileTitle">아이디</div>
-            <div className="myPageProfileDetail">{aboutUser.userEmail}</div>
+            <div className="myPageProfileDetail">{aboutUser.userId}</div>
           </div>
           <div>
             <div className="myPageProfileTitle">이메일</div>

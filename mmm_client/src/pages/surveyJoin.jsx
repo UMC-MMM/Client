@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import Footer from "../components/footer";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
 import JoinMultiSelection from "../components/surveyJoinKindContents/join-multiSelection";
@@ -53,8 +54,16 @@ const SurveyJoin = () => {
         </div>
         <div className="joinSub">
           <div className="joinSubCond">
-            <div className="joinSubCond1">{surveyContent.preferAge}대</div>
-            <div className="joinSubCond1">{surveyContent.preferGender}</div>
+            <div className="joinSubCond1">
+              {surveyContent.preferAge === null
+                ? "나이 상관없음"
+                : surveyContent.preferAge + "대"}
+            </div>
+            <div className="joinSubCond1">
+              {surveyContent.preferGender === null
+                ? "성별 상관없음"
+                : surveyContent.preferGender}
+            </div>
           </div>
           <div className="joinSubHash">
             <div className="joinSubHash1">#{surveyContent.hashtag}</div>
@@ -86,7 +95,16 @@ const SurveyJoin = () => {
         })}
 
         <div className="joinFinal">
-          <button type="submit">설문 제출하기</button>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "#282828",
+            }}
+          >
+            <button type="submit">설문 제출하기</button>
+          </Link>
         </div>
       </div>
       <Footer />
