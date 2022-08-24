@@ -4,6 +4,7 @@ import { BsX } from "react-icons/bs";
 
 const SingleSelection = () => {
   const [selections, setSelections] = useState([{ key: 0 }, { key: 1 }]);
+  const singleSelectionDistractor = [];
 
   const handleSurveyPostChoosePlusBtn = () => {
     const newSelections = [...selections, { key: Date.now() }];
@@ -13,6 +14,15 @@ const SingleSelection = () => {
   const handleJoinBoxDelete = (survey) => {
     const newSelections = selections.filter((item) => item.key !== survey.key);
     setSelections(newSelections);
+  };
+
+  const handleSingleSelectionDistractor = (e) => {
+    singleSelectionDistractor.push(e.target.value);
+    console.log(e);
+  };
+
+  const handleSubmit = () => {
+    console.log(singleSelectionDistractor);
   };
 
   return (
@@ -32,6 +42,7 @@ const SingleSelection = () => {
                       type="text"
                       name="text"
                       placeholder="선택지"
+                      onChange={handleSingleSelectionDistractor}
                     ></input>
                   </div>
                   <div onClick={() => handleJoinBoxDelete(selection)}>
@@ -48,6 +59,15 @@ const SingleSelection = () => {
         onClick={handleSurveyPostChoosePlusBtn}
       >
         선택지 추가
+      </div>
+      <div>
+        <input
+          id="surveyQuestionDistractor"
+          type="submit"
+          name="text"
+          placeholder="제발...."
+          onClick={handleSubmit}
+        ></input>
       </div>
     </div>
   );
