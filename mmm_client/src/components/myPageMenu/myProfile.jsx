@@ -3,7 +3,7 @@ import { useState } from "react";
 import MyProfileView from "./myProfileView";
 import MyProfileModification from "./myProfileModification";
 
-const MyProfile = () => {
+const MyProfile = ({ aboutUser }) => {
   const [myProfile, setMyProfile] = useState(0);
 
   const handleMyProfile = () => {
@@ -15,7 +15,9 @@ const MyProfile = () => {
   };
 
   const myProfileObj = {
-    0: <MyProfileView handleMyProfile={handleMyProfile} />,
+    0: (
+      <MyProfileView handleMyProfile={handleMyProfile} aboutUser={aboutUser} />
+    ),
     1: <MyProfileModification handleMyProfile={handleMyProfile} />,
   };
   return <div className="myPageProfile">{myProfileObj[myProfile]}</div>;
