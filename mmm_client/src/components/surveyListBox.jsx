@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
 const SurveyListBox = (props) => {
-  const getSurveyIdx = props.key;
+  const getSurveyIdx = props.surveyNo;
 
   return (
     <>
       <Link
         to="/surveyjoin"
-        surveyIdx={getSurveyIdx}
+        state={{ surveyIdx: getSurveyIdx }}
         style={{ textDecoration: "none", cursor: "pointer", color: "#282828" }}
       >
         <div className="surveyListBox">

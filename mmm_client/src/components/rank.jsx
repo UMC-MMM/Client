@@ -1,9 +1,8 @@
 import React from "react";
 import { FaCrown } from "react-icons/fa";
-
 import RankBox from "./rankBox";
 
-const Rank = () => {
+const Rank = ({ surveyTopThree }) => {
   return (
     <>
       <div className="rank">
@@ -16,27 +15,18 @@ const Rank = () => {
         </div>
       </div>
       <table className="rankBox">
-        <RankBox
-          rank={1}
-          title="설문조사 제목"
-          tag={["앱종류", "사용자", "설문종류"]}
-          age="나이 상관없음"
-          gender="성별 상관없음"
-        />
-        <RankBox
-          rank={2}
-          title="설문조사 제목"
-          tag={["앱종류", "사용자", "설문종류"]}
-          age="나이 상관없음"
-          gender="성별 상관없음"
-        />
-        <RankBox
-          rank={3}
-          title="설문조사 제목"
-          tag={["앱종류", "사용자", "설문종류"]}
-          age="나이 상관없음"
-          gender="성별 상관없음"
-        />
+        {surveyTopThree.map((survey, index) => {
+          return (
+            <RankBox
+              rank={index + 1}
+              title={survey.surveyTitle}
+              tag={survey.hashtag}
+              age={survey.preferAge}
+              gender={survey.preferGender}
+              idx={survey.surveyIdx}
+            />
+          );
+        })}
       </table>
     </>
   );
