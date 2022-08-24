@@ -18,7 +18,7 @@ const SurveyJoin = () => {
   // 설문조사 전체 내용을 담을 변수
   const [surveyContent, setSurveyContent] = useState([]);
   // 설문조사 질문들만 담을 변수
-  // const [surveyQuestions, setSurveyQuestions] = useState();
+  const [surveyQuestions, setSurveyQuestions] = useState([]);
 
   axios
     .get(`https://www.survave.com/survey/${surveyIdx}`, {
@@ -26,7 +26,9 @@ const SurveyJoin = () => {
     })
     .then(function (survey) {
       setSurveyContent(survey.data.result.getSurveyRes);
-      console.log(survey.data.result.surveyQuestionRes);
+      setSurveyQuestions(survey.data.result.surveyQuestionRes);
+      // console.log("여기");
+      // console.log(surveyQuestions);
     })
     .catch(function (error) {
       // console.log(error);
@@ -62,12 +64,13 @@ const SurveyJoin = () => {
           <div className="joinSubEnd">{surveyContent.deadlineAt}</div>
         </div>
         <div className="joinBox1">
-          <div className="joinBox1Text">설문조사 설명</div>
-          <div className="joinBox1Text"></div>
+          <div className="joinBox1Text">설문조조조조사</div>
+          <div className="joinBox1Text">
+            {surveyQuestions.map((question) => {
+              return <div>{question.questionContent}</div>;
+            })}
+          </div>
         </div>
-        {/* {surveyQuestions.map((question) => {
-          return <div>{question.questionContent}</div>;
-        })} */}
         <JoinSingleSelection />
         <JoinMultiSelection />
         <JoinDescriptiveForm />
