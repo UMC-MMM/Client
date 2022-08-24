@@ -9,11 +9,18 @@ const MyCoupon = () => {
         <div className="myCouponNum">5개</div>
       </div>
       <div className="myCouponItem">
-        <MyPageCoupon />
-        <MyPageCoupon />
-        <MyPageCoupon />
-        <MyPageCoupon />
-        <MyPageCoupon />
+        <MyPageCoupon
+          title="설문조사 등록 1회권"
+          content="설문조사를 1회 무료로 등록할 수 있는 쿠폰입니다."
+        />
+        <MyPageCoupon
+          title="설문조사 등록 할인권 (50%)"
+          content="설문조사 등록 시, 50%할인된 포인트로 등록할 수 있는 쿠폰입니다."
+        />
+        <MyPageCoupon
+          title="설문조사 등록 할인권 (30%)"
+          content="설문조사 등록 시, 30%할인된 포인트로 등록할 수 있는 쿠폰입니다."
+        />
       </div>
     </div>
   );
