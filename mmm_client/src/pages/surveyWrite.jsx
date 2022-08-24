@@ -2,64 +2,25 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import SurveyQustionBox from "../components/surveyQustionBox";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
+import { Link } from "react-router-dom";
 
 const SurveyWrite = () => {
-  const token = localStorage.getItem("token");
-  const userIdx = localStorage.getItem("userIdx");
+  const [surveyIntroduction, setSurveyIntroduction] = useState("");
+  const [surveyTitle, setSurveyTitle] = useState("");
 
-  const navigate = useNavigate();
-  let body = {
-    userIdx: { userIdx },
-    surveyIntroduction: "테스트 - 설문조사 등록 소개",
-    surveyTitle: "테스트 - 설문조사 등록 제목",
-    surveyQuestion: [
-      {
-        questionType: "Essay",
-        questionContent: "서술형질문내용1",
-        questionOption: [],
-      },
-      {
-        questionType: "Checkbox",
-        questionContent: "체크박스 질문2",
-        questionOption: [
-          "체크박스 옵션1",
-          "체크박스 옵션2",
-          "체크박스 옵션7",
-          "체크박스 옵션10",
-        ],
-      },
-      {
-        questionType: "Multiple",
-        questionContent: "멀티플 질문3",
-        questionOption: ["멀티플 옵션3", "멀티플 옵션4", "멀티플 옵션5"],
-      },
-    ],
-    deadlineAt: "2022-10-01",
-    preferGender: "MALE",
-    preferAge: 40,
-    surveyTime: 10,
-    hashtag: "해시태그",
-    surveyPointValue: 50,
-    couponIdx: null,
+  const surveyBody = {
+    surveyIntroduction,
+    surveyTitle,
   };
 
-  const handleSurveyPostCompleteBtn = () => {
-    axios
-      .post("https://www.survave.com/survey", body, {
-        headers: {
-          "X-ACCESS-TOKEN": token,
-        },
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log("오류발생");
-        console.log(error);
-      });
-    navigate("/surveyWrite2");
+  const handleSurveyTitle = (e) => {
+    setSurveyTitle(e.target.value);
+  };
+
+  const handleSurveyIntroduction = (e) => {
+    setSurveyIntroduction(e.target.value);
+
   };
 
   const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([
@@ -89,6 +50,7 @@ const SurveyWrite = () => {
             type="text"
             name="id"
             placeholder="설문조사의 제목을 입력하세요."
+            onChange={handleSurveyTitle}
           />
         </div>
         <div className="surveyPostDescriptionInput">
@@ -97,6 +59,7 @@ const SurveyWrite = () => {
             type="text"
             name="id"
             placeholder="설문조사의 설명을 입력하세요."
+            onChange={handleSurveyIntroduction}
           />
         </div>
       </div>
@@ -114,12 +77,17 @@ const SurveyWrite = () => {
       >
         +질문추가
       </div>
-      <div
-        className="surveyPostCompleteBtn"
-        onClick={handleSurveyPostCompleteBtn}
+      <Link
+        to="/surveyWrite2"
+        surveyBody={surveyBody}
+        style={{
+          textDecoration: "none",
+          cursor: "pointer",
+          color: "#282828",
+        }}
       >
-        설문작성완료
-      </div>
+        <div className="surveyPostCompleteBtn">설문작성완료</div>
+      </Link>
     </>
   );
 };
