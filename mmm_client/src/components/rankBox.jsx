@@ -17,7 +17,7 @@ const RankBox = (props) => {
           <div className="rankName">{props.title}</div>
           <div className="rankHashtags">
             <div className="rankHashtag1">
-              {props.tag}
+              #{props.tag}
               {/* {props.tag.map((tag) => {
             return <div className="rankHashtag1">#{tag}</div>;
           })} */}
@@ -25,10 +25,10 @@ const RankBox = (props) => {
           </div>
           <div className="rankCond">
             <div className="rankCond1">
-              {props.age === 0 ? "나이 상관없음" : props.age + "대"}
+              {props.age === null ? "나이 상관없음" : props.age + "대"}
             </div>
             <div className="rankCond2">
-              {props.gender === 0 ? "성별 상관없음" : props.gender}
+              {props.gender === null ? "성별 상관없음" : props.gender}
             </div>
           </div>
           <button className="rankBtn">
