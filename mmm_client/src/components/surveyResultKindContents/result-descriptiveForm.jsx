@@ -10,25 +10,6 @@ const ResultDescriptiveForm = () => {
     title: "서술형 질문",
   };
 
-  const token = localStorage.getItem("token");
-  const location = useLocation();
-  const surveyIdx = location.state.surveyIdx;
-  const [resultAnswer, setResultAnswer] = useState([]);
-
-  axios
-    .get(`https://www.survave.com/users/mysurveys/${surveyIdx}`, {
-      headers: { "X-ACCESS-TOKEN": token },
-    })
-    .then(function (response) {
-      setResultAnswer(
-        response.data.result.questionResultList.answerResultList.answer
-      );
-    })
-    .catch(function (error) {
-      // console.log(error);
-      // 되긴 되는데 에러
-    });
-
   return (
     <>
       <div className="resultSingle">
@@ -51,10 +32,7 @@ const ResultDescriptiveForm = () => {
           <div className="resultSingleQItem2">{descriptiveForm.title}</div>
         </div>
         <div className="resultSingleA">
-          {/* resultAnswer.map((answer) => {
-                return (
-          <div className="resultSingleADescrip"></div>);
-        }) */}
+          <div className="resultSingleADescrip"></div>
         </div>
       </div>
     </>
