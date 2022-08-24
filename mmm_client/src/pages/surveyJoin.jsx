@@ -62,7 +62,7 @@ const SurveyJoin = () => {
           <div className="joinSubEnd">{surveyContent.deadlineAt}</div>
         </div>
         <div className="joinBox1">
-          <div className="joinBox1Text">설문조사 내용</div>
+          <div className="joinBox1Text">{surveyContent.introduction}</div>
         </div>
         {surveyQuestions.map((question) => {
           if (question.questionType === "Essay") {
