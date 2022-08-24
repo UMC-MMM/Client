@@ -4,7 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 import Footer from "../components/footer";
 import axios from "axios";
 
-import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
+// import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
 import JoinMultiSelection from "../components/surveyJoinKindContents/join-multiSelection";
 import JoinDescriptiveForm from "../components/surveyJoinKindContents/join-descriptiveForm";
 import { useState } from "react";
@@ -27,11 +27,9 @@ const SurveyJoin = () => {
     .then(function (survey) {
       setSurveyContent(survey.data.result.getSurveyRes);
       setSurveyQuestions(survey.data.result.surveyQuestionRes);
-      // console.log("여기");
-      // console.log(surveyQuestions);
     })
     .catch(function (error) {
-      // console.log(error);
+      console.log(error);
     });
 
   return (
@@ -64,16 +62,29 @@ const SurveyJoin = () => {
           <div className="joinSubEnd">{surveyContent.deadlineAt}</div>
         </div>
         <div className="joinBox1">
-          <div className="joinBox1Text">설문조조조조사</div>
-          <div className="joinBox1Text">
-            {surveyQuestions.map((question) => {
-              return <div>{question.questionContent}</div>;
-            })}
-          </div>
+          <div className="joinBox1Text">{surveyContent.introduction}</div>
         </div>
-        <JoinSingleSelection />
-        <JoinMultiSelection />
-        <JoinDescriptiveForm />
+        {surveyQuestions.map((question) => {
+          if (question.questionType === "Essay") {
+            return <JoinDescriptiveForm title={question.questionContent} />;
+          } else if (question.questionType === "Checkbox") {
+            return (
+              <JoinMultiSelection
+                title={question.questionContent}
+                options={question.options}
+              />
+            );
+          } else {
+            return null;
+            // return (
+            //   <JoinSingleSelection
+            //     title={question.questionContent}
+            //     options={question.options}
+            //   />
+            // );
+          }
+        })}
+
         <div className="joinFinal">
           <button type="submit">설문 제출하기</button>
         </div>
