@@ -8,10 +8,12 @@ const RankBox = (props) => {
       <div className="rankBoxRight">
         <div className="rankName">{props.title}</div>
         <div className="rankHashtags">
-          {props.tag}
-          {/* {props.tag.map((tag) => {
+          <div className="rankHashtag1">
+            {props.tag}
+            {/* {props.tag.map((tag) => {
             return <div className="rankHashtag1">#{tag}</div>;
           })} */}
+          </div>
         </div>
         <div className="rankCond">
           <div className="rankCond1">
