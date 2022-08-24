@@ -23,6 +23,7 @@ const Rank = ({ surveyTopThree }) => {
               tag={survey.hashtag}
               age={survey.preferAge}
               gender={survey.preferGender}
+              idx={survey.surveyIdx}
             />
           );
         })}
