@@ -525,6 +525,16 @@
   color: #68c9d1;
 }
 
+.loginErrorMessage {
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+  width: 420px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+}
+
 /* signup page CSS */
 .signupTitle {
   margin: 0 auto;
@@ -579,7 +589,7 @@
   flex-direction: row;
   margin: 0 auto;
   margin-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   padding-left: 24px;
   width: 400px;
   height: 60px;
@@ -626,11 +636,18 @@
   width: 420px;
   display: block;
   margin: auto;
+  padding-top: 20px;
 }
 
-/* .signupBoxError {
+.signupErrorMessage {
+  width: 420px;
+  font-size: 14px;
+  font-weight: 700;
+  color: red;
+  text-align: left;
+  margin: auto;
   display: block;
-} */
+}
 
 .signupAgreeContainer {
   display: flex;
@@ -766,6 +783,17 @@
   align-items: center;
 }
 
+.joinSubHash1 {
+  border-radius: 30px;
+  color: #68c9d1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  background: #ffffff;
+  border: 2px solid #68c9d1;
+  margin-right: 8px;
+}
 .joinSubCond {
   display: flex;
   justify-content: space-between;
@@ -1609,16 +1637,15 @@
 
 /* 설문조사 리스트 페이지-구분선 */
 .surveyListLineFirst {
-  border: 2px solid #eeeeee;
+  /* border: 2px solid #eeeeee; */
   margin-top: 42px;
-}
-
-.surveyListLine {
-  border: 2px solid #eeeeee;
 }
 
 /* 설문조사리스트 페이지-listBox */
 .surveyListBox {
+  border: 2px solid #eeeeee;
+  border-right: none;
+  border-left: none;
   display: flex;
   flex-direction: column;
   /* background-color: #8e8e8e; */
@@ -2266,9 +2293,9 @@
 }
 
 .surveyPostChoosePlusBtn {
-  margin-left: 27px;
+  margin-left: 32px;
+  cursor: pointer;
   margin-bottom: 45px;
-  margin-top: 24px;
   height: 42px;
   width: 104px;
   border-radius: 10px;
@@ -2310,6 +2337,7 @@
 }
 
 .surveyPostDelete {
+  cursor: pointer;
   color: #e1605c;
   font-size: 15px;
   font-weight: 500;
@@ -2317,6 +2345,7 @@
 }
 
 .surveyPostPlusQuestionsBtn {
+  cursor: pointer;
   width: 136px;
   height: 47px;
   margin: 0 auto;
@@ -2331,6 +2360,7 @@
 }
 
 .surveyPostCompleteBtn {
+  cursor: pointer;
   width: 168px;
   height: 52px;
   border-radius: 5px;
@@ -2577,4 +2607,182 @@
 .surveyWrite2-datepicker {
   cursor: pointer;
   display: inline;
+}
+
+/* Dropdown */
+.dropdown {
+  width: 85px;
+  position: relative;
+  user-select: none;
+  margin-top: 10px;
+  margin-right: 45px;
+}
+
+.dropdownBtn {
+  padding: 15px;
+  text-align: center;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 110%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  padding: 15px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+/* 설문조사 게시화면->선택지 커스텀 */
+#surveyQuestionDistractor {
+  width: 680px;
+  border: none;
+  background-color: #fafafa;
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: normal;
+  color: #282828;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* 설문조사 게시화면->서술형 폼 커스텀 */
+.surveyDescriptiveForm {
+  width: 94%;
+  margin-left: 27px;
+  margin-bottom: 70px;
+}
+.surveyDescriptiveText {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #8e8e8e;
+}
+#surveyDescriptiveText {
+  border: none;
+  background-color: #eeeeee;
+  font-family: NotoSansKR;
+  font-size: 14px;
+  font-weight: normal;
+  color: #8e8e8e;
+  appearance: none;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* 설문조사 결과화면 */
+.resultTop {
+  display: flex;
+  width: 44%;
+  align-items: center;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  height: 57px;
+  margin-bottom: 75px;
+}
+
+.resultTopItem1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #282828;
+  margin-left: 28px;
+}
+
+.resultTopItem2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #e1605c;
+  margin-left: 19px;
+}
+
+.resultSingle {
+  background: #eeeeee;
+  border-radius: 20px;
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 88px;
+  /* align-items: center; */
+}
+
+.resultSingleTop {
+  display: flex;
+  align-items: center;
+  margin-top: 21px;
+}
+
+.resultSingleTopItem1 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  color: #282828;
+  margin-left: 30px;
+}
+
+.resultSingleTopItem2 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #282828;
+  margin-left: 15.66px;
+}
+
+.resultSingleQ {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.resultSingleQItem1 {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1605c;
+}
+
+.resultSingleQItem1-2 {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #68c9d1;
+}
+
+.resultSingleQItem2 {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #282828;
+  margin-left: 10px;
+}
+
+.resultSingleA {
+  margin-top: 47px;
+  margin-left: 89px;
 }

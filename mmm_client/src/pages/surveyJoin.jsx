@@ -2,57 +2,72 @@ import React from "react";
 import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import Footer from "../components/footer";
+import axios from "axios";
 
 import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
 import JoinMultiSelection from "../components/surveyJoinKindContents/join-multiSelection";
 import JoinDescriptiveForm from "../components/surveyJoinKindContents/join-descriptiveForm";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const SurveyJoin = () => {
-  const AboutSurvey = {
-    title: "설문조사 제목",
-    writer: "게시자 이름",
-    time: 5,
-    age: "나이 상관없음",
-    gender: "성별 상관없음",
-    tag: ["앱종류", "사용자", "설문종류"],
-    expiryDate: "2022. 8. 26.",
-    // 디데이 아직 미완성
-    detail:
-      "맥딜리버리 앱 UX UI 개선용 설문조사입니다. 맥딜리버리 앱의 사용성에 대한 인터뷰 또한 모집중이니 인터뷰에 응해주실 분은 마지막 설문문항에 전화번호를 꼭 기입해주세요.",
-  };
+  const token = localStorage.getItem("token");
+  const location = useLocation();
+  const surveyIdx = location.state.surveyIdx;
+
+  // 설문조사 전체 내용을 담을 변수
+  const [surveyContent, setSurveyContent] = useState([]);
+  // 설문조사 질문들만 담을 변수
+  // const [surveyQuestions, setSurveyQuestions] = useState();
+
+  axios
+    .get(`https://www.survave.com/survey/${surveyIdx}`, {
+      headers: { "X-ACCESS-TOKEN": token },
+    })
+    .then(function (survey) {
+      setSurveyContent(survey.data.result.getSurveyRes);
+      console.log(survey.data.result.surveyQuestionRes);
+    })
+    .catch(function (error) {
+      // console.log(error);
+    });
 
   return (
     <>
       <Navbar />
       <div className="join">
         <div className="joinTop">
-          <div className="joinTopPoint">10p</div>
+          <div className="joinTopPoint">{surveyContent.surveyPointValue}p</div>
           <div className="joinTopProfile">
             <div>
               <FaUserCircle size="44px" />
             </div>
-            <div className="joinTopProfileName">{AboutSurvey.writer}</div>
+            <div className="joinTopProfileName">{surveyContent.userName}</div>
           </div>
         </div>
         <div className="joinTitle">
-          <div className="joinTitleT">{AboutSurvey.title}</div>
-          <div className="joinTitleTime">약 {AboutSurvey.time}분 소요</div>
+          <div className="joinTitleT">{surveyContent.surveyTitle}</div>
+          <div className="joinTitleTime">
+            약 {surveyContent.surveyTime}분 소요
+          </div>
         </div>
         <div className="joinSub">
           <div className="joinSubCond">
-            <div className="joinSubCond1">{AboutSurvey.age}</div>
-            <div className="joinSubCond1">{AboutSurvey.gender}</div>
+            <div className="joinSubCond1">{surveyContent.preferAge}대</div>
+            <div className="joinSubCond1">{surveyContent.preferGender}</div>
           </div>
           <div className="joinSubHash">
-            {AboutSurvey.tag.map((tag) => {
-              return <div className="joinSubHash1">#{tag}</div>;
-            })}
+            <div className="joinSubHash1">#{surveyContent.hashtag}</div>
           </div>
-          <div className="joinSubEnd">D-10</div>
+          <div className="joinSubEnd">{surveyContent.deadlineAt}</div>
         </div>
         <div className="joinBox1">
-          <div className="joinBox1Text">{AboutSurvey.detail}</div>
+          <div className="joinBox1Text">설문조사 설명</div>
+          <div className="joinBox1Text"></div>
         </div>
+        {/* {surveyQuestions.map((question) => {
+          return <div>{question.questionContent}</div>;
+        })} */}
         <JoinSingleSelection />
         <JoinMultiSelection />
         <JoinDescriptiveForm />
