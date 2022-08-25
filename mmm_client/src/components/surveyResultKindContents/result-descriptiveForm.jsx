@@ -1,4 +1,7 @@
 import React from "react";
+import axios from "axios";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ResultDescriptiveForm = () => {
   const descriptiveForm = {
@@ -28,7 +31,9 @@ const ResultDescriptiveForm = () => {
           </div>
           <div className="resultSingleQItem2">{descriptiveForm.title}</div>
         </div>
-        <div className="resultSingleA"></div> //결과 그래프
+        <div className="resultSingleA">
+          <div className="resultSingleADescrip"></div>
+        </div>
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 
-const JoinDescriptiveForm = () => {
+const JoinDescriptiveForm = (props) => {
   const descriptiveForm = {
     essential: true,
-    title: "서술형 질문",
+    title: props.title,
   };
   return (
     <div className="joinBox4">

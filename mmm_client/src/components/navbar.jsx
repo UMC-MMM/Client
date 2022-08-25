@@ -70,17 +70,35 @@ const Navbar = () => {
             <ul className="navbarIcons">
               <li className="navbarBellIcon">
                 <span>
-                  <BsBellFill color="#C2C2C2" size="35px" />
+                  <BsBellFill
+                    color="#C2C2C2"
+                    size="35px"
+                    style={{
+                      cursor: "pointer",
+                    }}
+                  />
                 </span>
               </li>
               <li className="navbarMypageIcon" onClick={handleLoginOrMypage}>
                 {token === null ? (
                   <span>
-                    <FaUserPlus color="#C2C2C2" size="35px" />
+                    <FaUserPlus
+                      color="#C2C2C2"
+                      size="35px"
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    />
                   </span>
                 ) : (
                   <span>
-                    <FaUserCircle color="#C2C2C2" size="35px" />
+                    <FaUserCircle
+                      color="#C2C2C2"
+                      size="35px"
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    />
                   </span>
                 )}
                 {/* <span>

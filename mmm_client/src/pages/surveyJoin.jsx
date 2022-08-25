@@ -3,8 +3,9 @@ import Navbar from "../components/navbar";
 import { FaUserCircle } from "react-icons/fa";
 import Footer from "../components/footer";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
+// import JoinSingleSelection from "../components/surveyJoinKindContents/join-singleSelection";
 import JoinMultiSelection from "../components/surveyJoinKindContents/join-multiSelection";
 import JoinDescriptiveForm from "../components/surveyJoinKindContents/join-descriptiveForm";
 import { useState } from "react";
@@ -27,11 +28,9 @@ const SurveyJoin = () => {
     .then(function (survey) {
       setSurveyContent(survey.data.result.getSurveyRes);
       setSurveyQuestions(survey.data.result.surveyQuestionRes);
-      // console.log("여기");
-      // console.log(surveyQuestions);
     })
     .catch(function (error) {
-      // console.log(error);
+      console.log(error);
     });
 
   return (
@@ -55,8 +54,16 @@ const SurveyJoin = () => {
         </div>
         <div className="joinSub">
           <div className="joinSubCond">
-            <div className="joinSubCond1">{surveyContent.preferAge}대</div>
-            <div className="joinSubCond1">{surveyContent.preferGender}</div>
+            <div className="joinSubCond1">
+              {surveyContent.preferAge === null
+                ? "나이 상관없음"
+                : surveyContent.preferAge + "대"}
+            </div>
+            <div className="joinSubCond1">
+              {surveyContent.preferGender === null
+                ? "성별 상관없음"
+                : surveyContent.preferGender}
+            </div>
           </div>
           <div className="joinSubHash">
             <div className="joinSubHash1">#{surveyContent.hashtag}</div>
@@ -64,18 +71,40 @@ const SurveyJoin = () => {
           <div className="joinSubEnd">{surveyContent.deadlineAt}</div>
         </div>
         <div className="joinBox1">
-          <div className="joinBox1Text">설문조조조조사</div>
-          <div className="joinBox1Text">
-            {surveyQuestions.map((question) => {
-              return <div>{question.questionContent}</div>;
-            })}
-          </div>
+          <div className="joinBox1Text">{surveyContent.introduction}</div>
         </div>
-        <JoinSingleSelection />
-        <JoinMultiSelection />
-        <JoinDescriptiveForm />
+        {surveyQuestions.map((question) => {
+          if (question.questionType === "Essay") {
+            return <JoinDescriptiveForm title={question.questionContent} />;
+          } else if (question.questionType === "Checkbox") {
+            return (
+              <JoinMultiSelection
+                title={question.questionContent}
+                options={question.options}
+              />
+            );
+          } else {
+            return null;
+            // return (
+            //   <JoinSingleSelection
+            //     title={question.questionContent}
+            //     options={question.options}
+            //   />
+            // );
+          }
+        })}
+
         <div className="joinFinal">
-          <button type="submit">설문 제출하기</button>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "#282828",
+            }}
+          >
+            <button type="submit">설문 제출하기</button>
+          </Link>
         </div>
       </div>
       <Footer />

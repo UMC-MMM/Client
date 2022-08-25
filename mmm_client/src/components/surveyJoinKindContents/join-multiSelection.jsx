@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsSquare } from "react-icons/bs";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 
-const JoinMultiSelection = () => {
+const JoinMultiSelection = (props) => {
   const [userSelectMultiSelection, setUserSelectMultiSelection] = useState([]);
 
   // 체크 표시 취소를 위한 상태 정의
@@ -29,14 +29,8 @@ const JoinMultiSelection = () => {
 
   const multiSelection = {
     essential: true,
-    title: "다중선택형 질문",
-    selections: [
-      { key: 0, selection: "다중 선택 항목1" },
-      { key: 1, selection: "다중 선택 항목2" },
-      { key: 2, selection: "다중 선택 항목3" },
-      { key: 3, selection: "다중 선택 항목4" },
-      { key: 4, selection: "다중 선택 항목5" },
-    ],
+    title: props.title,
+    selections: props.options,
   };
 
   return (
@@ -49,17 +43,21 @@ const JoinMultiSelection = () => {
         <div className="joinBox3A">
           {multiSelection.selections.map((selection) => {
             return (
-              <label onClick={() => handleSelectMultiSelection(selection.key)}>
+              <label
+                onClick={() => handleSelectMultiSelection(selection.optionIdx)}
+              >
                 <div className="joinBox3A1">
                   <div className="joinBox3A1Btn">
-                    {userSelectMultiSelection.includes(selection.key) ===
+                    {userSelectMultiSelection.includes(selection.optionIdx) ===
                     true ? (
                       <BsFillCheckSquareFill size="20px" />
                     ) : (
                       <BsSquare size="20px" />
                     )}
                   </div>
-                  <div className="joinBox3A1Text">{selection.selection}</div>
+                  <div className="joinBox3A1Text">
+                    {selection.optionContent}
+                  </div>
                 </div>
               </label>
             );
