@@ -7,7 +7,7 @@ import DescriptiveForm from "../components/surveyPostKindContents/descriptiveFor
 const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setSelected] = useState("단일선택형");
-  const [questionType, setQuestionType] = useState("");
+  const [questionType, setQuestionType] = useState("Checkbox");
 
   const options = ["단일선택형", "다중선택형", "서술형"];
 
@@ -24,16 +24,26 @@ const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
   };
 
   const handlesurveyPostQuestionContent = (e) => {
-    console.log(e.target.value);
+    setQuestionContent(e.target.value);
   };
 
-  const showData = (data) => {
+  const showSingleSelectionData = (data) => {
+    setQuestionOption(data);
+  };
+
+  const showMultipleSelectionData = (data) => {
     setQuestionOption(data);
   };
 
   const surveyListsObj = {
-    단일선택형: <SingleSelection showData={showData} />,
-    다중선택형: <MultipleSelection />,
+    단일선택형: (
+      <SingleSelection showSingleSelectionData={showSingleSelectionData} />
+    ),
+    다중선택형: (
+      <MultipleSelection
+        showMultipleSelectionData={showMultipleSelectionData}
+      />
+    ),
     서술형: <DescriptiveForm />,
   };
 
@@ -47,10 +57,10 @@ const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
               type="text"
               name="id"
               placeholder="질문을 입력하세요."
-              onchange={handlesurveyPostQuestionContent}
+              onChange={handlesurveyPostQuestionContent}
             />
           </div>
-          <div onClick={handleHi}>하이</div>
+          <button onClick={handleHi}>제발....</button>
           <div className="surveyPostChooseSurveyKindAndDelete">
             <div className="dropdown">
               <div
@@ -70,6 +80,7 @@ const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
                       onClick={() => {
                         setSelected(option);
                         setIsActive(false);
+                        setQuestionOption({});
                         if (option === "단일선택형") {
                           setQuestionType("Checkbox");
                         } else if (option === "다중선택형") {

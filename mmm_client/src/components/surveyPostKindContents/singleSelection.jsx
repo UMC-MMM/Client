@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsCircle } from "react-icons/bs";
 import { BsX } from "react-icons/bs";
 
-const SingleSelection = ({ showData }) => {
+const SingleSelection = ({ showSingleSelectionData }) => {
   const [selections, setSelections] = useState([{ key: 0 }, { key: 1 }]);
 
   const [count, setCount] = useState(1);
@@ -34,7 +34,7 @@ const SingleSelection = ({ showData }) => {
     });
   };
 
-  showData(singleSelectionDistractorList);
+  showSingleSelectionData(singleSelectionDistractorList);
 
   return (
     <div className="joinBoxy">
