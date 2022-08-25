@@ -20,7 +20,6 @@ const SurveyWrite = () => {
 
   const handleSurveyIntroduction = (e) => {
     setSurveyIntroduction(e.target.value);
-
   };
 
   const [surveyQustionBoxs, setSurveyQustionBoxs] = useState([

@@ -2,18 +2,39 @@ import React, { useState } from "react";
 import { BsCircle } from "react-icons/bs";
 import { BsX } from "react-icons/bs";
 
-const SingleSelection = () => {
+const SingleSelection = ({ showData }) => {
   const [selections, setSelections] = useState([{ key: 0 }, { key: 1 }]);
 
+  const [count, setCount] = useState(1);
+
+  const [singleSelectionDistractorList, setSingleSelectionDistractorList] =
+    useState({
+      0: "",
+      1: "",
+    });
+
   const handleSurveyPostChoosePlusBtn = () => {
-    const newSelections = [...selections, { key: Date.now() }];
+    const newCount = count + 1;
+    setCount(newCount);
+    const newSelections = [...selections, { key: newCount }];
     setSelections(newSelections);
   };
 
   const handleJoinBoxDelete = (survey) => {
     const newSelections = selections.filter((item) => item.key !== survey.key);
+    delete singleSelectionDistractorList[survey.key];
     setSelections(newSelections);
   };
+
+  const handleSingleSelectionDistractor = (e) => {
+    const { name, value } = e.target;
+    setSingleSelectionDistractorList({
+      ...singleSelectionDistractorList,
+      [name]: value,
+    });
+  };
+
+  showData(singleSelectionDistractorList);
 
   return (
     <div className="joinBoxy">
@@ -30,8 +51,9 @@ const SingleSelection = () => {
                     <input
                       id="surveyQuestionDistractor"
                       type="text"
-                      name="text"
+                      name={selection.key}
                       placeholder="선택지"
+                      onChange={handleSingleSelectionDistractor}
                     ></input>
                   </div>
                   <div onClick={() => handleJoinBoxDelete(selection)}>

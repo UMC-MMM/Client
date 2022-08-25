@@ -18,7 +18,9 @@ const SurveyListBox = (props) => {
               <div className="boxTopPoint">{props.point}p</div>
               <div className="boxTopTitle">
                 <div className="boxTopTitleT">{props.title}</div>
-                <div className="boxTopTime">약 {props.time}분 소요</div>
+                <div className="boxTopTime">
+                  약 {props.time}분 소요 {props.key}이고
+                </div>
               </div>
             </div>
             <div className="boxTopProfile">

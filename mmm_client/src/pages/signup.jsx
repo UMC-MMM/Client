@@ -21,6 +21,7 @@ const Signup = () => {
   const [errorIdMessage, setErrorIdMessage] = useState("");
   const [errorPasswordMessage, setErrorPasswordMessage] = useState("");
 
+  // 아이디, 패스워드, 이메일, 이름
   const [userId, setUserId] = useState("");
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -29,6 +30,7 @@ const Signup = () => {
   // 페이지 이동
   const navigate = useNavigate();
 
+  // 아이디, 패스워드, 이메일, 이름 입력 받기!
   const handleIdChange = (e) => {
     setUserId(e.target.value);
   };
@@ -161,10 +163,14 @@ const Signup = () => {
           <div className="signupAgreeCheck">동의서 확인하기 →</div>
         </Link>
 
-        <div className="signupSubmitBtn">
+        <div
+          className="signupSubmitBtn"
+          style={{ backgroundColor: `${color}` }}
+        >
           <input
             id="signupSubmitBtn"
             className="signupSubmit"
+            backgroundColor={color}
             type="submit"
             name="submit"
             value="회원가입 하기"
