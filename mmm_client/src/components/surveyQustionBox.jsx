@@ -1,27 +1,42 @@
 import React, { useState } from "react";
+import { BsCaretDownFill } from "react-icons/bs";
 import SingleSelection from "../components/surveyPostKindContents/singleSelection";
 import MultipleSelection from "../components/surveyPostKindContents/multipleSelection";
 import DescriptiveForm from "../components/surveyPostKindContents/descriptiveForm";
-import Dropdown from "../components/dropdown";
 
 const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
-  const [surveyNumber, setSurveyNumber] = useState();
+  const [isActive, setIsActive] = useState(false);
+  const [selected, setSelected] = useState("단일선택형");
+  const [questionType, setQuestionType] = useState("");
+
+  const options = ["단일선택형", "다중선택형", "서술형"];
+
+  const [questionContent, setQuestionContent] = useState("");
+  const [questionOption, setQuestionOption] = useState({});
+
+  const handleHi = () => {
+    const body = {
+      questionType,
+      questionContent,
+      questionOption,
+    };
+    console.log(body);
+  };
+
+  const handlesurveyPostQuestionContent = (e) => {
+    console.log(e.target.value);
+  };
+
+  const showData = (data) => {
+    setQuestionOption(data);
+  };
 
   const surveyListsObj = {
-    0: <SingleSelection />,
-    1: <MultipleSelection />,
-    2: <DescriptiveForm />,
+    단일선택형: <SingleSelection showData={showData} />,
+    다중선택형: <MultipleSelection />,
+    서술형: <DescriptiveForm />,
   };
 
-  const surveyKind = (x) => {
-    if (x === "단일선택형") {
-      setSurveyNumber(0);
-    } else if (x === "다중선택형") {
-      setSurveyNumber(1);
-    } else if (x === "서술형") {
-      setSurveyNumber(2);
-    }
-  };
   return (
     <>
       <div className="surveyPostTitleBox">
@@ -32,10 +47,44 @@ const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
               type="text"
               name="id"
               placeholder="질문을 입력하세요."
+              onchange={handlesurveyPostQuestionContent}
             />
           </div>
+          <div onClick={handleHi}>하이</div>
           <div className="surveyPostChooseSurveyKindAndDelete">
-            <Dropdown surveyKind={surveyKind} />
+            <div className="dropdown">
+              <div
+                className="dropdownBtn"
+                onClick={() => setIsActive(!isActive)}
+              >
+                <div className="dropdownBtnIcon">
+                  <BsCaretDownFill color="#c1c1c1" size="12" />
+                </div>
+                <div className="dropdownBtnText">{selected}</div>
+              </div>
+              {isActive && (
+                <div className="dropdownContent">
+                  {options.map((option) => (
+                    <div
+                      className="dropdownItem"
+                      onClick={() => {
+                        setSelected(option);
+                        setIsActive(false);
+                        if (option === "단일선택형") {
+                          setQuestionType("Checkbox");
+                        } else if (option === "다중선택형") {
+                          setQuestionType("Checkbox");
+                        } else if (option === "서술형") {
+                          setQuestionType("Essay");
+                        }
+                      }}
+                    >
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
             <div
               className="surveyPostDelete"
               onClick={() => handleSurveyPostDelete(surveyQustionBox)}
@@ -44,9 +93,7 @@ const SurveyQustionBox = ({ surveyQustionBox, handleSurveyPostDelete }) => {
             </div>
           </div>
         </div>
-        <div className="surveyPostkindContent">
-          {surveyListsObj[surveyNumber]}
-        </div>
+        <div className="surveyPostkindContent">{surveyListsObj[selected]}</div>
       </div>
     </>
   );
