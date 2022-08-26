@@ -55,7 +55,7 @@ const SurveyJoin = () => {
         <div className="joinSub">
           <div className="joinSubCond">
             <div className="joinSubCond1">
-              {surveyContent.preferAge === null
+              {surveyContent.preferAge === 0
                 ? "나이 상관없음"
                 : surveyContent.preferAge + "대"}
             </div>

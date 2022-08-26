@@ -22,7 +22,7 @@ const MyPageListBox = (props) => {
         <div className="myPageListBoxSub">
           <div className="myPageListBoxSubCond">
             <div className="myPageListBoxSubCond1">
-              {props.age === null ? "나이 상관없음" : props.age + "대"}
+              {props.age === 0 ? "나이 상관없음" : props.age + "대"}
             </div>
             <div className="myPageListBoxSubCond2">
               {props.gender === null ? "성별 상관없음" : props.gender}

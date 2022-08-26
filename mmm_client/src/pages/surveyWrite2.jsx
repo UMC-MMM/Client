@@ -261,7 +261,15 @@ const SurveyWrite2 = () => {
           </div>
         </div>
         <div className="surveyWrite2-point-deduct">50P 차감하고</div>
-        <div className="surveyWrite2-finish-btn">설문게시완료</div>
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+          }}
+        >
+          <div className="surveyWrite2-finish-btn">설문게시완료</div>
+        </Link>
       </div>
     </>
   );
